@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>/2013/04/r-for-beginners/</loc>
+    <lastmod>2013-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2013/04/reinhart-rogoff-and-r/</loc>
     <lastmod>2013-04-28T00:00:00+00:00</lastmod>
   </url>
@@ -149,6 +154,12 @@
   </url>
   
   <url>
+    <loc>/tags/heart/</loc>
+    <lastmod>2013-04-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/hospital/</loc>
     <lastmod>2017-08-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -157,6 +168,12 @@
   <url>
     <loc>/tags/kennethrogoff/</loc>
     <lastmod>2013-04-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/linux/</loc>
+    <lastmod>2013-04-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -215,6 +232,12 @@
   </url>
   
   <url>
+    <loc>/tags/rcommander/</loc>
+    <lastmod>2013-04-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/regression/</loc>
     <lastmod>2013-04-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -235,6 +258,12 @@
   <url>
     <loc>/categories/spanish/</loc>
     <lastmod>2017-08-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/spss/</loc>
+    <lastmod>2013-04-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

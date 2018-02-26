@@ -1,0 +1,855 @@
+
+
+  
+    
+  
+
+
+  
+
+
+
+
+
+  
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.36.1 with theme Tranquilpeak 0.4.3-BETA">
+    <title>…about R, for beginners</title>
+    <meta name="author" content="aurora-mareviv">
+    <meta name="keywords" content=", R">
+
+    <link rel="icon" href="../../../favicon.png">
+    
+
+    
+    <meta name="description" content="These days I was remembering my beginnings as a linux user few years ago, and how I found R (possibly in a very unlikely way: searching for a SPSS alternative in Linux). For two years, R had been almost impossible for me. I didn’t understand its syntax (I don’t have programming background), and luckily I had installed R Commander (Rcmdr) to perform simple analysis and plots…
+Another feature of Rcmdr (that I didn’t use) was that every click to a button remains in a part of Rcmdr’s console, and then it can be copied, used and modified.">
+    <meta property="og:description" content="These days I was remembering my beginnings as a linux user few years ago, and how I found R (possibly in a very unlikely way: searching for a SPSS alternative in Linux). For two years, R had been almost impossible for me. I didn’t understand its syntax (I don’t have programming background), and luckily I had installed R Commander (Rcmdr) to perform simple analysis and plots…
+Another feature of Rcmdr (that I didn’t use) was that every click to a button remains in a part of Rcmdr’s console, and then it can be copied, used and modified.">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="…about R, for beginners">
+    <meta property="og:url" content="/2013/04/r-for-beginners/">
+    <meta property="og:site_name" content="Tales of R - Rmarkdown Blog">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tales of R - Rmarkdown Blog">
+    <meta name="twitter:description" content="These days I was remembering my beginnings as a linux user few years ago, and how I found R (possibly in a very unlikely way: searching for a SPSS alternative in Linux). For two years, R had been almost impossible for me. I didn’t understand its syntax (I don’t have programming background), and luckily I had installed R Commander (Rcmdr) to perform simple analysis and plots…
+Another feature of Rcmdr (that I didn’t use) was that every click to a button remains in a part of Rcmdr’s console, and then it can be copied, used and modified.">
+    
+      <meta name="twitter:creator" content="@maureviv">
+    
+    
+
+    
+    
+
+    
+      <meta property="og:image" content="/logo-alpha.png">
+    
+
+    
+      <meta property="og:image" content="/images/rlogo.png">
+    
+    
+    
+
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="../../../css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
+    
+    
+      
+        <link rel="stylesheet"  href="../../../css/my-style.css">
+      
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="../../../">Tales of R - Rmarkdown Blog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="../../../#about">
+    
+    
+    
+      
+        <img class="header-picture" src="../../../logo-alpha.png" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="../../../#about">
+          <img class="sidebar-profile-picture" src="../../../logo-alpha.png" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">aurora-mareviv</h4>
+        
+          <h5 class="sidebar-profile-bio">Anesthesiologist, MD, postdoc. Utter Rstats geek</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/maureviv">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+      
+      <span class="sidebar-button-desc">Twitter</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/aurora-mareviv">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://talesofr.wordpress.com">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-edit"></i>
+      
+      <span class="sidebar-button-desc">Tales of R</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.r-bloggers.com/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss-square"></i>
+      
+      <span class="sidebar-button-desc">R-bloggers</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/1948108/mareviv">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+      
+      <span class="sidebar-button-desc">Stack Overflow</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      …about R, for beginners
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2013-04-30T00:00:00Z">
+        
+  
+  
+  
+  
+    30 de April 2013
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="../../../categories/r">R</a>
+    
+  
+
+  </div>
+
+</div>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <link rel="stylesheet" href="../../../css/my-style.css" type="text/css" />
+
+
+<p>These days I was remembering my <a title="http://www.burns-stat.com/documents/tutorials/impatient-r/" href="http://www.burns-stat.com/documents/tutorials/impatient-r" target="_blank">beginnings</a> as a linux user few years ago, and how I found <a title="http://www.r-project.org./" href="http://www.r-project.org./" target="_blank">R</a> (possibly in a very unlikely way: searching for a SPSS alternative in Linux). For two years, R had been almost impossible for me. I didn’t understand its syntax (I don’t have programming background), and luckily I had installed <a title="http://www.rcommander.com/" href="http://www.rcommander.com/" target="_blank">R Commander</a> (Rcmdr) to perform simple analysis and plots…</p>
+<p>Another feature of Rcmdr (that I didn’t use) was that every click to a button remains in a part of Rcmdr’s console, and then it can be copied, used and modified. Indeed, the ‘<em>copypaste</em>’ thing has revealed to me as the best way to acquire, recyle, modify and run commands.</p>
+<p>Have you installed R? You can try this (nice) code:</p>
+<ul>
+<li>First we store an object called <code>object</code> in R’s memory (just like a big calculator)</li>
+</ul>
+<pre class="r"><code>object &lt;- seq(1,100,  by=5)</code></pre>
+<ul>
+<li><p><code>Object</code> stores the <a title="http://astrostatistics.psu.edu/su07/R/html/base/html/seq.html" href="http://astrostatistics.psu.edu/su07/R/html/base/html/seq.html" target="_blank">sequence </a>(seq) from 1 to 100, by 5. That is: 1, 6, 11, 16, 21 26, 31… If you type <a title="http://stat.ethz.ch/R-manual/R-devel/library/base/html/seq.html" href="http://stat.ethz.ch/R-manual/R-devel/library/base/html/seq.html" target="_blank"><code>?seq</code></a> in the console, you will have a brief help.</p></li>
+<li><p>With R, you can calculate big numbers, logarythms and fractions storing its components, with less chance of errors than with an ordinary calculator.</p></li>
+<li><p>You can create new variables from old ones:</p></li>
+</ul>
+<pre class="r"><code>logobject &lt;- log10(object)</code></pre>
+<ul>
+<li><code>Logobject</code> stores the decimal logarythm of every value inside <code>object</code>. That is:</li>
+</ul>
+<pre class="r"><code>logobject
+    [1] 0.0000000 0.7781513 1.0413927 1.2041200 1.3222193 1.4149733 1.4913617
+    [8] 1.5563025 1.6127839 1.6627578 1.7075702 1.7481880 1.7853298 1.8195439
+   [15] 1.8512583 1.8808136 1.9084850 1.9344985 1.9590414 1.9822712</code></pre>
+<ul>
+<li>You can also plot the variables with simple functions like <a title="http://stat.ethz.ch/R-manual/R-devel/library/graphics/html/plot.html" href="http://stat.ethz.ch/R-manual/R-devel/library/graphics/html/plot.html" target="_blank"><code>plot</code>:</a></li>
+</ul>
+<pre class="r"><code>plot(object)</code></pre>
+<p><img src="../../../post/2013-04-30-r-for-beginners_files/figure-html/unnamed-chunk-6-1.png" width="768" /></p>
+<pre class="r"><code>plot(object, logobject)</code></pre>
+<p><img src="../../../post/2013-04-30-r-for-beginners_files/figure-html/unnamed-chunk-6-2.png" width="768" /></p>
+<pre class="r"><code>plot(object, logobject, col = &quot;red&quot;, xlab=&quot;My X axis&quot;, ylab= &quot;This is my Y axis&quot;, main=&quot;My first plot&quot;)</code></pre>
+<p><img src="../../../post/2013-04-30-r-for-beginners_files/figure-html/unnamed-chunk-6-3.png" width="768" /></p>
+<ul>
+<li><p>As you can see, is not very difficult to change the <a title="http://research.stowers-institute.org/efg/R/Color/Chart/" href="http://research.stowers-institute.org/efg/R/Color/Chart/" target="_blank">color</a> “argument”, from “red” to “green” or “blue” for instance. The title, instead of “My first R plot” can be changed to “My coloured R plot”, or change the labels of the axes. Don’t forget to store these commands and new ones, in a plain Text document, Wordpad etc.. so you can recycle them and fix syntax errors!</p></li>
+<li><p>If you feel confident, you can try this. The spoiler is <a title="http://stackoverflow.com/questions/8082429" href="http://stackoverflow.com/questions/8082429/plot-a-heart-in-r" target="_blank">here</a>, by DWin</p></li>
+</ul>
+<pre class="r"><code>dat &lt;- data.frame(t=seq(0, 2*pi, by=0.1) )
+
+xhrt &lt;- function(t) 16*sin(t)^3
+
+yhrt &lt;- function(t) 13*cos(t)-5*cos(2*t)-2*cos(3*t)-cos(4*t)
+
+dat$y = yhrt(dat$t)
+
+dat$x = xhrt(dat$t)
+
+with(dat, plot(x,y, type=&quot;l&quot;))
+
+with(dat, polygon(x,y, col=&quot;hotpink&quot;))</code></pre>
+<p><img src="../../../post/2013-04-30-r-for-beginners_files/figure-html/unnamed-chunk-7-1.png" width="768" /></p>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="../../../tags/heart/">heart</a>
+
+  <a class="tag tag--primary tag--small" href="../../../tags/linux/">linux</a>
+
+  <a class="tag tag--primary tag--small" href="../../../tags/rcommander/">Rcommander</a>
+
+  <a class="tag tag--primary tag--small" href="../../../tags/spss/">SPSS</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="../../../2017/08/r-blogdown-setup-in-github/" data-tooltip="R Blogdown Setup in GitHub">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="../../../2013/04/reinhart-rogoff-and-r/" data-tooltip="Reinhart, Rogoff... and R">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2013/04/r-for-beginners/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2013/04/r-for-beginners/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2013/04/r-for-beginners/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2018 aurora-mareviv. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="../../../2017/08/r-blogdown-setup-in-github/" data-tooltip="R Blogdown Setup in GitHub">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="../../../2013/04/reinhart-rogoff-and-r/" data-tooltip="Reinhart, Rogoff... and R">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2013/04/r-for-beginners/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2013/04/r-for-beginners/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2013/04/r-for-beginners/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F2013%2F04%2Fr-for-beginners%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F2013%2F04%2Fr-for-beginners%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=%2F2013%2F04%2Fr-for-beginners%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="../../../logo-alpha.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">aurora-mareviv</h4>
+    
+      <div id="about-card-bio">Anesthesiologist, MD, postdoc. Utter Rstats geek</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Universidade de Santiago de Compostela
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Spain
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2018/02/r-blogdown-setup-in-github-2/">
+                <h3 class="media-heading">R Blogdown Setup in GitHub (2)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">An updated tutorial to set up a blogdown blog  Git &amp; GitHub repos RStudio and blogdown setup  Customising paths and styles Modify config.toml file Custom css Custom javascript MathJax Site build with blogdown   Deploying the site Updating the local git  repository Pushing to GitHub  Add R code A new post in blogdown Deploying the site with the new post  This .Rmd source code   An updated tutorial to set up a blogdown blog  This is an updated blog post from the previous version: R Blogdown Setup in GiHub.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2018/02/intro-joint-modeling-r/">
+                <h3 class="media-heading">An introduction to joint modeling in R</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">J Espasandin, O Lado, C Díaz, A Bouzas, I Guler, A Baluja. 
+   These days, between the 19th and 21st of February, has taken place the learning activity titled “An Introduction to the Joint Modeling of Longitudinal and Survival Data, with Applications in R” organized by the Interdisciplinary Group of Biostatistics (ICBUSC), directed by Professor Carmen Cadarso-Suárez, from the University of Santiago de Compostela.
+ The international nature of this scientific activity has been marked by the presence of researchers from different European countries such as Germany, Portugal, Holland, Greece or Turkey.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2017/12/minimal-project-tree-r/">
+                <h3 class="media-heading">A minimal Project Tree in R</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Introduction  The last two days arrived at my twitter feed some discussions on how bad are the following sentences at the beginning of your R script/notebook, sparked by @JennyBryan’s slides at the IASC-ARS/NZSA Conference:
+ setwd()
+ and
+ rm(list = ls())
+ 
+ The only two things that make @JennyBryan 😤😠🤯. Instead use projects + here::here() #rstats pic.twitter.com/GwxnHePL4n
+&mdash; Hadley Wickham (@hadleywickham) December 11, 2017  Blog post elaborating on my advice to avoid setwd() and rm(list = ls()) at top of an #rstats script.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2017/11/taming-exam-results-with-pdftools/">
+                <h3 class="media-heading">Taming exam results in pdf with pdftools</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Introduction  There are several ways to mine tables and other content from a pdf, using R. After a lot of trial &amp; error, here’s how I managed to extract global exam results from an international, massive, yearly examination, the EDAIC.
+This is my first use case of “pdf mining” with R, and also a fairly simple one. However, more complex and very fine examples of this can be found elsewhere, using both pdftools and tabulizer packages.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2017/08/tracking-septic-patients/">
+                <h3 class="media-heading">Tracking Septic Patients in a Hospital</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Background A hospital may be defined as a place, or building, or set of facilities where patients go to receive the care they need.
+In ancient times, a hospital was not much more than a hotel for the poor, where they could stay and be cared for. Some centuries passed, and now we call hospitals to extremely complex structures, from both physical and functional perspectives.
+In this context, patients usually undergo a wide variety of diagnostic and/or therapeutic procedures.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2017/08/r-blogdown-setup-in-github/">
+                <h3 class="media-heading">R Blogdown Setup in GitHub</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">The blogdown R package  Finally, -after 24h of failed attempts-, I could get my favourite Hugo theme up and running with R Studio and Blogdown.
+ After exploring some alternatives, like Shirin’s (with Jekyll), and Amber Thomas advice (which involved Git skills beyond my basic abilities), I was able to install Yihui’s hugo-lithium-theme in a new repository.
+However, I wanted to explore other blog templates, hosted in GiHub, like:</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2013/04/r-for-beginners/">
+                <h3 class="media-heading">…about R, for beginners</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Apr 4, 2013
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">These days I was remembering my beginnings as a linux user few years ago, and how I found R (possibly in a very unlikely way: searching for a SPSS alternative in Linux). For two years, R had been almost impossible for me. I didn’t understand its syntax (I don’t have programming background), and luckily I had installed R Commander (Rcmdr) to perform simple analysis and plots…
+Another feature of Rcmdr (that I didn’t use) was that every click to a button remains in a part of Rcmdr’s console, and then it can be copied, used and modified.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2013/04/reinhart-rogoff-and-r/">
+                <h3 class="media-heading">Reinhart, Rogoff... and R</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Apr 4, 2013
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Reinhart, Rogoff… and R EDIT: At the time I wrote this post, I didn’t know of the existence of this great one, from Christopher Gandrud, take a look!
+On april, the 15th, an article was published that will change economic theories… Or at least, it will questionate and change the methods employed to formule those theories. As a doctor, I spend time on reviewing evidence that can be applied to daily practice.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2013/04/watercolor-plots/">
+                <h3 class="media-heading">Watercolor plots</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Apr 4, 2013
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">R has been recognised as the most powerful statistical tool for displaying graphs. In the last years, R’s awesomeness in depicting relationships between variables is exploding with great packages such as ggplot2. One can simply walk around some R blogs, and find something like this:
+The ‘watercolor’ plot (aka à la Solomon Hsiang).
+Once you click these links above, you will forget completely about my blog, so… wait! I have to show a graph I made with the code provided there!</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         9 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://aurora-mareviv.github.io/talesofr/images/Kiwi-Vigo.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js" integrity="sha256-XrZQp+ZMfovqr6Hb2M6okHvSEYaB/+Xbx7toWmOOZUM=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" integrity="sha256-KacbO6Nou2geGJEUzQeKzKEdp/DENVGJKAd2v37moh0=" crossorigin="anonymous" />
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="../../../js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+  
+    <script src="../../../js/myjs.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/aurora-mareviv.github.io\/talesofr\/2013\/04\/r-for-beginners\/';
+          
+            this.page.identifier = '\/2013\/04\/r-for-beginners\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'talesofr';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+    
+  </body>
+</html>
+

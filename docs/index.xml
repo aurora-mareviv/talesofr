@@ -79,6 +79,16 @@ However, I wanted to explore other blog templates, hosted in GiHub, like:</descr
     </item>
     
     <item>
+      <title>…about R, for beginners</title>
+      <link>/2013/04/r-for-beginners/</link>
+      <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/04/r-for-beginners/</guid>
+      <description>These days I was remembering my beginnings as a linux user few years ago, and how I found R (possibly in a very unlikely way: searching for a SPSS alternative in Linux). For two years, R had been almost impossible for me. I didn’t understand its syntax (I don’t have programming background), and luckily I had installed R Commander (Rcmdr) to perform simple analysis and plots…
+Another feature of Rcmdr (that I didn’t use) was that every click to a button remains in a part of Rcmdr’s console, and then it can be copied, used and modified.</description>
+    </item>
+    
+    <item>
       <title>Reinhart, Rogoff... and R</title>
       <link>/2013/04/reinhart-rogoff-and-r/</link>
       <pubDate>Sun, 28 Apr 2013 00:00:00 +0000</pubDate>

@@ -1,0 +1,105 @@
+---
+title: …about R, for beginners
+author: mareviv
+date: '2013-04-30'
+slug: r-for-beginners
+categories:
+  - R
+tags:
+  - heart
+  - linux
+  - Rcommander
+  - SPSS
+thumbnailImagePosition: left
+thumbnailImage: ./images/rlogo.png
+metaAlignment: center
+disable_comments: false
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: "/css/my-style.css" 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, echo=TRUE, eval=TRUE, warning=FALSE, message=FALSE, comment="  ")
+# https:\/\/aurora-mareviv.github.io\/talesofr
+```
+
+```{r results='hide', echo=FALSE}
+# Installs missing libraries on render!
+list.of.packages <- c("rmarkdown", "Rcpp", "knitr", "ggplot2")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages, repos='https://cran.rstudio.com/')
+```
+
+```{r echo=FALSE}
+wdir <- getwd() 
+# la carpeta donde guardo los datos
+datadir <- paste(wdir, "/data", sep="")
+# y la carpeta inmediatamente por encima
+wdirRoot <- gsub("\\content\\/post", "", wdir) 
+```
+
+
+These days I was remembering my <a title="http://www.burns-stat.com/documents/tutorials/impatient-r/" href="http://www.burns-stat.com/documents/tutorials/impatient-r" target="_blank">beginnings</a> as a linux user few years ago, and how I found <a title="http://www.r-project.org./" href="http://www.r-project.org./" target="_blank">R</a> (possibly in a very unlikely way: searching for a SPSS alternative in Linux). For two years, R had been almost impossible for me. I didn't understand its syntax (I don't have programming background), and luckily I had installed <a title="http://www.rcommander.com/" href="http://www.rcommander.com/" target="_blank">R Commander</a> (Rcmdr) to perform simple analysis and plots...
+
+Another feature of Rcmdr (that I didn't use) was that every click to a button remains in a part of Rcmdr's console, and then it can be copied, used and modified. Indeed, the '<em>copypaste</em>' thing has revealed to me as the best way to acquire, recyle, modify and run commands.
+
+Have you installed R? You can try this (nice) code:
+
+- First we store an object called `object` in R's memory (just like a big calculator)
+
+```{r}
+object <- seq(1,100,  by=5)
+```
+
+- `Object` stores the <a title="http://astrostatistics.psu.edu/su07/R/html/base/html/seq.html" href="http://astrostatistics.psu.edu/su07/R/html/base/html/seq.html" target="_blank">sequence </a>(seq) from 1 to 100, by 5. That is: 1,  6, 11, 16, 21 26, 31... If you type <a title="http://stat.ethz.ch/R-manual/R-devel/library/base/html/seq.html" href="http://stat.ethz.ch/R-manual/R-devel/library/base/html/seq.html" target="_blank">`?seq`</a> in the console, you will have a brief help.
+
+- With R, you can calculate big numbers, logarythms and fractions storing its components, with less chance of errors than with an ordinary calculator.
+
+- You can create new variables from old ones:
+
+```{r}
+logobject <- log10(object)
+```
+
+- `Logobject` stores the decimal logarythm of every value inside `object`. That is:
+
+```{r}
+logobject
+```
+
+
+- You can also plot the variables with simple functions like <a title="http://stat.ethz.ch/R-manual/R-devel/library/graphics/html/plot.html" href="http://stat.ethz.ch/R-manual/R-devel/library/graphics/html/plot.html" target="_blank">`plot`:</a>
+
+```{r}
+plot(object)
+plot(object, logobject)
+plot(object, logobject, col = "red", xlab="My X axis", ylab= "This is my Y axis", main="My first plot")
+```
+
+
+- As you can see, is not very difficult to change the <a title="http://research.stowers-institute.org/efg/R/Color/Chart/" href="http://research.stowers-institute.org/efg/R/Color/Chart/" target="_blank">color</a> "argument", from "red" to "green" or "blue" for instance. The title, instead of "My first R plot" can be changed to "My coloured R plot", or change the labels of the axes. Don't forget to store these commands and new ones, in a plain Text document, Wordpad etc.. so you can recycle them and fix syntax errors!
+
+- If you feel confident, you can try this. The spoiler is <a title="http://stackoverflow.com/questions/8082429" href="http://stackoverflow.com/questions/8082429/plot-a-heart-in-r" target="_blank">here</a>, by DWin
+
+```{r}
+dat <- data.frame(t=seq(0, 2*pi, by=0.1) )
+
+xhrt <- function(t) 16*sin(t)^3
+
+yhrt <- function(t) 13*cos(t)-5*cos(2*t)-2*cos(3*t)-cos(4*t)
+
+dat$y = yhrt(dat$t)
+
+dat$x = xhrt(dat$t)
+
+with(dat, plot(x,y, type="l"))
+
+with(dat, polygon(x,y, col="hotpink"))
+```
+
+
+
+
