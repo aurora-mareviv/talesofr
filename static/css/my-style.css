@@ -99,8 +99,8 @@ a:hover{
 }
 
 .tag--primary, a.tag--primary {
-   color: var(--lightGreen);
-   border-color: var(--lightGreen);
+   color: var(--lightGreen) !important; 
+   border-color: var(--lightGreen) !important; 
 }
 
 a:hover > .tag--primary {
