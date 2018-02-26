@@ -138,6 +138,7 @@ The cover (background) image must be located in `/themes/hugo-tranquilpeak-theme
 
 ```{r eval=FALSE}
 coverImage = "myimage.jpg"
+# Set the full github.io URL to the image if this doesn't work
 ```
 
 We want some custom css and js. We need to locate them in `/static/css/my-style.css` and in `/static/js/myjs.js` respectively.
