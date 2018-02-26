@@ -1,0 +1,244 @@
+---
+title: A minimal Project Tree in R
+author: aurora-mareviv
+date: '2017-12-12'
+slug: minimal-project-tree-r
+categories:
+  - R
+tags:
+  - '#rstats'
+  - 'R Markdown'
+  - '#tutorial'
+  - '#template'
+  - '#tidy'
+thumbnailImagePosition: left
+thumbnailImage: ./images/scheme1.png
+metaAlignment: center
+disable_comments: false
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: "/css/my-style.css"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, echo=TRUE, eval=TRUE, warning=FALSE, message=FALSE, comment="  ")
+```
+
+```{r results='hide', echo=FALSE, eval=FALSE}
+# Installs missing libraries on render!
+list.of.packages <- c("rmarkdown", "dplyr", "ggplot2", "Rcpp", "knitr", "Hmisc", "readxl")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages, repos='https://cran.rstudio.com/')
+```
+
+```{r echo=FALSE}
+wdir <- getwd() 
+# la carpeta donde guardo los datos
+datadir <- paste(wdir, "/data", sep="")
+# y la carpeta inmediatamente por encima
+wdirRoot <- gsub("\\content\\/post", "", wdir) 
+```
+
+<meta name="twitter:site" content="@mareviv">
+<meta name="twitter:creator" content="@mareviv">
+<meta name="twitter:description" content="A minimal Project Tree in R." />
+<meta name="twitter:title" content="Minimal Project Tree in R" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://aurora-mareviv.github.io/images/scheme.png" />
+
+# Introduction &nbsp; <span class="fa fa-cogs"></span> 
+
+The last two days arrived at my twitter feed some discussions on how bad are the following sentences at the beginning of your R script/notebook, sparked by @[JennyBryan](https://twitter.com/JennyBryan)'s slides at the [IASC-ARS/NZSA Conference](http://www.nzsa2017.com/):
+
+> `setwd()`
+
+and
+
+> `rm(list = ls())`
+
+<br>
+
+<center>
+`r htmltools::HTML("{{< tweet 940021008764846080 >}}")`  
+`r htmltools::HTML("{{< tweet 940436177219338240 >}}")` 
+`r htmltools::HTML("{{< tweet 940582516532105217 >}}")`
+</center> 
+
+Jenny Bryan offered a detailed explanation for this, as well as some fixes, in her [tidyverse blog post](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/). The main idea was:  
+
+- To ensure reproducibility within a stable working directory tree. She proposes the very concise `here::here()` but other methods are available such as the  [`template`](https://github.com/Pakillo/template) or the [`ProjectTemplate`](http://projecttemplate.net/getting_started.html) packages..   
+- To avoid break havoc in other's computers with `rm(list = ls())`!.
+
+All of this buzz around project self-containment and reproducibility motivated me to finish a minimal directory tree that (with some variations) I have been using for this year's data analysis endeavours.  
+
+It is a extremely simple tree which separates a `/data`, a `/plot` and an `/img` directory inside the main folder (`root`)
+
+- The *data* folder contains both raw data and processed data files saved by R. 
+- The *plot* folder contains all the plots saved during the workflow. 
+- The *img* folder has every other image (logos, etc) that R takes as an input to build the results. 
+- Inside the *root* folder I store the main `.R` or `.Rmd` scripts.  
+
+This ensures that every folder has an unidirectional relationship with the root folder (except the *data* dir in this case). But the important thing is that the paths in the scripts are set *relative* to the root folder, so the entire tree can be copied elsewhere and still work as expected.  
+
+I also added some more features to the tree:  
+
+- An `.Rproj` file.   
+- Parametrize the `.Rmd` file.   
+- A <span class="texttt">Git</span> repository so the tree can be conveniently cloned or downloaded, with a .gitignore file:   
+
+<div class="button well alert alert-info text-center" id="myButton" onmouseover="alertWarning()"  onmouseout="alertInfo()">
+[`git clone https://github.com/aurora-mareviv/ProjectR`](https://github.com/aurora-mareviv/ProjectR)  
+</div>
+
+
+Here is a sketch of how it works: 
+
+<br>
+
+<center>
+![](/images/scheme.png)
+</center> 
+
+
+And here is the actual code of the notebook/script. I have not included regular markdown text outside the R chunks, as this template is intended to be changed and filled with new text each time:
+
+# Script code &nbsp; <span class="fa fa-tree"></span> &nbsp; <span class="fa fa-wrench"></span>
+
+```{r message=FALSE, warning=FALSE, results='hide'}
+# Installs missing libraries on render!
+list.of.packages <- c("rmarkdown", "dplyr", "ggplot2", "Rcpp", "knitr", "Hmisc", "readxl")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages, repos='https://cran.rstudio.com/')
+```
+
+```{r results='hide'}
+library(dplyr)
+library(knitr)
+library(ggplot2)
+```
+
+
+## Working directories
+
+```{r }
+# directory where the notebook is
+wdir <- getwd() 
+# directory where data are imported from & saved to
+datadir <- file.path(wdir, "data") # better than datadir <- paste(wdir, "/data", sep="")
+# directory where external images are imported from
+imgdir <- file.path(wdir, "img")
+# directory where plots are saved to
+plotdir <- file.path(wdir, "plot")
+# the folder immediately above root
+Up <- paste("\\", basename(wdir), sep="")
+wdirUp <- gsub(Up, "", wdir) 
+```
+
+
+## Data import
+
+```{r}
+# Data name (stored as a parameter in the Rmarkdown notebook)
+params <- NULL
+params$dataname <- "cars"
+```
+
+```{r eval=FALSE}
+# MSEXCEL
+dataname <- params$dataname # archive name
+routexl <- paste(datadir, "/", dataname, ".xlsx", sep="")  # complete route to archive
+
+library(readxl)
+mydata <- read_excel(routexl, sheet = 1)  # imports first sheet
+```
+
+```{r}
+# CSV / TSV (separated by tabs in this example)
+dataname <- params$dataname # archive name
+routecsv <- paste(datadir, "/", dataname, ".csv", sep="")  # complete route to archive
+
+mydata <- read.csv(paste(routecsv, sep=""), 
+         header = TRUE, 
+         sep = "\t",
+         dec = ".")
+
+```
+
+
+## Data operations
+
+```{r}
+# Hmisc::describe(mydata)
+head(mydata)
+```
+
+```{r fig.height=4, fig.width=5}
+p1 <- ggplot(mydata, aes(x=speed, y=dist)) + geom_point()
+p1
+```
+
+## Save plots
+
+```{r eval=FALSE}
+# TO PDF 
+plotname1 <- "p1.pdf"
+# TO PNG 
+plotname2 <- "p1.png"
+
+routeplot1 <- file.path(plotdir, plotname1)
+routeplot2 <- file.path(plotdir, plotname2)
+ggsave(routeplot1)  # (see http://ggplot2.tidyverse.org/reference/ggsave.html)
+ggsave(routeplot2) 
+```
+
+## Save data
+
+```{r eval=FALSE}
+# RDATA
+save(mydata, file="data/mydata.RData")
+```
+
+```{r eval=FALSE}
+# MSEXCEL # not run
+dataname2 <- "mydata"  # name we will give to file
+routexl2 <- paste(datadir, "/", dataname2, ".xlsx", sep="")   # complete route to future archive
+
+library(xlsx)
+write.xlsx(mydata, routexl2) # creates archive in specified route
+```
+
+```{r eval=FALSE}
+# CSV / TSV (separated by tabs in this example)
+dataname2 <- "mydata"  # name we will give to file
+routecsv2 <- paste(datadir, "/", dataname2, ".csv", sep="")  # complete route to future archive
+
+write.table(mydata, file = routecsv2, append = FALSE, quote = FALSE, sep = "\t ",
+            eol = "\n", na = "NA", dec = ".", row.names = FALSE,
+            col.names = TRUE)
+```
+
+
+This script -and the dir tree that contains it- is saving me a lot of time and headaches (where I've put that data?....), I hope it can be also useful for people out there!.   
+
+
+# Why I did this?
+
+I wanted to show a very basic directory tree (tree stump?) so it could be modified by people with no experience organising code. I am teaching R to some students (asynchronously) and need them to *really* understand how important it is to be tidy with R projects.  
+They have no idea of coding so I have to give them tools that:  
+
+- don't scare them,  
+- they can use right away with their data,  
+- make them... "learn R as you go" 😀   
+
+
+# Future improvements
+
+- Add a *Makefile*?
+- Use [Travis.ci](https://travis-ci.org/)?  
+- Etc...
+
+
+
+

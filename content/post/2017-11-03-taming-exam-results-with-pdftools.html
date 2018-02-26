@@ -1,0 +1,171 @@
+---
+title: Taming exam results in pdf with pdftools
+author: Aurora Baluja
+date: '2017-11-03'
+slug: taming-exam-results-with-pdftools
+categories:
+  - R
+tags:
+  - '#rstats'
+  - blogdown
+  - pdftools
+  - pdf
+  - edaic
+thumbnailImagePosition: left
+thumbnailImage: ./images/horse1.png
+metaAlignment: center
+disable_comments: false
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: "/css/my-style.css"
+---
+
+  <link rel="stylesheet" href="/css/my-style.css" type="text/css" />
+
+
+<center>
+<img src="/images/edaic.png" />
+</center>
+<div id="introduction" class="section level1">
+<h1>Introduction   <span class="fa fa-cogs"></span></h1>
+<p>There are several ways to mine tables and other content from a pdf, using R. After a lot of trial &amp; error, here’s how I managed to extract global exam results from an international, massive, yearly examination, the <a href="https://www.esahq.org/education/edaic/exam-types/part-i-examination">EDAIC</a>.</p>
+<p>This is my first use case of <em>“pdf mining”</em> with R, and also a fairly simple one. However, more complex and very fine examples of this can be found elsewhere, using both <a href="https://ropensci.org/blog/2016/03/01/pdftools-and-jeroen/"><span class="texttt">pdftools</span></a> and <a href="https://github.com/ropensci/tabulizer"><span class="texttt">tabulizer</span></a> packages.</p>
+<p>As can be seen from the original <a href="../../../content/post/data/EDAIC.pdf">pdf</a>, exam results are anonymous. They consist on a numeric, 6-digit <strong>code</strong> and a binary result: “<strong>FAIL / PASS</strong>”. I was particularly interested into seeing how many of them passed the exam, as some indirect measure of how <em>“hard”</em> it can be.</p>
+</div>
+<div id="mining-the-table" class="section level1">
+<h1>Mining the table   <span class="fa fa-wrench"></span></h1>
+<p>In this case I preferred <span class="texttt">pdftools</span> as it allowed me to extract the whole content from the pdf:</p>
+<pre class="r"><code>install.packages(&quot;pdftools&quot;)</code></pre>
+<pre class="r"><code>library(pdftools) 
+txt &lt;- pdf_text(&quot;EDAIC.pdf&quot;) 
+txt[1] 
+class(txt[1]) </code></pre>
+<pre><code>   [1] &quot;EDAIC Part I 2017                                                  Overall Results\n                                         Candidate N°       Result\n                                            107131            FAIL\n                                            119233            PASS\n                                            123744            FAIL\n                                            127988            FAIL\n                                            133842            PASS\n                                            135692            PASS\n                                            140341            FAIL\n                                            142595            FAIL\n                                            151479            PASS\n                                            151632            PASS\n                                            152787            PASS\n                                            157691            PASS\n                                            158867            PASS\n                                            160211            PASS\n                                            161970            FAIL\n                                            162536            PASS\n                                            163331            PASS\n                                            164442            FAIL\n                                            164835            PASS\n                                            165734            PASS\n                                            165900            PASS\n                                            166469            PASS\n                                            167241            FAIL\n                                            167740            PASS\n                                            168151            FAIL\n                                            168331            PASS\n                                            168371            FAIL\n                                            168711            FAIL\n                                            169786            PASS\n                                            170721            FAIL\n                                            170734            FAIL\n                                            170754            PASS\n                                            170980            PASS\n                                            171894            PASS\n                                            171911            PASS\n                                            172047            FAIL\n                                            172128            PASS\n                                            172255            FAIL\n                                            172310            PASS\n                                            172706            PASS\n                                            173136            FAIL\n                                            173229            FAIL\n                                            174336            PASS\n                                            174360            PASS\n                                            175177            FAIL\n                                            175180            FAIL\n                                            175184            FAIL\nYour candidate number is indicated on your admission document        Page 1 of 52\n&quot;
+   [1] &quot;character&quot;</code></pre>
+<p>These commands return a lenghty <em>blob</em> of text. Fortunately, there are some <code>\n</code> symbols that signal the new lines in the original document.</p>
+<p>We will use these to split the <em>blob</em> into something more approachable, using <a href="https://www.tidyverse.org/"><code>tidyversal</code></a> methods…</p>
+<ul>
+<li>Split the <em>blob</em>.<br />
+</li>
+<li>Transform the resulting <code>list</code> into a <code>character vector</code> with <code>unlist</code>.<br />
+</li>
+<li>Trim leading white spaces with <code>stringr::str_trim</code>.</li>
+</ul>
+<pre class="r"><code>library(tidyverse) 
+library(stringr) 
+tx2 &lt;- strsplit(txt, &quot;\n&quot;) %&gt;% # divide by carriage returns
+  unlist() %&gt;% 
+  str_trim(side = &quot;both&quot;) # trim white spaces
+tx2[1:10]
+    [1] &quot;EDAIC Part I 2017                                                  Overall Results&quot;
+    [2] &quot;Candidate N°       Result&quot;                                                         
+    [3] &quot;107131            FAIL&quot;                                                            
+    [4] &quot;119233            PASS&quot;                                                            
+    [5] &quot;123744            FAIL&quot;                                                            
+    [6] &quot;127988            FAIL&quot;                                                            
+    [7] &quot;133842            PASS&quot;                                                            
+    [8] &quot;135692            PASS&quot;                                                            
+    [9] &quot;140341            FAIL&quot;                                                            
+   [10] &quot;142595            FAIL&quot;</code></pre>
+<ul>
+<li>Remove the very first row.<br />
+</li>
+<li>Transform into a <code>tibble</code>.</li>
+</ul>
+<pre class="r"><code>tx3 &lt;- tx2[-1] %&gt;% 
+  data_frame() 
+tx3
+   # A tibble: 2,579 x 1
+      .                        
+      &lt;chr&gt;                    
+    1 Candidate N°       Result
+    2 107131            FAIL   
+    3 119233            PASS   
+    4 123744            FAIL   
+    5 127988            FAIL   
+    6 133842            PASS   
+    7 135692            PASS   
+    8 140341            FAIL   
+    9 142595            FAIL   
+   10 151479            PASS   
+   # ... with 2,569 more rows</code></pre>
+<ul>
+<li>Use <code>tidyr::separate</code> to split each row into two columns.<br />
+</li>
+<li>Remove all spaces.</li>
+</ul>
+<pre class="r"><code>tx4 &lt;- separate(tx3, ., c(&quot;key&quot;, &quot;value&quot;), &quot; &quot;, extra = &quot;merge&quot;) %&gt;%  
+  mutate(key = gsub(&#39;\\s+&#39;, &#39;&#39;, key)) %&gt;%
+  mutate(value = gsub(&#39;\\s+&#39;, &#39;&#39;, value)) 
+# tx4[c(1:6, 48:52),]
+tx4
+   # A tibble: 2,579 x 2
+      key       value   
+      &lt;chr&gt;     &lt;chr&gt;   
+    1 Candidate N°Result
+    2 107131    FAIL    
+    3 119233    PASS    
+    4 123744    FAIL    
+    5 127988    FAIL    
+    6 133842    PASS    
+    7 135692    PASS    
+    8 140341    FAIL    
+    9 142595    FAIL    
+   10 151479    PASS    
+   # ... with 2,569 more rows</code></pre>
+<ul>
+<li>Remove rows that do not represent table elements.</li>
+</ul>
+<pre class="r"><code>tx5 &lt;- tx4[grep(&#39;^[0-9]&#39;, tx4[[1]]),] 
+tx5
+   # A tibble: 2,424 x 2
+      key    value
+      &lt;chr&gt;  &lt;chr&gt;
+    1 107131 FAIL 
+    2 119233 PASS 
+    3 123744 FAIL 
+    4 127988 FAIL 
+    5 133842 PASS 
+    6 135692 PASS 
+    7 140341 FAIL 
+    8 142595 FAIL 
+    9 151479 PASS 
+   10 151632 PASS 
+   # ... with 2,414 more rows</code></pre>
+</div>
+<div id="extracting-the-results" class="section level1">
+<h1>Extracting the results   <span class="fa fa-star-o"></span></h1>
+<p>We already have the table! now it’s time to get to the summary:   <span class="fa fa-thumbs-o-up"></span>   <span class="fa fa-thumbs-o-down"></span></p>
+<pre class="r"><code>library(knitr)
+tx5 %&gt;%
+  group_by(value) %&gt;%
+  summarise (count = n()) %&gt;%
+  mutate(percent = paste( round( (count / sum(count)*100) , 1), &quot;%&quot; )) %&gt;% 
+  kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">value</th>
+<th align="right">count</th>
+<th align="left">percent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">FAIL</td>
+<td align="right">1017</td>
+<td align="left">42 %</td>
+</tr>
+<tr class="even">
+<td align="left">PASS</td>
+<td align="right">1407</td>
+<td align="left">58 %</td>
+</tr>
+</tbody>
+</table>
+<p>From these results we see that the <strong>EDAIC-Part 1</strong> exam doesn’t have a particularly high clearance rate. It is currently done by medical specialists, but its dificulty relies in a <em>very</em> broad list of subjects covered, ranging from topics in applied physics, the entire human physiology, pharmacology, clinical medicine and latest guidelines.</p>
+<p>The <strong>EDAIC-Part 2</strong> is an <a href="https://www.esahq.org/~/media/ESA/Files/EDUCATION/EDAIC%20Part%20II/Advice%20to%20candidates%20English.ashx">oral examination</a> which may take place in English, French, German, Spanish or Scandinavian languages, in which the examinee is evaluated by 4 pairs of examiners in 4 different sessions of 1-hour duration. <strong>Part 2</strong> is currently considered the toughest by examinees.</p>
+<p>Despite being a hard test to pass -and also the exam fee-, it’s becoming increasingly popular among anesthesiologists and critical care specialists that wish to stay up-to date with the current medical knowledge and practice.</p>
+</div>

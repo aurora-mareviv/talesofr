@@ -1,0 +1,25 @@
+<div class="post-header main-content-wrap {{ if $.Params.metaalignment }}text-{{ $.Params.metaalignment }}{{ else }}text-left{{ end }}">
+  {{ with $.Params.link }}
+    <h1 itemprop="headline"> 
+      <a class="link" href="{{ . | absURL }}" target="_blank" itemprop="url">
+        {{ $.Title }}
+      </a>
+    </h1>
+  {{ else }}
+    <h1 class="post-title" itemprop="headline">
+      {{ $.Title }}
+    </h1>
+  {{ end }}
+  {{ partial "post/meta.html" . }}
+</div>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>

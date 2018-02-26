@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Edaic on Tales of R - Rmarkdown Blog</title>
+    <link>/tags/edaic/</link>
+    <description>Recent content in Edaic on Tales of R - Rmarkdown Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/edaic/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Taming exam results in pdf with pdftools</title>
+      <link>/2017/11/taming-exam-results-with-pdftools/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/11/taming-exam-results-with-pdftools/</guid>
+      <description>Introduction  There are several ways to mine tables and other content from a pdf, using R. After a lot of trial &amp;amp; error, here’s how I managed to extract global exam results from an international, massive, yearly examination, the EDAIC.
+This is my first use case of “pdf mining” with R, and also a fairly simple one. However, more complex and very fine examples of this can be found elsewhere, using both pdftools and tabulizer packages.</description>
+    </item>
+    
+  </channel>
+</rss>

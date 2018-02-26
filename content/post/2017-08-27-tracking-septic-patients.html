@@ -1,0 +1,121 @@
+---
+date: '2017-08-27'
+draft: true
+title: Tracking Septic Patients in a Hospital
+author: Aurora Baluja
+slug: tracking-septic-patients
+categories: ["R", "medicine", "spanish"]
+tags: ["#rstats", "graph", "patients", "sepsis", "hospital", "sankey diagram"]
+thumbnailImagePosition: left
+thumbnailImage: ./images/sample.png
+metaAlignment: center
+disable_comments: false
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: "/css/my-style.css"
+---
+
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/d3/d3.min.js"></script>
+<script src="/rmarkdown-libs/sankey/sankey.js"></script>
+<script src="/rmarkdown-libs/sankeyNetwork-binding/sankeyNetwork.js"></script>
+  <link rel="stylesheet" href="/css/my-style.css" type="text/css" />
+
+
+<div id="background" class="section level1">
+<h1>Background</h1>
+<p>A hospital may be defined as a place, or building, or set of facilities where patients go to receive the care they need.<br />
+In ancient times, a hospital was not much more than a hotel for the poor, where they could stay and be cared for. Some centuries passed, and now we call hospitals to extremely complex structures, from both physical and functional perspectives.<br />
+In this context, patients usually undergo a wide variety of diagnostic and/or therapeutic procedures. Sometimes even they must be transferred between medical/surgical units. This occurs when the patient has new or aggravated risks that must be tackled more closely by other specialists.<br />
+For example, when a patient develops circulatory failure (shock), it must be transferred to an ICU. When the patient recovers, it may be taken back by their original service or, if needed, be transferred to a third unit.<br />
+The following data illustrates a number of patients being transferred between different services:<br />
+<br></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">origins</th>
+<th align="left">destinations</th>
+<th align="right">counts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Admission</td>
+<td align="left">Traumatology</td>
+<td align="right">20</td>
+</tr>
+<tr class="even">
+<td align="left">Traumatology</td>
+<td align="left">Intensive Care</td>
+<td align="right">10</td>
+</tr>
+<tr class="odd">
+<td align="left">Intensive Care</td>
+<td align="left">Traumatology</td>
+<td align="right">9</td>
+</tr>
+</tbody>
+</table>
+<p>Sankey diagrams are a suitable way to represent this kind of data. Developed at the end of the XIX century, they convey two basic notions:</p>
+<ul>
+<li>The direction of the arrow representing flow (the <em>shape</em> of the arrow in this case).<br />
+</li>
+<li>The arrow width, which is proportional to the flow quantity.</li>
+</ul>
+<p>The interactive diagram below represents patient flows: from Admission to the Traumatology department, where some of them go to the ICU and back to Traumatology.<br />
+<br></p>
+<div id="htmlwidget-1" style="width:768px;height:480px;" class="sankeyNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"links":{"source":[0,1,2],"target":[1,2,1],"value":[20,10,9]},"nodes":{"name":["Admission","Traumatology","Intensive Care"],"group":["Admission","Traumatology","Intensive Care"]},"options":{"NodeID":"name","NodeGroup":"name","LinkGroup":null,"colourScale":"d3.scaleOrdinal(d3.schemeCategory20);","fontSize":20,"fontFamily":"Arial","nodeWidth":30,"nodePadding":10,"units":"","margin":{"top":null,"right":null,"bottom":null,"left":null},"iterations":32,"sinksRight":true}},"evals":[],"jsHooks":[]}</script>
+<p>In a more complex setting, -such as the daily life at any hospital- such graphs may provide insight into the following variables:</p>
+<ul>
+<li>Most common pathways by groups of pathologies.<br />
+</li>
+<li>Inflow and outflow volumes between departments.<br />
+</li>
+<li>Relative weight of clinical units in processing certain groups of patients.<br />
+</li>
+<li>Help in predicting patient overflow at a given hospital section.</li>
+</ul>
+</div>
+<div id="real-world-data" class="section level1">
+<h1>Real world data</h1>
+<p>This data represents the “ins” and “outs” of patients with sepsis inside a tertiary-care hospital. Here we have the 3 forst rows:<br />
+<br></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">origins</th>
+<th align="left">destinations</th>
+<th align="right">counts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">MIV</td>
+<td align="left">MIR</td>
+<td align="right">133</td>
+</tr>
+<tr class="even">
+<td align="left">CGD</td>
+<td align="left">ANR</td>
+<td align="right">124</td>
+</tr>
+<tr class="odd">
+<td align="left">MIR</td>
+<td align="left">MIV</td>
+<td align="right">80</td>
+</tr>
+</tbody>
+</table>
+<p>The following Sankey graph shows how the central units in those patient’s care are ICUs (MIV= medical ICU; ANR= surgical ICU). Internal medicine (MIR) and General surgery (CGD) are also very important in terms of volume of admissions.</p>
+<div id="htmlwidget-2" style="width:768px;height:480px;" class="sankeyNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"links":{"source":[0,1,2,1,3,4,5,6,7,8,5,0,2,5,2,9,10,4,11,0,0,12,4,0,13,1,7,14,12,2,4,4,4,5,0,0,0,13,3,15,4,4,16,17,2,2,0,0,18,18,3,19,9,9,9,4,4,4,1,20,21,6,6,6,2,2,0,18,3,3,14,22,12,12,23,8,9,9,9,4,4,11,11,11,11,1,1,1,24,25,16,16,16,5,6,6,2,2,2,2,2,0,0,0,0,0,0,13,13,18,18,18,26,26,3,3,3,14,27,27,15,23,23,19,7,7,7,7,8,8,8],"target":[2,4,0,0,0,1,0,0,0,4,1,3,1,4,4,4,4,2,4,1,8,0,0,5,4,18,4,0,2,5,5,13,7,2,4,11,18,0,2,28,3,8,0,0,11,6,17,13,4,0,4,0,5,2,0,9,11,10,5,0,4,4,2,15,18,3,25,6,11,25,2,4,4,1,2,0,11,18,14,25,27,10,1,0,3,9,11,2,4,0,1,2,14,11,11,8,9,17,29,15,19,9,24,20,14,12,7,2,15,9,11,8,28,15,10,1,5,11,4,0,26,5,0,4,1,6,2,3,1,2,18],"value":[133,124,80,46,37,31,20,19,18,18,17,17,14,13,13,12,12,11,11,11,11,11,10,9,8,7,7,6,6,5,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]},"nodes":{"name":["MIV","CGD","MIR","NML","ANR","DIG","HEM","TRA","URO","ACV","CCA","CAR","ONC","NCR","NRL","PED","DER","END","NEF","REU","CPL","GIN","OBS","PSQ","CMF","CTO","NEO","ORL","CPE","OFT"],"group":["MIV","CGD","MIR","NML","ANR","DIG","HEM","TRA","URO","ACV","CCA","CAR","ONC","NCR","NRL","PED","DER","END","NEF","REU","CPL","GIN","OBS","PSQ","CMF","CTO","NEO","ORL","CPE","OFT"]},"options":{"NodeID":"name","NodeGroup":"name","LinkGroup":null,"colourScale":"d3.scaleOrdinal(d3.schemeCategory20);","fontSize":16,"fontFamily":"Arial","nodeWidth":15,"nodePadding":20,"units":"","margin":{"top":null,"right":20,"bottom":null,"left":null},"iterations":32,"sinksRight":true}},"evals":[],"jsHooks":[]}</script>
+<style>
+html *
+{
+  font-size: 14px;
+}
+</style>
+</div>

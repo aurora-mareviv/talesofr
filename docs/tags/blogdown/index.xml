@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogdown on Tales of R - Rmarkdown Blog</title>
+    <link>/tags/blogdown/</link>
+    <description>Recent content in Blogdown on Tales of R - Rmarkdown Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 25 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/blogdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>R Blogdown Setup in GitHub (2)</title>
+      <link>/2018/02/r-blogdown-setup-in-github-2/</link>
+      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/02/r-blogdown-setup-in-github-2/</guid>
+      <description>An updated tutorial to set up a blogdown blog  Git &amp;amp; GitHub repos RStudio and blogdown setup  Customising paths and styles Modify config.toml file Custom css Custom javascript MathJax Site build with blogdown   Deploying the site Updating the local git  repository Pushing to GitHub  Add R code A new post in blogdown Deploying the site with the new post  This .Rmd source code   An updated tutorial to set up a blogdown blog  This is an updated blog post from the previous version: R Blogdown Setup in GiHub.</description>
+    </item>
+    
+    <item>
+      <title>Taming exam results in pdf with pdftools</title>
+      <link>/2017/11/taming-exam-results-with-pdftools/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/11/taming-exam-results-with-pdftools/</guid>
+      <description>Introduction  There are several ways to mine tables and other content from a pdf, using R. After a lot of trial &amp;amp; error, here’s how I managed to extract global exam results from an international, massive, yearly examination, the EDAIC.
+This is my first use case of “pdf mining” with R, and also a fairly simple one. However, more complex and very fine examples of this can be found elsewhere, using both pdftools and tabulizer packages.</description>
+    </item>
+    
+    <item>
+      <title>R Blogdown Setup in GitHub</title>
+      <link>/2017/08/r-blogdown-setup-in-github/</link>
+      <pubDate>Thu, 17 Aug 2017 21:13:14 -0500</pubDate>
+      
+      <guid>/2017/08/r-blogdown-setup-in-github/</guid>
+      <description>The blogdown R package  Finally, -after 24h of failed attempts-, I could get my favourite Hugo theme up and running with R Studio and Blogdown.
+ After exploring some alternatives, like Shirin’s (with Jekyll), and Amber Thomas advice (which involved Git skills beyond my basic abilities), I was able to install Yihui’s hugo-lithium-theme in a new repository.
+However, I wanted to explore other blog templates, hosted in GiHub, like:</description>
+    </item>
+    
+  </channel>
+</rss>

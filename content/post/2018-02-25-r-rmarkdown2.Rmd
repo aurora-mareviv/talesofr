@@ -1,0 +1,433 @@
+---
+title: "R Blogdown Setup in GitHub (2)"
+author: "Aurora Baluja"
+date: 2018-02-25
+categories: ["R"]
+tags: ["R Markdown", "plot", "blogdown", "#rstats"]
+thumbnailImagePosition: left
+thumbnailImage: ./images/hexbins2.png
+coverImage: ./logo1.png
+metaAlignment: center
+disable_comments: false
+output:
+  blogdown::html_page:
+    toc: true
+    fig_width: 8
+    css: "/css/my-style.css"
+--- 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, echo=TRUE, eval=TRUE, warning=FALSE, message=FALSE, comment="  ")
+# https:\/\/aurora-mareviv.github.io\/talesofr
+```
+
+```{r results='hide', echo=FALSE}
+# Installs missing libraries on render!
+list.of.packages <- c("rmarkdown", "Rcpp", "knitr", "ggplot2")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages, repos='https://cran.rstudio.com/')
+```
+
+```{r echo=FALSE}
+wdir <- getwd() 
+# la carpeta donde guardo los datos
+datadir <- paste(wdir, "/data", sep="")
+# y la carpeta inmediatamente por encima
+wdirRoot <- gsub("\\content\\/post", "", wdir) 
+```
+
+
+
+# An updated tutorial to set up a <span class="texttt">blogdown</span> blog &nbsp; <span class="fa fa-newspaper-o"></span> 
+
+This is an updated blog post from the previous version: [R Blogdown Setup in GiHub](https://aurora-mareviv.github.io/talesofr/2017/08/r-blogdown-setup-in-gihub/). 
+
+Inspired by this great blog, by Elio Campitelli: [eliocamp.github.io/codigo-r](https://eliocamp.github.io/codigo-r/) and his settings on the hugo-tranquilpeak theme, by [Louis Barranqueiro](https://github.com/LouisBarranqueiro) & [Thibaud Lepr&ecirc;tre](https://github.com/kakawait).  
+
+As the changes I made imply many modifications in paths, directories (some very subtle), they invalidate much of my previous tutorial. The changes I basically made are: 
+
+- I still use Github pages for hosting. However, I changed the rendering folder from `master` to `docs`.  
+- Made some other fixes to the `config.toml` file.
+ 
+The steps I followed are detailed here: 
+
+
+## Git & GitHub repos  
+
+- <span class="fa fa-github"></span> Set up a GitHub account, following for example [this](https://www.wikihow.com/Create-an-Account-on-GitHub).  
+- <span class="fa fa-github"></span> Set up a new [GitHub](https://github.com/) repo with a name of your choice (in my case <span class="texttt">talesofr</span>). See [this](https://help.github.com/articles/create-a-repo/) and [this](https://tclavelle.github.io/blog/blogdown_github/).  
+- <span class="fa fa-github"></span> Activate GitHub pages. For this, you must go to the <span class="texttt">/settings</span> section of your repo and find the epigraph "GitHub Pages". In the dropdown menu, select: &nbsp; <span class="texttt">master branch /docs folder</span> and save. 
+
+![Activating GitHub pages](/images/tuto/tuto5.2.png)
+
+
+- Create a `git` local repo in your machine:
+    + Create manually a new directory called like your repository, e.g. <span class="texttt">talesofr</span>. 
+    + Run in the terminal (Windows users have to install [`git`](https://git-scm.com/downloads) first):  
+    
+    ```{bash eval=FALSE}
+    cd /Git/talesofr # your path may be different
+    git init # initiates repo in the directory
+    git remote add origin https://github.com/[USERNAME]/talesofr # connects git local repo to remote Github repo
+    git pull origin master # in case you have LICENSE and Readme.md files in the GitHub repo, they're downloaded to your machine
+    ``` 
+
+- You can add a *.gitignore* text file to the root directory of your repo. This tells `git` what files *not to add* to the repo, even if they are into the folder.  One example of *.gitignore* file is [this](https://github.com/aurora-mareviv/talesofr/blob/master/.gitignore). 
+- For now, your repo is ready. We will now focus in creating & customising our Blogdown.
+
+## RStudio and <span class="texttt">blogdown</span> setup
+
+- We will open RStudio (my Version is 1.1.419). 
+
+    + First, you may need to install Blogdown in R:
+    
+    ```{r eval=FALSE}
+    install.packages("blogdown")
+    ``` 
+    
+    + In RStudio, select the *Menu > File > New Project* following the lower half of these [instructions](https://bookdown.org/yihui/blogdown/rstudio-ide.html). The wizard for setting up a Hugo Blogdown project should be available in your RStudio version.  
+
+![Creating new Project](/images/tuto/tuto1.png)
+
+![Selecting Hugo Blogdown format](/images/tuto/tuto2.png)
+
+![Selecting Hugo Blogdown theme](/images/tuto/tuto3.2.png)
+
+![A **config.toml** file appears](/images/tuto/tuto4a.2.png)
+
+<hr>
+
+# Customising paths and styles
+
+Before we <span class="texttt">build</span> and <span class="texttt">serve</span> our site, we need to tweak a couple of things in advance, if we want to smoothly deploy our blog into GitHub pages.  
+
+## Modify <span class="texttt">config.toml</span> file
+
+To integrate with GiHub pages, there are the essential modifications at the top of our *config.toml* file: 
+
+- We need to set up the base URL to the "root" of the web page (https://[USERNAME].github.io/[REPO_NAME] in this case).  
+- By default, the web page is published in the `/public` folder. We need it to be published in the `/docs` folder of the repository (we must create it if it doesn't exist yet), to match the structure of the GitHub <span class="texttt">docs</span> branch (we'll see what that means):  
+
+```{r eval=FALSE}
+baseURL = "https://aurora-mareviv.github.io/talesofr/"
+publishDir = "docs"
+```
+
+- Other useful global settings:  
+
+```{r eval=FALSE}
+draft: false # if set to true, changes will not be published
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+enableEmoji = true
+...
+```
+
+#### Images & styling paths
+
+We can revisit the *config.toml* file to make changes to the default settings.  
+
+The file for the logo that appears in the corner must be placed in the `/docs/logo.png` path. To modify it in the *config.toml*:  
+
+```{r eval=FALSE}
+picture = "logo.png" # the path to the logo
+```
+
+The cover (background) image must be located in `/themes/hugo-tranquilpeak-theme/static/images`. To modify it in the *config.toml*:  
+
+```{r eval=FALSE}
+coverImage = "myimage.jpg"
+```
+
+We want some custom css and js. We need to locate them in `/static/css/my-style.css` and in `/static/js/myjs.js` respectively.
+
+```{r eval=FALSE}
+  # Custom CSS. Put here your custom CSS files. They are loaded after the theme CSS;
+  # they have to be referred from static root. Example
+   [[params.customCSS]]
+     href = "css/my-style.css"
+
+  # Custom JS. Put here your custom JS files. They are loaded after the theme JS;
+  # they have to be referred from static root. Example
+   [[params.customJS]]
+     src = "js/myjs.js"
+```
+
+
+## Custom css
+
+Now, we can add arbitrary classes to our *css* file! (see above).
+
+Since I started writing in Bootstrap, I <span class="fa fa-heart-o"></span> it a lot. Since this theme already has bootstrap classes, I brought some others I didn't find in the theme (they're [available](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md) for *.md* files, but currently not for *.Rmd*)
+
+<div class="well alert alert-danger text-center">
+  <span class="fa fa-minus-circle"></span> alert-danger
+</div>
+
+<div class="well alert alert-warning text-center">
+  <span class="fa fa-warning"></span> alert-warning
+</div>
+
+<div class="well alert alert-success text-center">
+  <span class="fa fa-check-circle"></span> alert-success
+</div>
+
+<div class="well alert alert-info text-center">
+  <span class="fa fa-info-circle"></span> alert-info
+</div> 
+
+Here is an example of a custom *css* file that can be copied to the file `/static/css/my-style.css`:
+
+```{css eval=FALSE}
+/* @import url('https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css'); may conflict with default theme!*/
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons'); /*google icons*/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'); /*font awesome icons*/
+
+.input-lg {
+  font-size: 30px;
+}
+.input {
+  font-size: 20px;
+}
+.font-sm {
+	font-size: 0.7em;
+}
+.texttt {
+  font-family: monospace;
+}
+.alert {
+padding: 15px;
+margin-bottom: 20px;
+border: 1px solid transparent;
+border-radius: 4px;
+}
+.alert-success {
+color: #3c763d;
+background-color: #dff0d8;
+border-color: #d6e9c6;
+}
+.alert-danger,
+.alert-error {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+}
+.alert-info {
+  color: #3a87ad;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+.alert-gray {
+  background-color: #f2f3f2;
+  border-color: #f2f3f2;
+}
+
+/*style for printing*/
+@media print {
+	.noPrint {
+	   display:none;
+   }
+	}
+
+/*link formatting*/
+a:link {
+	color: #478ca7;
+	text-decoration: none;
+} 
+a:visited {
+	color: #478ca7;
+	text-decoration: none;
+}
+a:hover {
+	color: #82b5c9;
+	text-decoration: none;
+}
+```
+
+An example of the <span style="color:#b94a48" class="texttt"> alert-danger</span> class:
+
+```{html eval=FALSE}
+<div class="well alert alert-danger text-center">
+  <span class="fa fa-minus-circle"></span> alert-danger
+</div>
+```
+
+Also, we have [font-awesome](http://fontawesome.io/icons/) icons! <span class="fa fa-gift"></span>
+
+#### Update! Hugo shortcodes in *.Rmd* !
+
+Searching through blogdown/issues in GitHub, I found this good trick by Yihui:   
+You can add Hugo shortcodes if you wrap them with the function `htmltools:HTML`
+
+```{r eval=TRUE}
+htmltools::HTML("{{< hl-text danger >}}
+              this is a highlighted danger text
+              {{< /hl-text >}}")
+```
+
+
+
+## Custom javascript
+
+We can also add really cool functions to enhance our post. **Click in the red button below!**:
+
+<div class="button well alert alert-danger text-center" id="myButton" onclick="alertInfoIcon()">
+  <span id="toInfo"><span class="fa fa-minus-circle"></span> alert-danger</span>
+</div> 
+
+Here is the code of the button:
+
+```{html eval=FALSE}
+<div class="button well alert alert-danger text-center" id="myButton" onclick="alertColor()">
+  <span id="toInfo"> <span class="fa fa-minus-circle"></span>alert-danger </span>
+</div>
+```
+
+And [here](https://github.com/aurora-mareviv/aurora-mareviv.github.io/blob/master/static/js/myjs.js) is the javascript function that you can copy into `/static/js/myjs.js`:
+
+```{js eval=FALSE}
+function alertColor() {
+  var result = "<span class='fa fa-info-circle'></span>&nbsp;alert-info";
+  document.getElementById("toInfo").innerHTML = result; 
+  document.getElementById("myButton").style.backgroundColor = "#d9edf7";
+  document.getElementById("myButton").style.color = "#3a87ad";
+  document.getElementById("myButton").style.borderColor = "#bce8f1";
+}
+```
+
+
+## MathJax
+
+To correctly display LaTeX formulas, we must follow Yihui Xie's [advice](https://bookdown.org/yihui/blogdown/templates.html) in older versions of the Hugo theme.  
+We will simply add the following code at the bottom of our <span class="texttt"> /themes/hugo-tranquilpeak-theme/layouts/partials/script.html </span>file:  
+
+```{html eval=FALSE}
+<script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+```
+
+$$\lim_{x \to \infty} \exp(-x) = 0$$
+
+## Site build with <span class="texttt"> blogdown </span>
+
+Once we have ready our theme, we can add some content, modifying or deleting the various examples we will find in `/content/post`.
+
+We need to make use of Blogdown & Hugo to compile our *.Rmd* file and create our *html* post:
+
+```{r eval=FALSE}
+blogdown::build_site()
+blogdown::serve_site()
+```
+
+In the viewer, at the right side of the IDE you can examine the resulting *html* and see if something didn't go OK.
+
+# Deploying the site
+
+## Updating the local <span class="texttt"> git </span> repository
+
+This can be done with simple git commands:
+
+```{bash eval=FALSE}
+cd /Git/[REPO_NAME] # your path to the repo may be different
+git add . # indexes all files that wil be added to the local repo
+git commit -m "Starting my Hugo blog" # adds all files to the local repo, with a commit message
+``` 
+
+## Pushing to GitHub
+
+```{bash eval=FALSE}
+git push origin master # we push the changes from the local git repo to the remote repo (GitHub repo)
+``` 
+
+Just go to the page <span class="texttt">[https://[USERNAME].github.io/[REPO_NAME]](https://aurora-mareviv.github.io/talesofr)</span> and enjoy your blog!
+
+<hr>
+
+
+# Add R code
+
+Works just the same as in Rmarkdown. R code is compiled into an *html* and published as static web content in few steps. Welcome to the era of reproducible blogging!  
+
+The figure \@ref(fig:diamond) uses the `ggplot2` library:
+
+```{r diamond, fig.cap='diamonds plot with ggplot2.', tidy=FALSE}
+library(ggplot2)
+ggplot(diamonds, aes(x=carat, y=price, color=clarity)) + geom_point()
+```
+
+<hr>
+
+
+# A new post in <span class="texttt">blogdown</span> 
+
+I know there is a procedure to create a new post using the interface in RStudio (**via the "Addins" button in RStudio IDE**) but this one will also work:   
+
+I copied a blank *.Rmd* file into the folder `/content/post`. I gave it a different name than the other post, with the date and some explanatory text (I called it "*2017-08-22-new-post.Rmd*").  
+
+Then, I added an appropriate YAML heading (similar to the one in the previous post, but changing dates and times). Beware, as the YAML header indent-sensitive:   
+
+```{r eval=FALSE}
+---
+title: "New Post in Blogdown"
+author: "1"
+date: 2018-08-26
+draft: false
+categories: ["R"]
+tags: ["R Markdown", "blogdown", "#rstats"]
+thumbnailImagePosition: left
+thumbnailImage: ./images/logo.png
+metaAlignment: center
+disable_comments: true
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: "/css/my-style.css"
+--- 
+```
+
+Finally I added some content to the Rmarkdown and saved the changes.  
+
+We need to make use of Blogdown & Hugo to compile our *.Rmd* file and create our *html* post:
+
+```{r eval=FALSE}
+blogdown::build_site()
+blogdown::serve_site()
+```
+
+In the viewer, at the right side of the IDE you can examine the resulting *html* and see if something didn't go OK.
+
+
+### Deploying the site with the new post
+
+#### Updating the local <span class="texttt"> git </span> repository
+
+This can be done with simple git commands: 
+
+```{bash eval=FALSE}
+cd /Git/[USERNAME].github.io # your path to the repo may be different
+git add . # indexes all files that wil be added to the local repo
+git commit -m "Adding a new post" # adds all files to the local repo, with a commit message
+``` 
+
+#### Pushing to GitHub
+
+```{bash eval=FALSE}
+git push origin master # we push the changes from the local git repo to the remote repo (GitHub repo)
+``` 
+
+You can rinse and repeat this procedure for the rest of the posts.  
+
+<hr>
+
+
+# This <span class="texttt">.Rmd</span> source code
+
+You can download it from [here](https://github.com/aurora-mareviv/talesofr/blob/master/content/post/2018-02-25-r-rmarkdown2.Rmd)
+
+
+
+![](/images/hexbins2.png)
+

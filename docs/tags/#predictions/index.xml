@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>#Predictions on Tales of R - Rmarkdown Blog</title>
+    <link>/tags/#predictions/</link>
+    <description>Recent content in #Predictions on Tales of R - Rmarkdown Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/#predictions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>An introduction to joint modeling in R</title>
+      <link>/2018/02/intro-joint-modeling-r/</link>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/02/intro-joint-modeling-r/</guid>
+      <description>J Espasandin, O Lado, C Díaz, A Bouzas, I Guler, A Baluja. 
+   These days, between the 19th and 21st of February, has taken place the learning activity titled “An Introduction to the Joint Modeling of Longitudinal and Survival Data, with Applications in R” organized by the Interdisciplinary Group of Biostatistics (ICBUSC), directed by Professor Carmen Cadarso-Suárez, from the University of Santiago de Compostela.
+ The international nature of this scientific activity has been marked by the presence of researchers from different European countries such as Germany, Portugal, Holland, Greece or Turkey.</description>
+    </item>
+    
+  </channel>
+</rss>

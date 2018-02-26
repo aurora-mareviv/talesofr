@@ -1,0 +1,860 @@
+
+
+  
+    
+  
+
+
+  
+
+
+
+
+
+  
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.36.1 with theme Tranquilpeak 0.4.3-BETA">
+    <title>An introduction to joint modeling in R</title>
+    <meta name="author" content="aurora-mareviv">
+    <meta name="keywords" content=", R">
+
+    <link rel="icon" href="../../../favicon.png">
+    
+
+    
+    <meta name="description" content="J Espasandin, O Lado, C Díaz, A Bouzas, I Guler, A Baluja. 
+   These days, between the 19th and 21st of February, has taken place the learning activity titled “An Introduction to the Joint Modeling of Longitudinal and Survival Data, with Applications in R” organized by the Interdisciplinary Group of Biostatistics (ICBUSC), directed by Professor Carmen Cadarso-Suárez, from the University of Santiago de Compostela.
+ The international nature of this scientific activity has been marked by the presence of researchers from different European countries such as Germany, Portugal, Holland, Greece or Turkey.">
+    <meta property="og:description" content="J Espasandin, O Lado, C Díaz, A Bouzas, I Guler, A Baluja. 
+   These days, between the 19th and 21st of February, has taken place the learning activity titled “An Introduction to the Joint Modeling of Longitudinal and Survival Data, with Applications in R” organized by the Interdisciplinary Group of Biostatistics (ICBUSC), directed by Professor Carmen Cadarso-Suárez, from the University of Santiago de Compostela.
+ The international nature of this scientific activity has been marked by the presence of researchers from different European countries such as Germany, Portugal, Holland, Greece or Turkey.">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="An introduction to joint modeling in R">
+    <meta property="og:url" content="/2018/02/intro-joint-modeling-r/">
+    <meta property="og:site_name" content="Tales of R - Rmarkdown Blog">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tales of R - Rmarkdown Blog">
+    <meta name="twitter:description" content="J Espasandin, O Lado, C Díaz, A Bouzas, I Guler, A Baluja. 
+   These days, between the 19th and 21st of February, has taken place the learning activity titled “An Introduction to the Joint Modeling of Longitudinal and Survival Data, with Applications in R” organized by the Interdisciplinary Group of Biostatistics (ICBUSC), directed by Professor Carmen Cadarso-Suárez, from the University of Santiago de Compostela.
+ The international nature of this scientific activity has been marked by the presence of researchers from different European countries such as Germany, Portugal, Holland, Greece or Turkey.">
+    
+      <meta name="twitter:creator" content="@maureviv">
+    
+    
+
+    
+    
+
+    
+      <meta property="og:image" content="/logo-alpha.png">
+    
+
+    
+      <meta property="og:image" content="/images/jointmod.gif">
+    
+    
+    
+
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="../../../css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
+    
+    
+      
+        <link rel="stylesheet"  href="../../../css/my-style.css">
+      
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="../../../">Tales of R - Rmarkdown Blog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="../../../#about">
+    
+    
+    
+      
+        <img class="header-picture" src="../../../logo-alpha.png" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="../../../#about">
+          <img class="sidebar-profile-picture" src="../../../logo-alpha.png" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">aurora-mareviv</h4>
+        
+          <h5 class="sidebar-profile-bio">Anesthesiologist, MD, postdoc. Utter Rstats geek</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/maureviv">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+      
+      <span class="sidebar-button-desc">Twitter</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/aurora-mareviv">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://talesofr.wordpress.com">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-edit"></i>
+      
+      <span class="sidebar-button-desc">Tales of R</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.r-bloggers.com/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss-square"></i>
+      
+      <span class="sidebar-button-desc">R-bloggers</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/1948108/mareviv">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+      
+      <span class="sidebar-button-desc">Stack Overflow</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      An introduction to joint modeling in R
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-02-23T00:00:00Z">
+        
+  
+  
+  
+  
+    23 de February 2018
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="../../../categories/r">R</a>, 
+    
+      <a class="category-link" href="../../../categories/medicine">medicine</a>
+    
+  
+
+  </div>
+
+</div>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <link rel="stylesheet" href="../../../css/my-style.css" type="text/css" />
+
+
+<p><em>J Espasandin, O Lado, C Díaz, A Bouzas, I Guler, A Baluja.</em>  </p>
+<p></br></p>
+<div class="well">
+<center>
+<img src="../../../images/jointmod.gif" />
+</center>
+</div>
+<p>These days, between the 19th and 21st of February, has taken place the learning activity titled “<strong>An Introduction to the Joint Modeling of Longitudinal and Survival Data, with Applications in R</strong>” organized by the Interdisciplinary Group of Biostatistics (<a href="http://icbusc.com/">ICBUSC</a>), directed by Professor Carmen Cadarso-Suárez, from the <a href="http://www.usc.es/en/index.html">University of Santiago de Compostela</a>.</p>
+<!--MORE-->
+<p>The international nature of this scientific activity has been marked by the presence of researchers from different European countries such as Germany, Portugal, Holland, Greece or Turkey. It also emphasizes its interdisciplinary nature, with attendees from different fields of research, such as statistics, biology, medicine, ecology or bioinformatics, belonging to different universities, biomedical institutions or the industry.</p>
+<p>The training activity has been taught by the professor <a href="http://www.drizopoulos.com/">Dimitris Rizopoulos</a> of the Erasmus University Medical Center in Rotterdam, specialist in <a href="http://www.drizopoulos.com/courses/EMC/ESP72.pdf">joint-modeling techniques</a>. Professor Rizopoulos is the author of a <a href="https://www.crcpress.com/Joint-Models-for-Longitudinal-and-Time-to-Event-Data-With-Applications/Rizopoulos/p/book/9781439872864">book on joint modeling</a>, as well as numerous publications and two related R packages: <a href="https://cran.r-project.org/web/packages/JM/index.html">JM</a> and <a href="https://cran.r-project.org/web/packages/JMbayes/index.html">JMbayes</a>.</p>
+<p>The Joint Modeling techniques presented during the scientific meeting allow for the simultaneous study of longitudinal and time-to-event data. <strong>Longitudinal data</strong> includes repeated measurements of individuals over time, and <strong>time-to event data</strong> represent the expected time before an event occurs (like death, an asthma crisis or a transplant). That combination of data frequently arises in the biomedical sciences, where it is common to analyze the evolution of a sick person over time.</p>
+<p>This novel statistical tool is especially useful in the field of biomedicine. For instance, in patient follow-up studies after surgery; to design a personalised pattern of medical visits; to carry out predictions of survival based on the evolution of a patient, or updating those predictions in light of new data; identification of useful biomarkers; prediction of patient outcome with different chronic diseases such as diabetes, some types of cancer or cardiovascular disease.</p>
+<p>The applicability of these models has been illustrated through the JM and JMBayes R packages (by D Rizopoulos), as well as the packages <a href="https://cran.r-project.org/web/packages/joineR/index.html">joineR</a> (by Philipson et al.), and <a href="https://cran.r-project.org/web/packages/lcmm/index.html">lcmm</a> (by Proust-Lima et al.)</p>
+<div id="an-overview-of-joint-modeling" class="section level1">
+<h1>An overview of joint modeling   <span class="fa fa-cogs"></span></h1>
+<p>It basically combines (joins) the probability distributions from a linear mixed-effects model with random effects (which takes care of the longitudinal data) and a survival Cox model (which calculates the hazard ratio for an event from the censored data). The whole model and its parts can be extended in several ways:</p>
+<ul>
+<li>To find latent population heterogeneity (<em>latent class joint models</em>).</li>
+<li>Allow for multiple longitudinal markers.</li>
+<li>Allow for the analysis of multiple failure times. This is the case of competing risks and recurrent events (for instance, when a child develops asthma attacks, to find the risk of recurrence).</li>
+<li>Time-Dependent accelerated failure time (<em>AFT</em>) Models.</li>
+<li>Dynamic predictions when new values are added for the longitudinal variable, using Maximum Likelihood Estimates and empirical Bayes estimates.</li>
+</ul>
+<p>Also, the <a href="https://cran.r-project.org/web/packages/JM/index.html">JM</a> package has functions for <em>discrimination</em> and <em>callibration</em>, (of a single marker and between models): <em>sensitivity</em> &amp; <em>specificity</em>, <em>time-dependent ROCs</em> and <em>AUC</em>.</p>
+<div id="applications-for-joint-modeling" class="section level3">
+<h3>Applications for joint modeling   <span class="fa fa-pencil"></span>   <span class="fa fa-heartbeat"></span></h3>
+<p>Citing D. Rizopoulos:</p>
+<blockquote>
+<p>Joint models for longitudinal and time-to-event data have become a valuable tool in the analysis of follow-up data. These models are applicable mainly in two settings: First, when the focus is on the survival outcome and we wish to account for the effect of an endogenous time-dependent covariate measured with error, and second, when the focus is on the longitudinal outcome and we wish to correct for nonrandom dropout.</p>
+</blockquote>
+</div>
+<div id="summary" class="section level2">
+<h2>Summary   <span class="fa fa-filter"></span></h2>
+<blockquote>
+<p>When we need joint models for longitudinal and survival outcomes?</p>
+</blockquote>
+<div class="alert alert-info">
+<ul>
+<li><p>To handle endogenous time-varying covariates in a survival analysis context</p></li>
+<li><p>To account for nonrandom dropout in a longitudinal data analysis context</p></li>
+</ul>
+</div>
+<blockquote>
+<p>How joint models work?</p>
+</blockquote>
+<div class="alert alert-info">
+<ul>
+<li><p>A mixed model for the longitudinal outcome</p></li>
+<li><p>A relative risk model for the event process</p></li>
+<li><p>Explain interrelationships with shared random effects</p></li>
+</ul>
+</div>
+</div>
+<div id="last-but-not-least-a-dynamic-predicion-gif" class="section level2">
+<h2>Last but not least… a dynamic predicion GIF!   <span class="fa fa-code"></span>   <span class="fa fa-film"></span></h2>
+<pre class="r"><code>library(JM)
+# Animation example 
+# Mixed-effects model fit
+lmeFit.p1 &lt;- lme(log(pro) ~ time + time:treat, data = prothro,
+    random = ~ time | id)  
+
+# Cox survival model fit
+survFit.p1 &lt;- coxph(Surv(Time, death) ~ treat, data = prothros, x = TRUE)  
+
+# Joint model
+jointFit.p1 &lt;- jointModel(lmeFit.p1, survFit.p1, timeVar = &quot;time&quot;,
+    method = &quot;piecewise-PH-aGH&quot;)
+
+# We are interested in producing predictions of survival probabilities for Patient 155
+dataP155 &lt;- prothro[prothro$id == 155, ]
+len_id &lt;- nrow(dataP155)
+
+# We can plot the data
+sfit3 &lt;- survfitJM(jointFit.p1, newdata = dataP155[1:3, ]) 
+sfit4 &lt;- survfitJM(jointFit.p1, newdata = dataP155[1:4, ]) 
+
+par(mfrow=c(1,2))
+plotfit3 &lt;- plot(sfit3, estimator=&quot;mean&quot;, include.y = TRUE, conf.int=0.95, fill.area=TRUE, col.area=&quot;lightblue&quot;, main=&quot;Patient 155&quot;)
+plotfit4 &lt;- plot(sfit4, estimator=&quot;mean&quot;, include.y = TRUE, conf.int=0.95, fill.area=TRUE, col.area=&quot;lightblue&quot;, main=&quot;Patient 155&quot;)</code></pre>
+<p><img src="../../../post/2018-02-23-intro-joint-modeling-r_files/figure-html/unnamed-chunk-3-1.png" width="768" /></p>
+<pre class="r"><code>library(animation)
+saveGIF({
+  for(i in c(1:len_id)){
+      sfit &lt;- survfitJM(jointFit.p1, newdata = dataP155[1:i, ]) 
+      plot(sfit, estimator=&quot;mean&quot;, include.y = TRUE, conf.int=0.95, fill.area=TRUE, col.area=&quot;lightblue&quot;, main=&quot;Patient 1&quot;)
+      
+  }
+},ani.width = 400, ani.height=400)</code></pre>
+<center>
+<img src="../../../images/jointmod.gif" />
+</center>
+<blockquote>
+<p>A great crowd over there!</p>
+</blockquote>
+<div class="alert">
+<center>
+<img src="../../../images/jointmodelcrowd.jpg" />
+</center>
+</div>
+</div>
+</div>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="../../../tags/#rstats/">#rstats</a>
+
+  <a class="tag tag--primary tag--small" href="../../../tags/patients/">patients</a>
+
+  <a class="tag tag--primary tag--small" href="../../../tags/#predictions/">#predictions</a>
+
+  <a class="tag tag--primary tag--small" href="../../../tags/#personalisedmedicine/">#personalisedMedicine</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="../../../2018/02/r-blogdown-setup-in-github-2/" data-tooltip="R Blogdown Setup in GitHub (2)">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="../../../2017/12/minimal-project-tree-r/" data-tooltip="A minimal Project Tree in R">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2018/02/intro-joint-modeling-r/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2018/02/intro-joint-modeling-r/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2018/02/intro-joint-modeling-r/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2018 aurora-mareviv. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="../../../2018/02/r-blogdown-setup-in-github-2/" data-tooltip="R Blogdown Setup in GitHub (2)">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="../../../2017/12/minimal-project-tree-r/" data-tooltip="A minimal Project Tree in R">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2018/02/intro-joint-modeling-r/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2018/02/intro-joint-modeling-r/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2018/02/intro-joint-modeling-r/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F2018%2F02%2Fintro-joint-modeling-r%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F2018%2F02%2Fintro-joint-modeling-r%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=%2F2018%2F02%2Fintro-joint-modeling-r%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="../../../logo-alpha.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">aurora-mareviv</h4>
+    
+      <div id="about-card-bio">Anesthesiologist, MD, postdoc. Utter Rstats geek</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Universidade de Santiago de Compostela
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Spain
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2018/02/r-blogdown-setup-in-github-2/">
+                <h3 class="media-heading">R Blogdown Setup in GitHub (2)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">An updated tutorial to set up a blogdown blog  Git &amp; GitHub repos RStudio and blogdown setup  Customising paths and styles Modify config.toml file Custom css Custom javascript MathJax Site build with blogdown   Deploying the site Updating the local git  repository Pushing to GitHub  Add R code A new post in blogdown Deploying the site with the new post  This .Rmd source code   An updated tutorial to set up a blogdown blog  This is an updated blog post from the previous version: R Blogdown Setup in GiHub.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2018/02/intro-joint-modeling-r/">
+                <h3 class="media-heading">An introduction to joint modeling in R</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">J Espasandin, O Lado, C Díaz, A Bouzas, I Guler, A Baluja. 
+   These days, between the 19th and 21st of February, has taken place the learning activity titled “An Introduction to the Joint Modeling of Longitudinal and Survival Data, with Applications in R” organized by the Interdisciplinary Group of Biostatistics (ICBUSC), directed by Professor Carmen Cadarso-Suárez, from the University of Santiago de Compostela.
+ The international nature of this scientific activity has been marked by the presence of researchers from different European countries such as Germany, Portugal, Holland, Greece or Turkey.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2017/12/minimal-project-tree-r/">
+                <h3 class="media-heading">A minimal Project Tree in R</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Introduction  The last two days arrived at my twitter feed some discussions on how bad are the following sentences at the beginning of your R script/notebook, sparked by @JennyBryan’s slides at the IASC-ARS/NZSA Conference:
+ setwd()
+ and
+ rm(list = ls())
+ 
+ The only two things that make @JennyBryan 😤😠🤯. Instead use projects + here::here() #rstats pic.twitter.com/GwxnHePL4n
+&mdash; Hadley Wickham (@hadleywickham) December 11, 2017  Blog post elaborating on my advice to avoid setwd() and rm(list = ls()) at top of an #rstats script.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2017/11/taming-exam-results-with-pdftools/">
+                <h3 class="media-heading">Taming exam results in pdf with pdftools</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Introduction  There are several ways to mine tables and other content from a pdf, using R. After a lot of trial &amp; error, here’s how I managed to extract global exam results from an international, massive, yearly examination, the EDAIC.
+This is my first use case of “pdf mining” with R, and also a fairly simple one. However, more complex and very fine examples of this can be found elsewhere, using both pdftools and tabulizer packages.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2017/08/tracking-septic-patients/">
+                <h3 class="media-heading">Tracking Septic Patients in a Hospital</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Background A hospital may be defined as a place, or building, or set of facilities where patients go to receive the care they need.
+In ancient times, a hospital was not much more than a hotel for the poor, where they could stay and be cared for. Some centuries passed, and now we call hospitals to extremely complex structures, from both physical and functional perspectives.
+In this context, patients usually undergo a wide variety of diagnostic and/or therapeutic procedures.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2017/08/r-blogdown-setup-in-github/">
+                <h3 class="media-heading">R Blogdown Setup in GitHub</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">The blogdown R package  Finally, -after 24h of failed attempts-, I could get my favourite Hugo theme up and running with R Studio and Blogdown.
+ After exploring some alternatives, like Shirin’s (with Jekyll), and Amber Thomas advice (which involved Git skills beyond my basic abilities), I was able to install Yihui’s hugo-lithium-theme in a new repository.
+However, I wanted to explore other blog templates, hosted in GiHub, like:</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         6 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('/images/Canido-Beach2.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js" integrity="sha256-XrZQp+ZMfovqr6Hb2M6okHvSEYaB/+Xbx7toWmOOZUM=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" integrity="sha256-KacbO6Nou2geGJEUzQeKzKEdp/DENVGJKAd2v37moh0=" crossorigin="anonymous" />
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="../../../js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+  
+    <script src="../../../js/myjs.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = '\/2018\/02\/intro-joint-modeling-r\/';
+          
+            this.page.identifier = '\/2018\/02\/intro-joint-modeling-r\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'talesofr';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+    
+  </body>
+</html>
+

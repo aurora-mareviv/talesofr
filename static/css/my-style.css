@@ -1,0 +1,174 @@
+/*@import url('https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css');*/
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons'); /*google icons*/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'); /*font awesome icons*/
+/*alpha: http://www.color-hex.com/color/972d1d*/
+
+.input-lg {
+  font-size: 30px;
+}
+.input {
+  font-size: 20px;
+}
+.font-sm {
+	font-size: 0.7em;
+}
+.texttt {
+  font-family: monospace;
+}
+
+.alert {
+padding: 15px;
+margin-bottom: 20px;
+border: 1px solid transparent;
+border-radius: 4px;
+}
+.alert-success {
+color: #3c763d;
+background-color: #dff0d8;
+border-color: #d6e9c6;
+}
+.alert-warning{
+  color:#8a6d3b;
+  background-color:#fcf8e3;
+  border-color:#faebcc
+}
+.alert-danger,
+.alert-error {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+}
+.alert-info {
+  color: #3a87ad;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+} 
+.alert-gray {
+  background-color: #f2f3f2;
+  border-color: #f2f3f2;
+}
+
+@media print {
+	.noPrint {
+	   display:none;
+   }
+	}
+
+
+/*link formatting*/
+:root {
+    --lightBlue: #478ca7; 
+    --lightBlue-hover: #82b5c9; 
+    --lightBlue-alpha: rgba(71, 140, 167, 0.3); 
+    
+    --lightGreen: #4ea500; 
+    --lightGreen-hover: #73c46c; 
+    --lightGreen-alpha: rgba(78, 165, 0, 0.3); 
+    
+    --darkRed: #951d2d;  
+    --darkRed-alpha: rgba(149, 29, 45, 0.3); 
+    --lightRed: #c13c40;  /*#c13c40*/
+    --lightRed-hover: #cf8383; 
+    --lightRed-alpha: rgba(193, 60, 64, 0.3); 
+    
+    --lightOrange: #d7b572;
+    --darkOrange: #cc8800; #d7b572
+    --darkOrange-alpha: rgba(204, 136, 0, 0.3); 
+    --darkOrange2: #972D1D;
+    --darkOrange-alpha2: rgba(151, 45, 29, 0.3); 
+    --darkPink: #a93241;
+    --darkPink-alpha: rgba(169, 50, 65, 0.3); 
+    
+    --lightGrey: rgba(235, 235, 235);  /*default sidebar link color #ebebeb*/ 
+    --lightGrey-alpha: rgba(235, 235, 235, 0.3);  
+    --darkGrey-code: #8b9fa7; /*#657b83*/
+    --lightGrey-background: #f7f8f8;
+    --lightGrey-code: #d6dbdb; /*#bbc4c4*/
+    --darkGrey-background: #3b4444;
+}
+
+a:link, a:visited  {
+	color: var(--lightRed);
+	text-decoration: none;
+} 
+
+a:hover{
+	color: var(--lightRed-hover);
+	text-decoration: none;
+}
+
+.tag--primary, a.tag--primary {
+   color: var(--lightRed) !important;
+   border-color: var(--lightRed) !important;
+}
+
+a:hover > .tag--primary {
+   color: var(--lightRed) !important;
+}
+
+
+/*sidebar link formatting*/
+.sidebar-profile, .sidebar-buttons, 
+#about-card{  
+   background-color: var(--darkOrange-alpha2) !important; 
+   border-radius: 10px;
+   /*sidebar-button for standalone btns*/
+}
+.sidebar-profile-name, .sidebar-profile-bio, .sidebar-button-icon, .sidebar-button-desc, #about-card-name, #about-card-bio, #about-card-job, #about-card-location, #about-btn-close {
+   color: var(--lightGrey) !important; 
+}
+
+
+/*highlight.js small tweaks*/
+.hljs, .quote, .link .class .xml{
+   background-color: var(--darkGrey-background) !important; 
+   color: var(--lightGrey-code) !important; /*original color: #657b83*/
+   border-radius: 10px;
+}
+
+.hljs > .comment{
+   color: var(--darkGrey-code) !important;
+}
+.hljs > .keyword{
+   color: var(--lightRed-hover) !important;
+}
+.keyword{
+   color: var(--lightRed-hover) !important;
+}
+.hljs > .function{
+   color: var(--lightRed-hover) !important;
+}
+.hljs > .literal{ /*bool true-false*/
+   color: var(--lightOrange) !important;
+}
+.hljs > .string{
+   color: var(--lightBlue-hover) !important;
+}
+.hljs > .string > .vglnk { /*links inside code*/
+   color: var(--lightBlue-code) !important;
+}
+.hljs > .number{
+   color: var(--lightGreen-hover) !important;
+}
+.hljs > .title{
+   color: var(--lightBlue-hover) !important;
+}
+
+.hljs > .tag{
+   color: var(--lightGrey-code) !important;
+}
+.hljs > .tag{
+   color: var(--lightGrey-code) !important;
+}
+.hljs > .tag > .name{
+   color: var(--lightRed-hover) !important;
+}
+.hljs > .tag > .attr{
+   color: var(--lightOrange) !important;
+}
+.hljs > .tag > .string{
+   color: var(--lightBlue-hover) !important;
+}
+
+
+

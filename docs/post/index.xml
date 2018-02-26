@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Tales of R - Rmarkdown Blog</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Tales of R - Rmarkdown Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 25 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>R Blogdown Setup in GitHub (2)</title>
+      <link>/2018/02/r-blogdown-setup-in-github-2/</link>
+      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/02/r-blogdown-setup-in-github-2/</guid>
+      <description>An updated tutorial to set up a blogdown blog  Git &amp;amp; GitHub repos RStudio and blogdown setup  Customising paths and styles Modify config.toml file Custom css Custom javascript MathJax Site build with blogdown   Deploying the site Updating the local git  repository Pushing to GitHub  Add R code A new post in blogdown Deploying the site with the new post  This .Rmd source code   An updated tutorial to set up a blogdown blog  This is an updated blog post from the previous version: R Blogdown Setup in GiHub.</description>
+    </item>
+    
+    <item>
+      <title>An introduction to joint modeling in R</title>
+      <link>/2018/02/intro-joint-modeling-r/</link>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/02/intro-joint-modeling-r/</guid>
+      <description>J Espasandin, O Lado, C Díaz, A Bouzas, I Guler, A Baluja. 
+   These days, between the 19th and 21st of February, has taken place the learning activity titled “An Introduction to the Joint Modeling of Longitudinal and Survival Data, with Applications in R” organized by the Interdisciplinary Group of Biostatistics (ICBUSC), directed by Professor Carmen Cadarso-Suárez, from the University of Santiago de Compostela.
+ The international nature of this scientific activity has been marked by the presence of researchers from different European countries such as Germany, Portugal, Holland, Greece or Turkey.</description>
+    </item>
+    
+    <item>
+      <title>A minimal Project Tree in R</title>
+      <link>/2017/12/minimal-project-tree-r/</link>
+      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/12/minimal-project-tree-r/</guid>
+      <description>Introduction  The last two days arrived at my twitter feed some discussions on how bad are the following sentences at the beginning of your R script/notebook, sparked by @JennyBryan’s slides at the IASC-ARS/NZSA Conference:
+ setwd()
+ and
+ rm(list = ls())
+ 
+ The only two things that make @JennyBryan 😤😠🤯. Instead use projects + here::here() #rstats pic.twitter.com/GwxnHePL4n
+&amp;mdash; Hadley Wickham (@hadleywickham) December 11, 2017  Blog post elaborating on my advice to avoid setwd() and rm(list = ls()) at top of an #rstats script.</description>
+    </item>
+    
+    <item>
+      <title>Taming exam results in pdf with pdftools</title>
+      <link>/2017/11/taming-exam-results-with-pdftools/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/11/taming-exam-results-with-pdftools/</guid>
+      <description>Introduction  There are several ways to mine tables and other content from a pdf, using R. After a lot of trial &amp;amp; error, here’s how I managed to extract global exam results from an international, massive, yearly examination, the EDAIC.
+This is my first use case of “pdf mining” with R, and also a fairly simple one. However, more complex and very fine examples of this can be found elsewhere, using both pdftools and tabulizer packages.</description>
+    </item>
+    
+    <item>
+      <title>Tracking Septic Patients in a Hospital</title>
+      <link>/2017/08/tracking-septic-patients/</link>
+      <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/08/tracking-septic-patients/</guid>
+      <description>Background A hospital may be defined as a place, or building, or set of facilities where patients go to receive the care they need.
+In ancient times, a hospital was not much more than a hotel for the poor, where they could stay and be cared for. Some centuries passed, and now we call hospitals to extremely complex structures, from both physical and functional perspectives.
+In this context, patients usually undergo a wide variety of diagnostic and/or therapeutic procedures.</description>
+    </item>
+    
+    <item>
+      <title>R Blogdown Setup in GitHub</title>
+      <link>/2017/08/r-blogdown-setup-in-github/</link>
+      <pubDate>Thu, 17 Aug 2017 21:13:14 -0500</pubDate>
+      
+      <guid>/2017/08/r-blogdown-setup-in-github/</guid>
+      <description>The blogdown R package  Finally, -after 24h of failed attempts-, I could get my favourite Hugo theme up and running with R Studio and Blogdown.
+ After exploring some alternatives, like Shirin’s (with Jekyll), and Amber Thomas advice (which involved Git skills beyond my basic abilities), I was able to install Yihui’s hugo-lithium-theme in a new repository.
+However, I wanted to explore other blog templates, hosted in GiHub, like:</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1109 @@
+
+
+  
+    
+  
+
+
+  
+
+
+
+
+
+  
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.36.1 with theme Tranquilpeak 0.4.3-BETA">
+    <title>R Blogdown Setup in GitHub (2)</title>
+    <meta name="author" content="aurora-mareviv">
+    <meta name="keywords" content=", R">
+
+    <link rel="icon" href="../../../favicon.png">
+    
+
+    
+    <meta name="description" content="An updated tutorial to set up a blogdown blog  Git &amp; GitHub repos RStudio and blogdown setup  Customising paths and styles Modify config.toml file Custom css Custom javascript MathJax Site build with blogdown   Deploying the site Updating the local git  repository Pushing to GitHub  Add R code A new post in blogdown Deploying the site with the new post  This .Rmd source code   An updated tutorial to set up a blogdown blog  This is an updated blog post from the previous version: R Blogdown Setup in GiHub.">
+    <meta property="og:description" content="An updated tutorial to set up a blogdown blog  Git &amp; GitHub repos RStudio and blogdown setup  Customising paths and styles Modify config.toml file Custom css Custom javascript MathJax Site build with blogdown   Deploying the site Updating the local git  repository Pushing to GitHub  Add R code A new post in blogdown Deploying the site with the new post  This .Rmd source code   An updated tutorial to set up a blogdown blog  This is an updated blog post from the previous version: R Blogdown Setup in GiHub.">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="R Blogdown Setup in GitHub (2)">
+    <meta property="og:url" content="/2018/02/r-blogdown-setup-in-github-2/">
+    <meta property="og:site_name" content="Tales of R - Rmarkdown Blog">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tales of R - Rmarkdown Blog">
+    <meta name="twitter:description" content="An updated tutorial to set up a blogdown blog  Git &amp; GitHub repos RStudio and blogdown setup  Customising paths and styles Modify config.toml file Custom css Custom javascript MathJax Site build with blogdown   Deploying the site Updating the local git  repository Pushing to GitHub  Add R code A new post in blogdown Deploying the site with the new post  This .Rmd source code   An updated tutorial to set up a blogdown blog  This is an updated blog post from the previous version: R Blogdown Setup in GiHub.">
+    
+      <meta name="twitter:creator" content="@maureviv">
+    
+    
+
+    
+    
+
+    
+      <meta property="og:image" content="/logo-alpha.png">
+    
+
+    
+      <meta property="og:image" content="/images/hexbins2.png">
+    
+    
+      <meta property="og:image" content="/logo1.png">
+    
+    
+
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="../../../css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
+    
+    
+      
+        <link rel="stylesheet"  href="../../../css/my-style.css">
+      
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="../../../">Tales of R - Rmarkdown Blog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="../../../#about">
+    
+    
+    
+      
+        <img class="header-picture" src="../../../logo-alpha.png" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="../../../#about">
+          <img class="sidebar-profile-picture" src="../../../logo-alpha.png" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">aurora-mareviv</h4>
+        
+          <h5 class="sidebar-profile-bio">Anesthesiologist, MD, postdoc. Utter Rstats geek</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/maureviv">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+      
+      <span class="sidebar-button-desc">Twitter</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/aurora-mareviv">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://talesofr.wordpress.com">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-edit"></i>
+      
+      <span class="sidebar-button-desc">Tales of R</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.r-bloggers.com/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss-square"></i>
+      
+      <span class="sidebar-button-desc">R-bloggers</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/1948108/mareviv">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+      
+      <span class="sidebar-button-desc">Stack Overflow</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-center
+              "
+       style="background-image:url('./logo1.png')"
+       data-behavior="4">
+    
+      <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      R Blogdown Setup in GitHub (2)
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-02-25T00:00:00Z">
+        
+  
+  
+  
+  
+    25 de February 2018
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="../../../categories/r">R</a>
+    
+  
+
+  </div>
+
+</div>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+  </div>
+
+
+      <div id="main" data-behavior="4"
+        class="hasCover
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <link rel="stylesheet" href="../../../css/my-style.css" type="text/css" />
+
+<div id="TOC">
+<ul>
+<li><a href="#an-updated-tutorial-to-set-up-a-blogdown-blog">An updated tutorial to set up a <span class="texttt">blogdown</span> blog   <span class="fa fa-newspaper-o"></span></a><ul>
+<li><a href="#git-github-repos">Git &amp; GitHub repos</a></li>
+<li><a href="#rstudio-and-blogdown-setup">RStudio and <span class="texttt">blogdown</span> setup</a></li>
+</ul></li>
+<li><a href="#customising-paths-and-styles">Customising paths and styles</a><ul>
+<li><a href="#modify-config.toml-file">Modify <span class="texttt">config.toml</span> file</a></li>
+<li><a href="#custom-css">Custom css</a></li>
+<li><a href="#custom-javascript">Custom javascript</a></li>
+<li><a href="#mathjax">MathJax</a></li>
+<li><a href="#site-build-with-blogdown">Site build with <span class="texttt"> blogdown </span></a></li>
+</ul></li>
+<li><a href="#deploying-the-site">Deploying the site</a><ul>
+<li><a href="#updating-the-local-git-repository">Updating the local <span class="texttt"> git </span> repository</a></li>
+<li><a href="#pushing-to-github">Pushing to GitHub</a></li>
+</ul></li>
+<li><a href="#add-r-code">Add R code</a></li>
+<li><a href="#a-new-post-in-blogdown">A new post in <span class="texttt">blogdown</span></a><ul>
+<li><a href="#deploying-the-site-with-the-new-post">Deploying the site with the new post</a></li>
+</ul></li>
+<li><a href="#this-.rmd-source-code">This <span class="texttt">.Rmd</span> source code</a></li>
+</ul>
+</div>
+
+<div id="an-updated-tutorial-to-set-up-a-blogdown-blog" class="section level1">
+<h1>An updated tutorial to set up a <span class="texttt">blogdown</span> blog   <span class="fa fa-newspaper-o"></span></h1>
+<p>This is an updated blog post from the previous version: <a href="https://aurora-mareviv.github.io/talesofr/2017/08/r-blogdown-setup-in-gihub/">R Blogdown Setup in GiHub</a>.</p>
+<p>Inspired by this great blog, by Elio Campitelli: <a href="https://eliocamp.github.io/codigo-r/">eliocamp.github.io/codigo-r</a> and his settings on the hugo-tranquilpeak theme, by <a href="https://github.com/LouisBarranqueiro">Louis Barranqueiro</a> &amp; <a href="https://github.com/kakawait">Thibaud Leprêtre</a>.</p>
+<p>As the changes I made imply many modifications in paths, directories (some very subtle), they invalidate much of my previous tutorial. The changes I basically made are:</p>
+<ul>
+<li>I still use Github pages for hosting. However, I changed the rendering folder from <code>master</code> to <code>docs</code>.<br />
+</li>
+<li>Made some other fixes to the <code>config.toml</code> file.</li>
+</ul>
+<p>The steps I followed are detailed here:</p>
+<div id="git-github-repos" class="section level2">
+<h2>Git &amp; GitHub repos</h2>
+<ul>
+<li><span class="fa fa-github"></span> Set up a GitHub account, following for example <a href="https://www.wikihow.com/Create-an-Account-on-GitHub">this</a>.<br />
+</li>
+<li><span class="fa fa-github"></span> Set up a new <a href="https://github.com/">GitHub</a> repo with a name of your choice (in my case <span class="texttt">talesofr</span>). See <a href="https://help.github.com/articles/create-a-repo/">this</a> and <a href="https://tclavelle.github.io/blog/blogdown_github/">this</a>.<br />
+</li>
+<li><span class="fa fa-github"></span> Activate GitHub pages. For this, you must go to the <span class="texttt">/settings</span> section of your repo and find the epigraph “GitHub Pages”. In the dropdown menu, select:   <span class="texttt">master branch /docs folder</span> and save.</li>
+</ul>
+<div class="figure">
+<img src="../../../images/tuto/tuto5.2.png" alt="Activating GitHub pages" />
+<p class="caption">Activating GitHub pages</p>
+</div>
+<ul>
+<li>Create a <code>git</code> local repo in your machine:
+<ul>
+<li>Create manually a new directory called like your repository, e.g. <span class="texttt">talesofr</span>.</li>
+<li>Run in the terminal (Windows users have to install <a href="https://git-scm.com/downloads"><code>git</code></a> first):</li>
+</ul>
+<pre class="bash"><code>cd /Git/talesofr # your path may be different
+git init # initiates repo in the directory
+git remote add origin https://github.com/[USERNAME]/talesofr # connects git local repo to remote Github repo
+git pull origin master # in case you have LICENSE and Readme.md files in the GitHub repo, they&#39;re downloaded to your machine</code></pre></li>
+<li>You can add a <em>.gitignore</em> text file to the root directory of your repo. This tells <code>git</code> what files <em>not to add</em> to the repo, even if they are into the folder. One example of <em>.gitignore</em> file is <a href="https://github.com/aurora-mareviv/talesofr/blob/master/.gitignore">this</a>.</li>
+<li>For now, your repo is ready. We will now focus in creating &amp; customising our Blogdown.</li>
+</ul>
+</div>
+<div id="rstudio-and-blogdown-setup" class="section level2">
+<h2>RStudio and <span class="texttt">blogdown</span> setup</h2>
+<ul>
+<li><p>We will open RStudio (my Version is 1.1.419).</p>
+<ul>
+<li>First, you may need to install Blogdown in R:</li>
+</ul>
+<pre class="r"><code>install.packages(&quot;blogdown&quot;)</code></pre>
+<ul>
+<li>In RStudio, select the <em>Menu &gt; File &gt; New Project</em> following the lower half of these <a href="https://bookdown.org/yihui/blogdown/rstudio-ide.html">instructions</a>. The wizard for setting up a Hugo Blogdown project should be available in your RStudio version.</li>
+</ul></li>
+</ul>
+<div class="figure">
+<img src="../../../images/tuto/tuto1.png" alt="Creating new Project" />
+<p class="caption">Creating new Project</p>
+</div>
+<div class="figure">
+<img src="../../../images/tuto/tuto2.png" alt="Selecting Hugo Blogdown format" />
+<p class="caption">Selecting Hugo Blogdown format</p>
+</div>
+<div class="figure">
+<img src="../../../images/tuto/tuto3.2.png" alt="Selecting Hugo Blogdown theme" />
+<p class="caption">Selecting Hugo Blogdown theme</p>
+</div>
+<div class="figure">
+<img src="../../../images/tuto/tuto4a.2.png" alt="A config.toml file appears" />
+<p class="caption">A <strong>config.toml</strong> file appears</p>
+</div>
+<hr>
+</div>
+</div>
+<div id="customising-paths-and-styles" class="section level1">
+<h1>Customising paths and styles</h1>
+<p>Before we <span class="texttt">build</span> and <span class="texttt">serve</span> our site, we need to tweak a couple of things in advance, if we want to smoothly deploy our blog into GitHub pages.</p>
+<div id="modify-config.toml-file" class="section level2">
+<h2>Modify <span class="texttt">config.toml</span> file</h2>
+<p>To integrate with GiHub pages, there are the essential modifications at the top of our <em>config.toml</em> file:</p>
+<ul>
+<li>We need to set up the base URL to the “root” of the web page (<a href="https://%5BUSERNAME%5D.github.io/%5BREPO_NAME%5D" class="uri">https://[USERNAME].github.io/[REPO_NAME]</a> in this case).<br />
+</li>
+<li>By default, the web page is published in the <code>/public</code> folder. We need it to be published in the <code>/docs</code> folder of the repository (we must create it if it doesn’t exist yet), to match the structure of the GitHub <span class="texttt">docs</span> branch (we’ll see what that means):</li>
+</ul>
+<pre class="r"><code>baseURL = &quot;https://aurora-mareviv.github.io/talesofr/&quot;
+publishDir = &quot;docs&quot;</code></pre>
+<ul>
+<li>Other useful global settings:</li>
+</ul>
+<pre class="r"><code>draft: false # if set to true, changes will not be published
+ignoreFiles = [&quot;\\.Rmd$&quot;, &quot;\\.Rmarkdown$&quot;, &quot;_files$&quot;, &quot;_cache$&quot;]
+enableEmoji = true
+...</code></pre>
+<div id="images-styling-paths" class="section level4">
+<h4>Images &amp; styling paths</h4>
+<p>We can revisit the <em>config.toml</em> file to make changes to the default settings.</p>
+<p>The file for the logo that appears in the corner must be placed in the <code>/docs/logo.png</code> path. To modify it in the <em>config.toml</em>:</p>
+<pre class="r"><code>picture = &quot;logo.png&quot; # the path to the logo</code></pre>
+<p>The cover (background) image must be located in <code>/themes/hugo-tranquilpeak-theme/static/images</code>. To modify it in the <em>config.toml</em>:</p>
+<pre class="r"><code>coverImage = &quot;myimage.jpg&quot;</code></pre>
+<p>We want some custom css and js. We need to locate them in <code>/static/css/my-style.css</code> and in <code>/static/js/myjs.js</code> respectively.</p>
+<pre class="r"><code>  # Custom CSS. Put here your custom CSS files. They are loaded after the theme CSS;
+  # they have to be referred from static root. Example
+   [[params.customCSS]]
+     href = &quot;css/my-style.css&quot;
+
+  # Custom JS. Put here your custom JS files. They are loaded after the theme JS;
+  # they have to be referred from static root. Example
+   [[params.customJS]]
+     src = &quot;js/myjs.js&quot;</code></pre>
+</div>
+</div>
+<div id="custom-css" class="section level2">
+<h2>Custom css</h2>
+<p>Now, we can add arbitrary classes to our <em>css</em> file! (see above).</p>
+<p>Since I started writing in Bootstrap, I <span class="fa fa-heart-o"></span> it a lot. Since this theme already has bootstrap classes, I brought some others I didn’t find in the theme (they’re <a href="https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md">available</a> for <em>.md</em> files, but currently not for <em>.Rmd</em>)</p>
+<div class="well alert alert-danger text-center">
+<p><span class="fa fa-minus-circle"></span> alert-danger</p>
+</div>
+<div class="well alert alert-warning text-center">
+<p><span class="fa fa-warning"></span> alert-warning</p>
+</div>
+<div class="well alert alert-success text-center">
+<p><span class="fa fa-check-circle"></span> alert-success</p>
+</div>
+<div class="well alert alert-info text-center">
+<p><span class="fa fa-info-circle"></span> alert-info</p>
+</div>
+<p>Here is an example of a custom <em>css</em> file that can be copied to the file <code>/static/css/my-style.css</code>:</p>
+<pre class="css"><code>/* @import url(&#39;https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css&#39;); may conflict with default theme!*/
+@import url(&#39;https://fonts.googleapis.com/icon?family=Material+Icons&#39;); /*google icons*/
+@import url(&#39;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#39;); /*font awesome icons*/
+
+.input-lg {
+  font-size: 30px;
+}
+.input {
+  font-size: 20px;
+}
+.font-sm {
+    font-size: 0.7em;
+}
+.texttt {
+  font-family: monospace;
+}
+.alert {
+padding: 15px;
+margin-bottom: 20px;
+border: 1px solid transparent;
+border-radius: 4px;
+}
+.alert-success {
+color: #3c763d;
+background-color: #dff0d8;
+border-color: #d6e9c6;
+}
+.alert-danger,
+.alert-error {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+}
+.alert-info {
+  color: #3a87ad;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+.alert-gray {
+  background-color: #f2f3f2;
+  border-color: #f2f3f2;
+}
+
+/*style for printing*/
+@media print {
+    .noPrint {
+       display:none;
+   }
+    }
+
+/*link formatting*/
+a:link {
+    color: #478ca7;
+    text-decoration: none;
+} 
+a:visited {
+    color: #478ca7;
+    text-decoration: none;
+}
+a:hover {
+    color: #82b5c9;
+    text-decoration: none;
+}</code></pre>
+<p>An example of the <span class="texttt" style="color:#b94a48"> alert-danger</span> class:</p>
+<pre class="html"><code>&lt;div class=&quot;well alert alert-danger text-center&quot;&gt;
+  &lt;span class=&quot;fa fa-minus-circle&quot;&gt;&lt;/span&gt; alert-danger
+&lt;/div&gt;</code></pre>
+<p>Also, we have <a href="http://fontawesome.io/icons/">font-awesome</a> icons! <span class="fa fa-gift"></span></p>
+<div id="update-hugo-shortcodes-in-.rmd" class="section level4">
+<h4>Update! Hugo shortcodes in <em>.Rmd</em> !</h4>
+<p>Searching through blogdown/issues in GitHub, I found this good trick by Yihui:<br />
+You can add Hugo shortcodes if you wrap them with the function <code>htmltools:HTML</code></p>
+<pre class="r"><code>htmltools::HTML(&quot;{{&lt; hl-text danger &gt;}}
+              this is a highlighted danger text
+              {{&lt; /hl-text &gt;}}&quot;)</code></pre>
+<span class="highlight-text danger">
+              this is a highlighted danger text
+              </span>
+</div>
+</div>
+<div id="custom-javascript" class="section level2">
+<h2>Custom javascript</h2>
+<p>We can also add really cool functions to enhance our post. <strong>Click in the red button below!</strong>:</p>
+<div id="myButton" class="button well alert alert-danger text-center" onclick="alertInfoIcon()">
+<p><span id="toInfo"><span class="fa fa-minus-circle"></span> alert-danger</span></p>
+</div>
+<p>Here is the code of the button:</p>
+<pre class="html"><code>&lt;div class=&quot;button well alert alert-danger text-center&quot; id=&quot;myButton&quot; onclick=&quot;alertColor()&quot;&gt;
+  &lt;span id=&quot;toInfo&quot;&gt; &lt;span class=&quot;fa fa-minus-circle&quot;&gt;&lt;/span&gt;alert-danger &lt;/span&gt;
+&lt;/div&gt;</code></pre>
+<p>And <a href="https://github.com/aurora-mareviv/aurora-mareviv.github.io/blob/master/static/js/myjs.js">here</a> is the javascript function that you can copy into <code>/static/js/myjs.js</code>:</p>
+<pre class="js"><code>function alertColor() {
+  var result = &quot;&lt;span class=&#39;fa fa-info-circle&#39;&gt;&lt;/span&gt;&amp;nbsp;alert-info&quot;;
+  document.getElementById(&quot;toInfo&quot;).innerHTML = result; 
+  document.getElementById(&quot;myButton&quot;).style.backgroundColor = &quot;#d9edf7&quot;;
+  document.getElementById(&quot;myButton&quot;).style.color = &quot;#3a87ad&quot;;
+  document.getElementById(&quot;myButton&quot;).style.borderColor = &quot;#bce8f1&quot;;
+}</code></pre>
+</div>
+<div id="mathjax" class="section level2">
+<h2>MathJax</h2>
+<p>To correctly display LaTeX formulas, we must follow Yihui Xie’s <a href="https://bookdown.org/yihui/blogdown/templates.html">advice</a> in older versions of the Hugo theme.<br />
+We will simply add the following code at the bottom of our <span class="texttt"> /themes/hugo-tranquilpeak-theme/layouts/partials/script.html </span>file:</p>
+<pre class="html"><code>&lt;script src=&quot;//yihui.name/js/math-code.js&quot;&gt;&lt;/script&gt;
+&lt;script async
+src=&quot;//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
+&lt;/script&gt;</code></pre>
+<p><span class="math display">\[\lim_{x \to \infty} \exp(-x) = 0\]</span></p>
+</div>
+<div id="site-build-with-blogdown" class="section level2">
+<h2>Site build with <span class="texttt"> blogdown </span></h2>
+<p>Once we have ready our theme, we can add some content, modifying or deleting the various examples we will find in <code>/content/post</code>.</p>
+<p>We need to make use of Blogdown &amp; Hugo to compile our <em>.Rmd</em> file and create our <em>html</em> post:</p>
+<pre class="r"><code>blogdown::build_site()
+blogdown::serve_site()</code></pre>
+<p>In the viewer, at the right side of the IDE you can examine the resulting <em>html</em> and see if something didn’t go OK.</p>
+</div>
+</div>
+<div id="deploying-the-site" class="section level1">
+<h1>Deploying the site</h1>
+<div id="updating-the-local-git-repository" class="section level2">
+<h2>Updating the local <span class="texttt"> git </span> repository</h2>
+<p>This can be done with simple git commands:</p>
+<pre class="bash"><code>cd /Git/[REPO_NAME] # your path to the repo may be different
+git add . # indexes all files that wil be added to the local repo
+git commit -m &quot;Starting my Hugo blog&quot; # adds all files to the local repo, with a commit message</code></pre>
+</div>
+<div id="pushing-to-github" class="section level2">
+<h2>Pushing to GitHub</h2>
+<pre class="bash"><code>git push origin master # we push the changes from the local git repo to the remote repo (GitHub repo)</code></pre>
+<p>Just go to the page <span class="texttt"><a href="https://aurora-mareviv.github.io/talesofr">https://[USERNAME].github.io/[REPO_NAME]</a></span> and enjoy your blog!</p>
+<hr>
+</div>
+</div>
+<div id="add-r-code" class="section level1">
+<h1>Add R code</h1>
+<p>Works just the same as in Rmarkdown. R code is compiled into an <em>html</em> and published as static web content in few steps. Welcome to the era of reproducible blogging!</p>
+<p>The figure <a href="#fig:diamond">1</a> uses the <code>ggplot2</code> library:</p>
+<pre class="r"><code>library(ggplot2)
+ggplot(diamonds, aes(x=carat, y=price, color=clarity)) + geom_point()</code></pre>
+<div class="figure"><span id="fig:diamond"></span>
+<img src="../../../post/2018-02-25-r-rmarkdown2_files/figure-html/diamond-1.png" alt="diamonds plot with ggplot2." width="768" />
+<p class="caption">
+Figure 1: diamonds plot with ggplot2.
+</p>
+</div>
+<hr>
+</div>
+<div id="a-new-post-in-blogdown" class="section level1">
+<h1>A new post in <span class="texttt">blogdown</span></h1>
+<p>I know there is a procedure to create a new post using the interface in RStudio (<strong>via the “Addins” button in RStudio IDE</strong>) but this one will also work:</p>
+<p>I copied a blank <em>.Rmd</em> file into the folder <code>/content/post</code>. I gave it a different name than the other post, with the date and some explanatory text (I called it “<em>2017-08-22-new-post.Rmd</em>”).</p>
+<p>Then, I added an appropriate YAML heading (similar to the one in the previous post, but changing dates and times). Beware, as the YAML header indent-sensitive:</p>
+<pre class="r"><code>---
+title: &quot;New Post in Blogdown&quot;
+author: &quot;1&quot;
+date: 2018-08-26
+draft: false
+categories: [&quot;R&quot;]
+tags: [&quot;R Markdown&quot;, &quot;blogdown&quot;, &quot;#rstats&quot;]
+thumbnailImagePosition: left
+thumbnailImage: ./images/logo.png
+metaAlignment: center
+disable_comments: true
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: &quot;/css/my-style.css&quot;
+--- </code></pre>
+<p>Finally I added some content to the Rmarkdown and saved the changes.</p>
+<p>We need to make use of Blogdown &amp; Hugo to compile our <em>.Rmd</em> file and create our <em>html</em> post:</p>
+<pre class="r"><code>blogdown::build_site()
+blogdown::serve_site()</code></pre>
+<p>In the viewer, at the right side of the IDE you can examine the resulting <em>html</em> and see if something didn’t go OK.</p>
+<div id="deploying-the-site-with-the-new-post" class="section level3">
+<h3>Deploying the site with the new post</h3>
+<div id="updating-the-local-git-repository-1" class="section level4">
+<h4>Updating the local <span class="texttt"> git </span> repository</h4>
+<p>This can be done with simple git commands:</p>
+<pre class="bash"><code>cd /Git/[USERNAME].github.io # your path to the repo may be different
+git add . # indexes all files that wil be added to the local repo
+git commit -m &quot;Adding a new post&quot; # adds all files to the local repo, with a commit message</code></pre>
+</div>
+<div id="pushing-to-github-1" class="section level4">
+<h4>Pushing to GitHub</h4>
+<pre class="bash"><code>git push origin master # we push the changes from the local git repo to the remote repo (GitHub repo)</code></pre>
+<p>You can rinse and repeat this procedure for the rest of the posts.</p>
+<hr>
+</div>
+</div>
+</div>
+<div id="this-.rmd-source-code" class="section level1">
+<h1>This <span class="texttt">.Rmd</span> source code</h1>
+<p>You can download it from <a href="https://github.com/aurora-mareviv/talesofr/blob/master/content/post/2018-02-25-r-rmarkdown2.Rmd">here</a></p>
+<div class="figure">
+<img src="../../../images/hexbins2.png" />
+
+</div>
+</div>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="../../../tags/r-markdown/">R Markdown</a>
+
+  <a class="tag tag--primary tag--small" href="../../../tags/plot/">plot</a>
+
+  <a class="tag tag--primary tag--small" href="../../../tags/blogdown/">blogdown</a>
+
+  <a class="tag tag--primary tag--small" href="../../../tags/#rstats/">#rstats</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="../../../2018/02/intro-joint-modeling-r/" data-tooltip="An introduction to joint modeling in R">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2018/02/r-blogdown-setup-in-github-2/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2018/02/r-blogdown-setup-in-github-2/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2018/02/r-blogdown-setup-in-github-2/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2018 aurora-mareviv. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="../../../2018/02/intro-joint-modeling-r/" data-tooltip="An introduction to joint modeling in R">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2018/02/r-blogdown-setup-in-github-2/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2018/02/r-blogdown-setup-in-github-2/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2018/02/r-blogdown-setup-in-github-2/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F2018%2F02%2Fr-blogdown-setup-in-github-2%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F2018%2F02%2Fr-blogdown-setup-in-github-2%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=%2F2018%2F02%2Fr-blogdown-setup-in-github-2%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="../../../logo-alpha.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">aurora-mareviv</h4>
+    
+      <div id="about-card-bio">Anesthesiologist, MD, postdoc. Utter Rstats geek</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Universidade de Santiago de Compostela
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Spain
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2018/02/r-blogdown-setup-in-github-2/">
+                <h3 class="media-heading">R Blogdown Setup in GitHub (2)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">An updated tutorial to set up a blogdown blog  Git &amp; GitHub repos RStudio and blogdown setup  Customising paths and styles Modify config.toml file Custom css Custom javascript MathJax Site build with blogdown   Deploying the site Updating the local git  repository Pushing to GitHub  Add R code A new post in blogdown Deploying the site with the new post  This .Rmd source code   An updated tutorial to set up a blogdown blog  This is an updated blog post from the previous version: R Blogdown Setup in GiHub.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2018/02/intro-joint-modeling-r/">
+                <h3 class="media-heading">An introduction to joint modeling in R</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">J Espasandin, O Lado, C Díaz, A Bouzas, I Guler, A Baluja. 
+   These days, between the 19th and 21st of February, has taken place the learning activity titled “An Introduction to the Joint Modeling of Longitudinal and Survival Data, with Applications in R” organized by the Interdisciplinary Group of Biostatistics (ICBUSC), directed by Professor Carmen Cadarso-Suárez, from the University of Santiago de Compostela.
+ The international nature of this scientific activity has been marked by the presence of researchers from different European countries such as Germany, Portugal, Holland, Greece or Turkey.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2017/12/minimal-project-tree-r/">
+                <h3 class="media-heading">A minimal Project Tree in R</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Introduction  The last two days arrived at my twitter feed some discussions on how bad are the following sentences at the beginning of your R script/notebook, sparked by @JennyBryan’s slides at the IASC-ARS/NZSA Conference:
+ setwd()
+ and
+ rm(list = ls())
+ 
+ The only two things that make @JennyBryan 😤😠🤯. Instead use projects + here::here() #rstats pic.twitter.com/GwxnHePL4n
+&mdash; Hadley Wickham (@hadleywickham) December 11, 2017  Blog post elaborating on my advice to avoid setwd() and rm(list = ls()) at top of an #rstats script.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2017/11/taming-exam-results-with-pdftools/">
+                <h3 class="media-heading">Taming exam results in pdf with pdftools</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Introduction  There are several ways to mine tables and other content from a pdf, using R. After a lot of trial &amp; error, here’s how I managed to extract global exam results from an international, massive, yearly examination, the EDAIC.
+This is my first use case of “pdf mining” with R, and also a fairly simple one. However, more complex and very fine examples of this can be found elsewhere, using both pdftools and tabulizer packages.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2017/08/tracking-septic-patients/">
+                <h3 class="media-heading">Tracking Septic Patients in a Hospital</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Background A hospital may be defined as a place, or building, or set of facilities where patients go to receive the care they need.
+In ancient times, a hospital was not much more than a hotel for the poor, where they could stay and be cared for. Some centuries passed, and now we call hospitals to extremely complex structures, from both physical and functional perspectives.
+In this context, patients usually undergo a wide variety of diagnostic and/or therapeutic procedures.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2017/08/r-blogdown-setup-in-github/">
+                <h3 class="media-heading">R Blogdown Setup in GitHub</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">The blogdown R package  Finally, -after 24h of failed attempts-, I could get my favourite Hugo theme up and running with R Studio and Blogdown.
+ After exploring some alternatives, like Shirin’s (with Jekyll), and Amber Thomas advice (which involved Git skills beyond my basic abilities), I was able to install Yihui’s hugo-lithium-theme in a new repository.
+However, I wanted to explore other blog templates, hosted in GiHub, like:</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         6 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('/images/Canido-Beach2.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js" integrity="sha256-XrZQp+ZMfovqr6Hb2M6okHvSEYaB/+Xbx7toWmOOZUM=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" integrity="sha256-KacbO6Nou2geGJEUzQeKzKEdp/DENVGJKAd2v37moh0=" crossorigin="anonymous" />
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="../../../js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+  
+    <script src="../../../js/myjs.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = '\/2018\/02\/r-blogdown-setup-in-github-2\/';
+          
+            this.page.identifier = '\/2018\/02\/r-blogdown-setup-in-github-2\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'talesofr';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+    
+  </body>
+</html>
+
