@@ -16,7 +16,7 @@ tags:
   - regression
   - ThomasHerndon
 thumbnailImagePosition: left
-thumbnailImage: ./images/reinhart-rogoff/reinhart-data-herndon1.png
+thumbnailImage: ./images/reinhart-rogoff/gam_growth_debt_overplotted.png
 metaAlignment: center
 disable_comments: false
 output:
