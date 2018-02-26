@@ -104,7 +104,7 @@ a:hover{
 }
 
 a:hover > .tag--primary {
-   color: var(--lightGreen) !important;
+   color: var(--lightGreen) ;
 }
 
 
