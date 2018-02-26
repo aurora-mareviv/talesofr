@@ -78,5 +78,16 @@ In this context, patients usually undergo a wide variety of diagnostic and/or th
 However, I wanted to explore other blog templates, hosted in GiHub, like:</description>
     </item>
     
+    <item>
+      <title>Watercolor plots</title>
+      <link>/2013/04/watercolor-plots/</link>
+      <pubDate>Sun, 28 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/04/watercolor-plots/</guid>
+      <description>R has been recognised as the most powerful statistical tool for displaying graphs. In the last years, R’s awesomeness in depicting relationships between variables is exploding with great packages such as ggplot2. One can simply walk around some R blogs, and find something like this:
+The ‘watercolor’ plot (aka à la Solomon Hsiang).
+Once you click these links above, you will forget completely about my blog, so… wait! I have to show a graph I made with the code provided there!</description>
+    </item>
+    
   </channel>
 </rss>

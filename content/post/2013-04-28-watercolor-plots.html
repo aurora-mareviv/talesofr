@@ -1,0 +1,58 @@
+---
+title: Watercolor plots
+author: mareviv
+date: '2013-04-28'
+slug: watercolor-plots
+categories:
+  - R
+tags:
+  - ggplot
+  - graphs
+  - regression
+  - watercolor
+thumbnailImagePosition: left
+thumbnailImage: ./images/comet1.png
+metaAlignment: center
+disable_comments: false
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: "/css/my-style.css"
+---
+
+  <link rel="stylesheet" href="/css/my-style.css" type="text/css" />
+
+
+<p>R has been recognised as the most powerful statistical tool for displaying <a title="pinterest" href="http://pinterest.com/zief0002/ggplot2/" target="_blank" rel="noopener">graphs</a>. In the last years, R’s awesomeness in depicting relationships between variables is exploding with great packages such as <a title="ggplot" href="http://ggplot2.org/" target="_blank" rel="noopener">ggplot2</a>. One can simply walk around some R blogs, and find something like this:</p>
+<p>The ‘<a title="wat" href="http://www.nicebread.de/visually-weighted-watercolor-plots-new-variants-please-vote/" target="_blank" rel="noopener">watercolor</a>’ plot (aka à la <a title="solomon hsiang" href="http://www.fight-entropy.com/2012/08/watercolor-regression.html" target="_blank" rel="noopener">Solomon Hsiang</a>).</p>
+<p>Once you click these links above, you will forget completely about my blog, so… wait! I have to show a graph I made with the code provided there! Here it is, isn’t beautiful?</p>
+<p>The plot:</p>
+<div class="figure">
+<img src="/images/comet1.png" alt="Comet plot… also aurora plot" />
+<p class="caption">Comet plot… also aurora plot</p>
+</div>
+<p>This black background is a little tweak from the plain one… Here’s the line of code I modified from the original of <a title="water2" href="http://www.nicebread.de/visually-weighted-watercolor-plots-new-variants-please-vote/" target="_blank" rel="noopener">Felix Schönbrodt:</a></p>
+<blockquote>
+<p>you can change this line:</p>
+</blockquote>
+<pre class="r"><code>gg.points &lt;- geom_point(data=data, aes_string(x=IV, y=DV), size=1, shape=shape, fill=&quot;white&quot;, color=&quot;black&quot;)</code></pre>
+<blockquote>
+<p>for this one (you can tweak more parameters in it like the size of the points):</p>
+</blockquote>
+<pre class="r"><code>gg.points &lt;- geom_point(data=data, aes_string(x=IV, y=DV), size=1, shape=shape, fill=&quot;white&quot;, color=&quot;white&quot;)</code></pre>
+<blockquote>
+<p>then I run the function adding my black background (surrounded by a white background):</p>
+</blockquote>
+<pre class="r"><code>p &lt;- vwReg(......, shape = 21, ......)
+
+p + theme(
+panel.background = element_rect(fill = &quot;black&quot;,colour = NA),
+panel.grid.minor = element_line(&quot;gray28&quot;, size = 0.1),
+panel.grid.major = element_line(&quot;gray48&quot;, size = 0.1),
+plot.background = element_rect(fill = &quot;white&quot;,colour = NA))</code></pre>
+<p>And another one, in white background.. (and <code>spaghetti = TRUE</code>)</p>
+<div class="figure">
+<img src="/images/spaghetti_scores.png" alt="Spaghetti Euroscores" />
+<p class="caption">Spaghetti Euroscores</p>
+</div>

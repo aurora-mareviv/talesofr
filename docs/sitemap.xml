@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>/2013/04/watercolor-plots/</loc>
+    <lastmod>2013-04-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/#personalisedmedicine/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -91,8 +96,20 @@
   </url>
   
   <url>
+    <loc>/tags/ggplot/</loc>
+    <lastmod>2013-04-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/graph/</loc>
     <lastmod>2017-08-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/graphs/</loc>
+    <lastmod>2013-04-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -151,6 +168,12 @@
   </url>
   
   <url>
+    <loc>/tags/regression/</loc>
+    <lastmod>2013-04-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/sankey-diagram/</loc>
     <lastmod>2017-08-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -177,6 +200,12 @@
   <url>
     <loc>/</loc>
     <lastmod>2018-02-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/watercolor/</loc>
+    <lastmod>2013-04-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

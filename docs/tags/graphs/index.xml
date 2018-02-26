@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Graphs on Tales of R - Rmarkdown Blog</title>
+    <link>/tags/graphs/</link>
+    <description>Recent content in Graphs on Tales of R - Rmarkdown Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Apr 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/graphs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Watercolor plots</title>
+      <link>/2013/04/watercolor-plots/</link>
+      <pubDate>Sun, 28 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/04/watercolor-plots/</guid>
+      <description>R has been recognised as the most powerful statistical tool for displaying graphs. In the last years, R’s awesomeness in depicting relationships between variables is exploding with great packages such as ggplot2. One can simply walk around some R blogs, and find something like this:
+The ‘watercolor’ plot (aka à la Solomon Hsiang).
+Once you click these links above, you will forget completely about my blog, so… wait! I have to show a graph I made with the code provided there!</description>
+    </item>
+    
+  </channel>
+</rss>

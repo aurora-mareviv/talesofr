@@ -1,0 +1,86 @@
+---
+title: Watercolor plots
+author: mareviv
+date: '2013-04-28'
+slug: watercolor-plots
+categories:
+  - R
+tags:
+  - ggplot
+  - graphs
+  - regression
+  - watercolor
+thumbnailImagePosition: left
+thumbnailImage: ./images/comet1.png
+metaAlignment: center
+disable_comments: false
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: "/css/my-style.css"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, echo=TRUE, eval=TRUE, warning=FALSE, message=FALSE, comment="  ")
+# https:\/\/aurora-mareviv.github.io\/talesofr
+```
+
+```{r results='hide', echo=FALSE}
+# Installs missing libraries on render!
+list.of.packages <- c("rmarkdown", "Rcpp", "knitr", "ggplot2")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages, repos='https://cran.rstudio.com/')
+```
+
+```{r echo=FALSE}
+wdir <- getwd() 
+# la carpeta donde guardo los datos
+datadir <- paste(wdir, "/data", sep="")
+# y la carpeta inmediatamente por encima
+wdirRoot <- gsub("\\content\\/post", "", wdir) 
+```
+
+
+R has been recognised as the most powerful statistical tool for displaying <a title="pinterest" href="http://pinterest.com/zief0002/ggplot2/" target="_blank" rel="noopener">graphs</a>. In the last years, R's awesomeness in depicting relationships between variables is exploding with great packages such as <a title="ggplot" href="http://ggplot2.org/" target="_blank" rel="noopener">ggplot2</a>. One can simply walk around some R blogs, and find something like this:
+
+The '<a title="wat" href="http://www.nicebread.de/visually-weighted-watercolor-plots-new-variants-please-vote/" target="_blank" rel="noopener">watercolor</a>' plot (aka à la <a title="solomon hsiang" href="http://www.fight-entropy.com/2012/08/watercolor-regression.html" target="_blank" rel="noopener">Solomon Hsiang</a>).
+
+Once you click these links above, you will forget completely about my blog, so... wait! I have to show a graph I made with the code provided there! Here it is, isn't beautiful?
+
+The plot:  
+
+![Comet plot... also aurora plot](/images/comet1.png)
+
+This black background is a little tweak from the plain one... Here's the line of code I modified from the original of <a title="water2" href="http://www.nicebread.de/visually-weighted-watercolor-plots-new-variants-please-vote/" target="_blank" rel="noopener">Felix Schönbrodt:</a>
+
+> you can change this line:
+
+```{r eval=FALSE}
+gg.points <- geom_point(data=data, aes_string(x=IV, y=DV), size=1, shape=shape, fill="white", color="black")
+```
+
+> for this one (you can tweak more parameters in it like the size of the points):
+
+```{r eval=FALSE}
+gg.points <- geom_point(data=data, aes_string(x=IV, y=DV), size=1, shape=shape, fill="white", color="white")
+```
+
+
+> then I run the function adding my black background (surrounded by a white background):
+
+```{r eval=FALSE}
+p <- vwReg(......, shape = 21, ......)
+
+p + theme(
+panel.background = element_rect(fill = "black",colour = NA),
+panel.grid.minor = element_line("gray28", size = 0.1),
+panel.grid.major = element_line("gray48", size = 0.1),
+plot.background = element_rect(fill = "white",colour = NA))
+```
+
+
+And another one, in white background.. (and `spaghetti = TRUE`)
+
+![Spaghetti Euroscores](/images/spaghetti_scores.png)
+
