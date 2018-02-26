@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>/2013/04/reinhart-rogoff-and-r/</loc>
+    <lastmod>2013-04-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2013/04/watercolor-plots/</loc>
     <lastmod>2013-04-28T00:00:00+00:00</lastmod>
   </url>
@@ -79,13 +84,31 @@
   </url>
   
   <url>
+    <loc>/tags/barplot/</loc>
+    <lastmod>2013-04-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/blogdown/</loc>
     <lastmod>2018-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>/tags/carmenreinhart/</loc>
+    <lastmod>2013-04-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/economics/</loc>
+    <lastmod>2013-04-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -96,7 +119,19 @@
   </url>
   
   <url>
+    <loc>/tags/gam/</loc>
+    <lastmod>2013-04-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/ggplot/</loc>
+    <lastmod>2013-04-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ggplot2/</loc>
     <lastmod>2013-04-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -120,8 +155,20 @@
   </url>
   
   <url>
+    <loc>/tags/kennethrogoff/</loc>
+    <lastmod>2013-04-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/medicine/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/modeling/</loc>
+    <lastmod>2013-04-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -200,6 +247,12 @@
   <url>
     <loc>/</loc>
     <lastmod>2018-02-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/thomasherndon/</loc>
+    <lastmod>2013-04-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gam on Tales of R - Rmarkdown Blog</title>
+    <link>/tags/gam/</link>
+    <description>Recent content in Gam on Tales of R - Rmarkdown Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Apr 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/gam/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reinhart, Rogoff... and R</title>
+      <link>/2013/04/reinhart-rogoff-and-r/</link>
+      <pubDate>Sun, 28 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/04/reinhart-rogoff-and-r/</guid>
+      <description>Reinhart, Rogoff… and R EDIT: At the time I wrote this post, I didn’t know of the existence of this great one, from Christopher Gandrud, take a look!
+On april, the 15th, an article was published that will change economic theories… Or at least, it will questionate and change the methods employed to formule those theories. As a doctor, I spend time on reviewing evidence that can be applied to daily practice.</description>
+    </item>
+    
+  </channel>
+</rss>

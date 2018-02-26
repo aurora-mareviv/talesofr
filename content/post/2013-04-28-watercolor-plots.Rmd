@@ -11,7 +11,7 @@ tags:
   - regression
   - watercolor
 thumbnailImagePosition: left
-thumbnailImage: ./images/comet1.png
+thumbnailImage: ./images/comet-plots/comet1.png
 metaAlignment: center
 disable_comments: false
 output:
@@ -50,7 +50,7 @@ Once you click these links above, you will forget completely about my blog, so..
 
 The plot:  
 
-![Comet plot... also aurora plot](/images/comet1.png)
+![Comet plot... also aurora plot](/images/comet-plots/comet1.png)
 
 This black background is a little tweak from the plain one... Here's the line of code I modified from the original of <a title="water2" href="http://www.nicebread.de/visually-weighted-watercolor-plots-new-variants-please-vote/" target="_blank" rel="noopener">Felix Schönbrodt:</a>
 
@@ -82,5 +82,5 @@ plot.background = element_rect(fill = "white",colour = NA))
 
 And another one, in white background.. (and `spaghetti = TRUE`)
 
-![Spaghetti Euroscores](/images/spaghetti_scores.png)
+![Spaghetti Euroscores](/images/comet-plots/spaghetti_scores.png)
 
