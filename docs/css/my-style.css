@@ -93,7 +93,7 @@ a:link, a:visited  {
 } 
 
 a:hover{
-	color: var(--lightRed-hover) !important;
+	color: var(--lightRed-hover);
 	text-decoration: none;
 }
 
