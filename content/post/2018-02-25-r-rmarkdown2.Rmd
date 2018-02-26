@@ -7,6 +7,7 @@ tags: ["R Markdown", "plot", "blogdown", "#rstats"]
 thumbnailImagePosition: left
 thumbnailImage: ./images/hexbins2.png
 coverImage: ../../../images/transparent.png
+coverSize: full #partial
 metaAlignment: center
 disable_comments: false
 output:
@@ -378,6 +379,8 @@ categories: ["R"]
 tags: ["R Markdown", "blogdown", "#rstats"]
 thumbnailImagePosition: left
 thumbnailImage: ./images/logo.png
+coverImage: ../../../images/transparent.png  
+coverSize: partial # full: for maximum cover size
 metaAlignment: center
 disable_comments: true
 output:
