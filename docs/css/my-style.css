@@ -171,6 +171,10 @@ a:hover > .tag--primary {
 .hljs > .tag > .string{
    color: var(--lightBlue-hover) !important;
 }
+.hljs > .tag > .string > .vglnk { /*links inside code*/
+   color: var(--lightBlue-hover) !important;
+}
+
 
 
 
