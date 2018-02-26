@@ -85,6 +85,7 @@ border-color: #d6e9c6;
     --lightGrey-background: #f7f8f8;
     --lightGrey-code: #d6dbdb; /*#bbc4c4*/
     --darkGrey-background: #3b4444;
+    --darkGrey-background-alpha: rgba(59, 68, 68, 0.8); 
 }
 
 a:link, a:visited  {
