@@ -430,6 +430,7 @@ You can rinse and repeat this procedure for the rest of the posts.
 
 You can download it from [here](https://github.com/aurora-mareviv/talesofr/blob/master/content/post/2018-02-25-r-rmarkdown2.Rmd)
 
+Further customisation can be done thanks to the incredible user documentation for the [hugo-tranquilpeak-theme](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md)
 
 
 ![](/images/hexbins2.png)
