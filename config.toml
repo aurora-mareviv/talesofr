@@ -172,7 +172,7 @@ canonifyurls = true
 
   # Display an image gallery at the end of a post which have photos variables (false: disabled, true: enabled)
   imageGallery = true
-
+ 
   # Display thumbnail image of each post on index pages (false: disabled, true: enabled)
   thumbnailImage = true
   # Display thumbnail image at the right of title in index pages (`right`, `left` or `bottom`)
