@@ -88,7 +88,7 @@ border-color: #d6e9c6;
     --darkGrey-background: #3b4444;
     --darkGrey-background-alpha: rgba(59, 68, 68, 0.8); 
     --white: #ffffff;
-    --white-alpha: rgba(255, 255, 255, 0.9); 
+    --white-alpha: rgba(255, 255, 255, 0.95); 
     --transparent: rgba(255, 255, 255, 0); 
 }
 
@@ -125,6 +125,10 @@ a:hover > .tag--primary {
 /*main panel blog front*/
 .hasCoverMetaIn{ 
    background-color: var(--lightGreen-alpha) !important; 
+   overflow:auto;
+}
+.hasCover{ 
+   background-color: var(--white) !important; 
    overflow:auto;
 }
 /*post excerpts*/
