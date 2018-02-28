@@ -87,6 +87,7 @@ border-color: #d6e9c6;
     --lightGrey-code: #d6dbdb; /*#bbc4c4*/
     --darkGrey-background: #3b4444;
     --darkGrey-background-alpha: rgba(59, 68, 68, 0.8); 
+    --white: #ffffff;
     --white-alpha: rgba(255, 255, 255, 0.9); 
     --transparent: rgba(255, 255, 255, 0); 
 }
@@ -117,7 +118,7 @@ a:hover > .tag--primary {
    /*sidebar-button for standalone btns*/
 }
 .sidebar-profile-name, .sidebar-profile-bio, .sidebar-button-icon, .sidebar-button-desc, #about, #about-card-name, #about-card-bio, #about-card-job, #about-card-location, #about-btn-close{
-   color: var(--lightGrey) !important;
+   color: var(--white) !important;
 }
 
 
