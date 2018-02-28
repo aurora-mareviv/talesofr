@@ -113,6 +113,12 @@ canonifyurls = true
   name = "R-bloggers"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss-square\"></i>"
   url = "https://www.r-bloggers.com/"
+[[menu.links]]
+  weight = 5
+  identifier = "rweekly"
+  name = "R-weekly"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss-square\"></i>"
+  url = "https://rweekly.org/"
 
 [[menu.misc]]
   weight = 0

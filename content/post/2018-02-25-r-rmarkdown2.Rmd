@@ -44,6 +44,7 @@ wdirRoot <- gsub("\\content\\/post", "", wdir)
 
 This is an updated blog post from the previous version: [R Blogdown Setup in GiHub](https://aurora-mareviv.github.io/talesofr/2017/08/r-blogdown-setup-in-gihub/). 
 
+<!--MORE--> 
 Inspired by this great blog, by Elio Campitelli: [eliocamp.github.io/codigo-r](https://eliocamp.github.io/codigo-r/) and his settings on the hugo-tranquilpeak theme, by [Louis Barranqueiro](https://github.com/LouisBarranqueiro) & [Thibaud Lepr&ecirc;tre](https://github.com/kakawait).  
 
 As the changes I made imply many modifications in paths, directories (some very subtle), they invalidate much of my previous tutorial. The changes I basically made are: 
