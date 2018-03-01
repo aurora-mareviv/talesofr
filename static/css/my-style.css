@@ -127,34 +127,46 @@ a:hover > .tag--primary {
 
 /*main panel blog front*/
 .hasCoverMetaIn{ 
-   background-color: var(--transparent) !important; 
+   background-color: var(--white); 
    overflow:auto;
 }
 
 /*posts background*/
-.hasCover, .post-header, .post-content{ 
-   background-color: var(--white) !important; 
+.hasCover, .post-header, .post-content, .post-footer{ 
+   background-color: var(--white); 
+   padding: 10px;
+   border-radius: 10px;
+   box-sizing: border-box;
    overflow:auto;
 }
 .post-header{
    padding: 10px;
    border-radius: 10px;
 }
+.post-header-cover--full > .main-content-wrap{
+   background-color: var(--transparent) !important; 
+}
 
 /*post excerpts*/
-.postShorten, #footer, .btn--default{ /*.postShorten-wrap*/
-   background-color: var(--darkGrey-background-alpha08) !important; 
+.postShorten, #footer{ /*.postShorten-wrap*/
+   background-color: var(--white) !important; 
    padding: 10px;
    border-radius: 10px;
    border-bottom-style: none !important; 
    box-sizing: border-box;
 }
+.btn--default{ /*.postShorten-wrap*/
+   background-color: var(--white) !important; 
+   padding: 10px;
+   border-radius: 10px;
+   box-sizing: border-box;
+}
 /*post excerpts text color*/
 .postShorten-wrap > div, .postShorten-wrap > div > .postShorten-meta, .postShorten-wrap > div > .postShorten-meta > a{ 
-   color: var(--lightGrey-alpha08) !important; 
+   color: var(--darkGrey-background-alpha08) !important; 
 }
 .postShorten-wrap > div h1{ 
-   color: var(--white) !important; 
+   color: var(--darkGrey-background-alpha06) !important; 
 }
 /*thumbnail*/
 .postShorten-thumbnailimg{
