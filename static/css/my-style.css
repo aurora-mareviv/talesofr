@@ -130,10 +130,17 @@ a:hover > .tag--primary {
    background-color: var(--transparent) !important; 
    overflow:auto;
 }
-.hasCover{ 
+
+/*posts background*/
+.hasCover, .post-header, .post-content{ 
    background-color: var(--white) !important; 
    overflow:auto;
 }
+.post-header{
+   padding: 10px;
+   border-radius: 10px;
+}
+
 /*post excerpts*/
 .postShorten, #footer, .btn--default{ /*.postShorten-wrap*/
    background-color: var(--darkGrey-background-alpha08) !important; 
