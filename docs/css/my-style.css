@@ -143,7 +143,7 @@ a:hover > .tag--primary {
    padding: 10px;
    border-radius: 10px;
 }
-.post-header-cover--full > .main-content-wrap{
+.post-header-cover--full > .main-content-wrap, .post-header-cover > .main-content-wrap{
    background-color: var(--transparent) !important; 
 }
 
