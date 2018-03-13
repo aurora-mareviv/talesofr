@@ -68,21 +68,21 @@ What TeX editor did you install? If you have TeXworks, the way to configure Swea
 
 ![MacTeX](/images/sweave/mactexinstall.png)
 
-## CONFIGURING TEXWORKS
+## CONFIGURING SWEAVE FOR TEXWORKS
 
 If you have TeXworks, all you have to do is go to:
 
 `Edit >> Preferences >> Typesetting`
 
-### In MS Windows
-
 You will see this screen:
 
-![MS-Windows](/images/sweave/texworkssweave-1.png)
+![Sweave configuration](/images/sweave/texworkssweave-1.png)
 
-If you click the "`+`" button (highlighted in green) to add a new tool, another screen will appear:
+If you click the "`+`" button (highlighted in green) to add a new tool, another screen will appear. Here, the configuration varies slightly depending on the Operating system.
 
-![MS-Windows](/images/sweave/windows-texworkssweave.png)
+### In MS Windows
+
+![Sweave in MS-Windows](/images/sweave/windows-texworkssweave.png)
 
 You only have to fill in these fields with the name of the new tool, `Sweave` and adding its "arguments" clicking in the "`+`" sign.
 
@@ -94,11 +94,11 @@ The field `Arguments` will contain all the commands that Sweave needs to connect
 
 In (K)Ubuntu is configured in a similar way:
 
-![Kubuntu](/images/sweave/kubuntu-texworkssweave.png)
+![Sweave in Kubuntu](/images/sweave/kubuntu-texworkssweave.png)
 
 And so in Mac OS X (note that we have the same Sweave commands as in Ubuntu):
 
-![MacOSX](/images/sweave/macosx-texworkssweave.png)
+![Sweave in MacOSX](/images/sweave/macosx-texworkssweave.png)
 
 
 ## WRITING A .RNW FILE
@@ -120,13 +120,13 @@ To compile the LaTeX/Sweave file, you have to click in the pull-down menu, and s
 
 `Sweave`
 
-![MacTeX](/images/sweave/sweave_compilation.png)
+![Compiling TeX files with Sweave](/images/sweave/sweave_compilation.png)
 
 Great! the last step is to click in the green, round "play" button...
 
 Voilà!
 
-![MacTeX](/images/sweave/sweave_output.png)
+![Sweave output](/images/sweave/sweave_output.png)
 
 
 
@@ -142,20 +142,19 @@ sudo apt-get install texworks
 
 After the configuration of Sweave typesetting -see above-, I was trying to compile my own template, and this error appeared:
 
-<div class="well well-sm">
+<div class="alert alert-danger">
 
->`Error in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet, :`  
+`Error in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet, :`  
 `Running 'texi2dvi' on 'untitled-1.tex' failed.`  
 `Messages:`  
 `sh: 1: /usr/bin/texi2dvi: not found`  
 
 </div>  
-<br>
 
 `Texi2dvi` appears to be a script that allows direct compilation of a `.pdf` from a `.Rnw` file.
 
 
-Maybe it's not the cleanest solution, but I copied the [source code of `texi2dvi`](http://ftp.gnu.org/gnu/texinfo/texi2dvi) and created a script with it: (`sudo gedit` if you are running Ubuntu, `sudo kate` if Kubuntu)
+Maybe it's not the cleanest solution, but I copied the [source code of `texi2dvi`](http://ftp.gnu.org/gnu/texinfo/texi2dvi) and created a script with it: (`sudo gedit` if you are running Ubuntu, `sudo kate` if Kubuntu).  
 
 Open up a Terminal and type:
 

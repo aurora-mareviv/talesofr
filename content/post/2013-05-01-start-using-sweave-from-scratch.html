@@ -35,7 +35,7 @@ output:
 <div id="TOC">
 <ul>
 <li><a href="#introduction">INTRODUCTION</a></li>
-<li><a href="#configuring-texworks">CONFIGURING TEXWORKS</a><ul>
+<li><a href="#configuring-sweave-for-texworks">CONFIGURING SWEAVE FOR TEXWORKS</a><ul>
 <li><a href="#in-ms-windows">In MS Windows</a></li>
 <li><a href="#in-kubuntu-macosx">In (K)Ubuntu &amp; MacOSX</a></li>
 </ul></li>
@@ -64,21 +64,21 @@ output:
 <p class="caption">MacTeX</p>
 </div>
 </div>
-<div id="configuring-texworks" class="section level2">
-<h2>CONFIGURING TEXWORKS</h2>
+<div id="configuring-sweave-for-texworks" class="section level2">
+<h2>CONFIGURING SWEAVE FOR TEXWORKS</h2>
 <p>If you have TeXworks, all you have to do is go to:</p>
 <p><code>Edit &gt;&gt; Preferences &gt;&gt; Typesetting</code></p>
-<div id="in-ms-windows" class="section level3">
-<h3>In MS Windows</h3>
 <p>You will see this screen:</p>
 <div class="figure">
-<img src="/images/sweave/texworkssweave-1.png" alt="MS-Windows" />
-<p class="caption">MS-Windows</p>
+<img src="/images/sweave/texworkssweave-1.png" alt="Sweave configuration" />
+<p class="caption">Sweave configuration</p>
 </div>
-<p>If you click the “<code>+</code>” button (highlighted in green) to add a new tool, another screen will appear:</p>
+<p>If you click the “<code>+</code>” button (highlighted in green) to add a new tool, another screen will appear. Here, the configuration varies slightly depending on the Operating system.</p>
+<div id="in-ms-windows" class="section level3">
+<h3>In MS Windows</h3>
 <div class="figure">
-<img src="/images/sweave/windows-texworkssweave.png" alt="MS-Windows" />
-<p class="caption">MS-Windows</p>
+<img src="/images/sweave/windows-texworkssweave.png" alt="Sweave in MS-Windows" />
+<p class="caption">Sweave in MS-Windows</p>
 </div>
 <p>You only have to fill in these fields with the name of the new tool, <code>Sweave</code> and adding its “arguments” clicking in the “<code>+</code>” sign.</p>
 <p>The field <code>Program</code> is filled with the path to your R executable, which can be similar to that in the picture. Just be careful to type “slashes” ( <code>/</code> ) instead of “backslashes” ( <code>\</code> ).</p>
@@ -88,13 +88,13 @@ output:
 <h3>In (K)Ubuntu &amp; MacOSX</h3>
 <p>In (K)Ubuntu is configured in a similar way:</p>
 <div class="figure">
-<img src="/images/sweave/kubuntu-texworkssweave.png" alt="Kubuntu" />
-<p class="caption">Kubuntu</p>
+<img src="/images/sweave/kubuntu-texworkssweave.png" alt="Sweave in Kubuntu" />
+<p class="caption">Sweave in Kubuntu</p>
 </div>
 <p>And so in Mac OS X (note that we have the same Sweave commands as in Ubuntu):</p>
 <div class="figure">
-<img src="/images/sweave/macosx-texworkssweave.png" alt="MacOSX" />
-<p class="caption">MacOSX</p>
+<img src="/images/sweave/macosx-texworkssweave.png" alt="Sweave in MacOSX" />
+<p class="caption">Sweave in MacOSX</p>
 </div>
 </div>
 </div>
@@ -109,14 +109,14 @@ output:
 <p>To compile the LaTeX/Sweave file, you have to click in the pull-down menu, and select:</p>
 <p><code>Sweave</code></p>
 <div class="figure">
-<img src="/images/sweave/sweave_compilation.png" alt="MacTeX" />
-<p class="caption">MacTeX</p>
+<img src="/images/sweave/sweave_compilation.png" alt="Compiling TeX files with Sweave" />
+<p class="caption">Compiling TeX files with Sweave</p>
 </div>
 <p>Great! the last step is to click in the green, round “play” button…</p>
 <p>Voilà!</p>
 <div class="figure">
-<img src="/images/sweave/sweave_output.png" alt="MacTeX" />
-<p class="caption">MacTeX</p>
+<img src="/images/sweave/sweave_output.png" alt="Sweave output" />
+<p class="caption">Sweave output</p>
 </div>
 </div>
 <div id="edit-for-texworks-in-ubuntu" class="section level2">
@@ -126,17 +126,14 @@ output:
 # sudo apt-get upgrade
 sudo apt-get install texworks</code></pre>
 <p>After the configuration of Sweave typesetting -see above-, I was trying to compile my own template, and this error appeared:</p>
-<div class="well well-sm">
-<blockquote>
+<div class="alert alert-danger">
 <p><code>Error in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet, :</code><br />
 <code>Running 'texi2dvi' on 'untitled-1.tex' failed.</code><br />
 <code>Messages:</code><br />
 <code>sh: 1: /usr/bin/texi2dvi: not found</code></p>
-</blockquote>
 </div>
-<p><br></p>
 <p><code>Texi2dvi</code> appears to be a script that allows direct compilation of a <code>.pdf</code> from a <code>.Rnw</code> file.</p>
-<p>Maybe it’s not the cleanest solution, but I copied the <a href="http://ftp.gnu.org/gnu/texinfo/texi2dvi">source code of <code>texi2dvi</code></a> and created a script with it: (<code>sudo gedit</code> if you are running Ubuntu, <code>sudo kate</code> if Kubuntu)</p>
+<p>Maybe it’s not the cleanest solution, but I copied the <a href="http://ftp.gnu.org/gnu/texinfo/texi2dvi">source code of <code>texi2dvi</code></a> and created a script with it: (<code>sudo gedit</code> if you are running Ubuntu, <code>sudo kate</code> if Kubuntu).</p>
 <p>Open up a Terminal and type:</p>
 <pre class="bash"><code>sudo kate /usr/bin/texi2dvi</code></pre>
 <p>Then you can paste the code into this script, and save the changes. To <strong>make it executable</strong>, type in the Terminal:</p>
