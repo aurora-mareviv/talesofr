@@ -183,6 +183,24 @@
     </item>
     
     <item>
+      <title>Kubuntu</title>
+      <link>/tags/kubuntu/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/kubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Latex</title>
+      <link>/tags/latex/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/latex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Linux</title>
       <link>/tags/linux/</link>
       <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
@@ -192,11 +210,38 @@
     </item>
     
     <item>
+      <title>Miktex</title>
+      <link>/tags/miktex/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/miktex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Modeling</title>
       <link>/tags/modeling/</link>
       <pubDate>Sun, 28 Apr 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/modeling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ms Windows</title>
+      <link>/tags/ms-windows/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ms-windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Os X</title>
+      <link>/tags/os-x/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/os-x/</guid>
       <description></description>
     </item>
     
@@ -291,11 +336,65 @@
     </item>
     
     <item>
+      <title>Sweave</title>
+      <link>/tags/sweave/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/sweave/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tex</title>
+      <link>/tags/tex/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/tex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tex Live</title>
+      <link>/tags/tex-live/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/tex-live/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Texmaker</title>
+      <link>/tags/texmaker/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/texmaker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Texworks</title>
+      <link>/tags/texworks/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/texworks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Thomasherndon</title>
       <link>/tags/thomasherndon/</link>
       <pubDate>Sun, 28 Apr 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/thomasherndon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>/tags/ubuntu/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ubuntu/</guid>
       <description></description>
     </item>
     

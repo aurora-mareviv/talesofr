@@ -155,7 +155,7 @@ a:hover > .tag--primary {
    border-bottom-style: none !important; 
    box-sizing: border-box;
 }
-.btn--default{ /*.postShorten-wrap*/
+.btn--default, .btn--disabled{ /*.postShorten-wrap*/
    background-color: var(--white) !important; 
    padding: 10px;
    border-radius: 10px;

@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>/2013/05/start-using-sweave-from-scratch/</loc>
+    <lastmod>2013-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2013/04/r-for-beginners/</loc>
     <lastmod>2013-04-30T00:00:00+00:00</lastmod>
   </url>
@@ -172,6 +177,18 @@
   </url>
   
   <url>
+    <loc>/tags/kubuntu/</loc>
+    <lastmod>2013-05-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/latex/</loc>
+    <lastmod>2013-05-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/linux/</loc>
     <lastmod>2013-04-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -184,8 +201,26 @@
   </url>
   
   <url>
+    <loc>/tags/miktex/</loc>
+    <lastmod>2013-05-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/modeling/</loc>
     <lastmod>2013-04-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ms-windows/</loc>
+    <lastmod>2013-05-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/os-x/</loc>
+    <lastmod>2013-05-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -268,6 +303,12 @@
   </url>
   
   <url>
+    <loc>/tags/sweave/</loc>
+    <lastmod>2013-05-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -280,8 +321,38 @@
   </url>
   
   <url>
+    <loc>/tags/tex/</loc>
+    <lastmod>2013-05-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/tex-live/</loc>
+    <lastmod>2013-05-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/texmaker/</loc>
+    <lastmod>2013-05-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/texworks/</loc>
+    <lastmod>2013-05-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/thomasherndon/</loc>
     <lastmod>2013-04-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ubuntu/</loc>
+    <lastmod>2013-05-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
