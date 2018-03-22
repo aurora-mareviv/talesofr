@@ -174,7 +174,7 @@ canonifyurls = true
   # or in `source/assets/images/` if you can't or don't want to build the theme,
   # and use relative url : `your-image.png`
   # coverImage = "trebol7.jpg"
-  coverImage = "https://aurora-mareviv.github.io/talesofr/images/Mazaira_carballinho2.jpg"
+  coverImage = "pontevedra-rua-oliva2.jpg"
 
   # Display an image gallery at the end of a post which have photos variables (false: disabled, true: enabled)
   imageGallery = true
