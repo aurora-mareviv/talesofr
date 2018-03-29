@@ -33,6 +33,16 @@
   </url>
   
   <url>
+    <loc>/2013/05/gdata-for-ms-windows/</loc>
+    <lastmod>2013-05-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2013/05/heatmaps-p-values-coloured-by-odds-ratio/</loc>
+    <lastmod>2013-05-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2013/05/ridiculously-photogenic-heatmap-p-values/</loc>
     <lastmod>2013-05-05T00:00:00+00:00</lastmod>
   </url>
@@ -134,7 +144,13 @@
   
   <url>
     <loc>/tags/chi-square/</loc>
-    <lastmod>2013-05-05T00:00:00+00:00</lastmod>
+    <lastmod>2013-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/database/</loc>
+    <lastmod>2013-05-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -151,14 +167,26 @@
   </url>
   
   <url>
+    <loc>/tags/excel/</loc>
+    <lastmod>2013-05-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/factors/</loc>
-    <lastmod>2013-05-05T00:00:00+00:00</lastmod>
+    <lastmod>2013-05-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/gam/</loc>
     <lastmod>2013-04-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/gdata/</loc>
+    <lastmod>2013-05-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -170,13 +198,13 @@
   
   <url>
     <loc>/tags/ggplot2/</loc>
-    <lastmod>2013-05-05T00:00:00+00:00</lastmod>
+    <lastmod>2013-05-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/gplots/</loc>
-    <lastmod>2013-05-05T00:00:00+00:00</lastmod>
+    <lastmod>2013-05-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -188,7 +216,7 @@
   
   <url>
     <loc>/tags/graphs/</loc>
-    <lastmod>2013-04-28T00:00:00+00:00</lastmod>
+    <lastmod>2013-05-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -200,13 +228,13 @@
   
   <url>
     <loc>/tags/heatmap/</loc>
-    <lastmod>2013-05-05T00:00:00+00:00</lastmod>
+    <lastmod>2013-05-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/heatplot/</loc>
-    <lastmod>2013-05-05T00:00:00+00:00</lastmod>
+    <lastmod>2013-05-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -271,6 +299,12 @@
   </url>
   
   <url>
+    <loc>/tags/p-value/</loc>
+    <lastmod>2013-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/patients/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -289,8 +323,14 @@
   </url>
   
   <url>
+    <loc>/tags/perl/</loc>
+    <lastmod>2013-05-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/pheatmap/</loc>
-    <lastmod>2013-05-05T00:00:00+00:00</lastmod>
+    <lastmod>2013-05-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -302,7 +342,7 @@
   
   <url>
     <loc>/tags/plyr/</loc>
-    <lastmod>2013-05-05T00:00:00+00:00</lastmod>
+    <lastmod>2013-05-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -332,7 +372,7 @@
   
   <url>
     <loc>/tags/regheatmap/</loc>
-    <lastmod>2013-05-05T00:00:00+00:00</lastmod>
+    <lastmod>2013-05-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -344,7 +384,7 @@
   
   <url>
     <loc>/tags/reshape/</loc>
-    <lastmod>2013-05-05T00:00:00+00:00</lastmod>
+    <lastmod>2013-05-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -356,7 +396,7 @@
   
   <url>
     <loc>/tags/scales/</loc>
-    <lastmod>2013-05-05T00:00:00+00:00</lastmod>
+    <lastmod>2013-05-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -404,7 +444,7 @@
   
   <url>
     <loc>/tags/test/</loc>
-    <lastmod>2013-05-05T00:00:00+00:00</lastmod>
+    <lastmod>2013-05-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

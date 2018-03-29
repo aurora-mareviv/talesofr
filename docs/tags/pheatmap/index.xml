@@ -6,10 +6,20 @@
     <description>Recent content in Pheatmap on Tales of R - Rmarkdown Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 May 2013 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 May 2013 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/pheatmap/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>heatmaps with p-values (2)... coloured according to odds ratio</title>
+      <link>/2013/05/heatmaps-p-values-coloured-by-odds-ratio/</link>
+      <pubDate>Tue, 07 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/05/heatmaps-p-values-coloured-by-odds-ratio/</guid>
+      <description>I like heatplots with p-values -or frequencies, or whatever-. Not very conclusive, but pretty anyway. And when talking about graphs, pretty will make our neurons to fire in more interesting ways: neurons like “pretty” graphs. Moreover, observing your data can be as important as analysing it. It’s better to observe, to listen your patients than making tests without knowing very much about them…
+In the heatmaps of the previous post, not a lot of information can be included.</description>
+    </item>
     
     <item>
       <title>... ridiculously photogenic factors (heatmap with p-values)</title>

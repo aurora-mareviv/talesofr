@@ -1,0 +1,34 @@
+---
+title: Using gdata, for MS Windows users
+author: mareviv
+date: '2013-05-18'
+slug: gdata-for-ms-windows
+categories:
+  - R
+tags:
+  - database
+  - Excel
+  - gdata
+  - Perl
+  - '#rstats'
+thumbnailImagePosition: left
+thumbnailImage: ./images/perl/perwinlogo.png
+metaAlignment: center
+disable_comments: false
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 6
+    css: "/css/my-style.css"
+---
+
+I use both GNU-Linux and Windows systems on a regular basis... so I'm aware of the advantages (more for GNU-Linux in my case) and disadvantages of both.
+
+Recently I needed to analyse a database from a remote location, an Excel (`*xlsx) file.
+
+The problem was that I couldn't put my gdata library to work... some weird errors about a missing Perl interpreter... just needed to install one. Based on [this tutorial](http://cran.r-project.org/web/packages/gdata/INSTALL){target="_blank"} in CRAN, I downloaded [ActivePerl](http://www.activestate.com/activeperl/downloads){target="_blank"}.
+
+Then, I followed the instructions to install it, leaving the default options. The program sets the PATH to the interpreter, so R can finally find Perl...
+
+Just start then a R session... Done!
+
