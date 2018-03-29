@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>/2013/06/biostatisticians-beware-of-fuzzy-researchers/</loc>
+    <lastmod>2013-06-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2013/05/gdata-for-ms-windows/</loc>
     <lastmod>2013-05-18T00:00:00+00:00</lastmod>
   </url>
@@ -109,6 +114,18 @@
   </url>
   
   <url>
+    <loc>/tags/anaesthesiology/</loc>
+    <lastmod>2013-06-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/anesthesia/</loc>
+    <lastmod>2013-06-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/archives/</loc>
     <priority>0</priority>
   </url>
@@ -132,6 +149,12 @@
   </url>
   
   <url>
+    <loc>/tags/brain/</loc>
+    <lastmod>2013-06-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/carmenreinhart/</loc>
     <lastmod>2013-04-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -139,12 +162,25 @@
   
   <url>
     <loc>/categories/</loc>
+    <lastmod>2013-06-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/chi-square/</loc>
     <lastmod>2013-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/clinicians/</loc>
+    <lastmod>2013-06-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/collaboration/</loc>
+    <lastmod>2013-06-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -228,13 +264,19 @@
   
   <url>
     <loc>/tags/heatmap/</loc>
-    <lastmod>2013-05-07T00:00:00+00:00</lastmod>
+    <lastmod>2013-06-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/heatplot/</loc>
     <lastmod>2013-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/hemoencephalography/</loc>
+    <lastmod>2013-06-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -275,6 +317,12 @@
   </url>
   
   <url>
+    <loc>/tags/medicine/</loc>
+    <lastmod>2013-06-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/miktex/</loc>
     <lastmod>2013-05-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -289,6 +337,18 @@
   <url>
     <loc>/tags/ms-windows/</loc>
     <lastmod>2013-05-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/neurofeedback/</loc>
+    <lastmod>2013-06-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/neuron/</loc>
+    <lastmod>2013-06-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -353,6 +413,12 @@
   </url>
   
   <url>
+    <loc>/tags/psychology/</loc>
+    <lastmod>2013-06-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/r/</loc>
     <lastmod>2018-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -383,8 +449,20 @@
   </url>
   
   <url>
+    <loc>/tags/research/</loc>
+    <lastmod>2013-06-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/reshape/</loc>
     <lastmod>2013-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/review/</loc>
+    <lastmod>2013-06-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

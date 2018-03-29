@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Neurofeedback on Tales of R - Rmarkdown Blog</title>
+    <link>/tags/neurofeedback/</link>
+    <description>Recent content in Neurofeedback on Tales of R - Rmarkdown Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 11 Jun 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/neurofeedback/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Biostatisticians… beware of fuzzy researchers!</title>
+      <link>/2013/06/biostatisticians-beware-of-fuzzy-researchers/</link>
+      <pubDate>Tue, 11 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/06/biostatisticians-beware-of-fuzzy-researchers/</guid>
+      <description>In the last days I was thinking about about how researchers could collaborate efficiently with their experts in statistics. With the increasing complexity in science, interchanging information can be crucial to get the best results. But what happens when a researcher doesn’t give all the information a statistician needs?.
+When someone asks for help in statistics -as a clinician, I need it often-, many biostatisticians ensure that some basic points are met in a research study -prior to their analysis-, and I think they should ask for them as soon as possible:</description>
+    </item>
+    
+  </channel>
+</rss>

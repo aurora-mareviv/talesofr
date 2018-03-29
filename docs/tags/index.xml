@@ -66,6 +66,15 @@
     </item>
     
     <item>
+      <title>Anaesthesiology</title>
+      <link>/tags/anaesthesiology/</link>
+      <pubDate>Tue, 11 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/anaesthesiology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Barplot</title>
       <link>/tags/barplot/</link>
       <pubDate>Sun, 28 Apr 2013 00:00:00 +0000</pubDate>
@@ -93,6 +102,15 @@
     </item>
     
     <item>
+      <title>Brain</title>
+      <link>/tags/brain/</link>
+      <pubDate>Tue, 11 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/brain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Carmenreinhart</title>
       <link>/tags/carmenreinhart/</link>
       <pubDate>Sun, 28 Apr 2013 00:00:00 +0000</pubDate>
@@ -107,6 +125,24 @@
       <pubDate>Tue, 07 May 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/chi-square/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Clinicians</title>
+      <link>/tags/clinicians/</link>
+      <pubDate>Tue, 11 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/clinicians/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Collaboration</title>
+      <link>/tags/collaboration/</link>
+      <pubDate>Tue, 11 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/collaboration/</guid>
       <description></description>
     </item>
     
@@ -230,7 +266,7 @@
     <item>
       <title>Heatmap</title>
       <link>/tags/heatmap/</link>
-      <pubDate>Tue, 07 May 2013 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 11 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/heatmap/</guid>
       <description></description>
@@ -242,6 +278,15 @@
       <pubDate>Tue, 07 May 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/heatplot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hemoencephalography</title>
+      <link>/tags/hemoencephalography/</link>
+      <pubDate>Tue, 11 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/hemoencephalography/</guid>
       <description></description>
     </item>
     
@@ -291,6 +336,15 @@
     </item>
     
     <item>
+      <title>Medicine</title>
+      <link>/tags/medicine/</link>
+      <pubDate>Tue, 11 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/medicine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Miktex</title>
       <link>/tags/miktex/</link>
       <pubDate>Thu, 02 May 2013 00:00:00 +0000</pubDate>
@@ -314,6 +368,24 @@
       <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/ms-windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Neurofeedback</title>
+      <link>/tags/neurofeedback/</link>
+      <pubDate>Tue, 11 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/neurofeedback/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Neuron</title>
+      <link>/tags/neuron/</link>
+      <pubDate>Tue, 11 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/neuron/</guid>
       <description></description>
     </item>
     
@@ -399,6 +471,15 @@
     </item>
     
     <item>
+      <title>Psychology</title>
+      <link>/tags/psychology/</link>
+      <pubDate>Tue, 11 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/psychology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>R Markdown</title>
       <link>/tags/r-markdown/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
@@ -435,11 +516,29 @@
     </item>
     
     <item>
+      <title>Research</title>
+      <link>/tags/research/</link>
+      <pubDate>Tue, 11 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Reshape</title>
       <link>/tags/reshape/</link>
       <pubDate>Tue, 07 May 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/reshape/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Review</title>
+      <link>/tags/review/</link>
+      <pubDate>Tue, 11 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/review/</guid>
       <description></description>
     </item>
     

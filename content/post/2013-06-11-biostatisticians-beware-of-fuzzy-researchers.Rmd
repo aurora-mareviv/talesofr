@@ -1,0 +1,82 @@
+---
+title: Biostatisticians… beware of fuzzy researchers!
+author: mareviv
+date: '2013-06-11'
+slug: biostatisticians-beware-of-fuzzy-researchers
+categories:
+  - medicine
+  - anesthesia
+tags:
+  - anaesthesiology
+  - brain
+  - clinicians
+  - collaboration
+  - heatmap
+  - hemoencephalography
+  - medicine
+  - neurofeedback
+  - neuron
+  - psychology
+  - research
+  - review
+thumbnailImagePosition: left
+thumbnailImage: ./images/medicine/bis2.jpg
+metaAlignment: center
+disable_comments: false
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: "/css/my-style.css"
+---
+
+In the last days I was thinking about about how researchers could collaborate efficiently with their experts in statistics. With the increasing complexity in science, interchanging information can be crucial to get the best results. But what happens when a researcher doesn't give all the information a statistician needs?.
+
+When someone asks for help in statistics -as a clinician, I need it often-, many biostatisticians ensure that some basic points are met in a research study -prior to their analysis-, and I think they should ask for them as soon as possible:
+
+<div class="alert alert-warning">
+
+- Is the research question **sensible**, and supported by the literature in any way? A good research idea should be accompanied by a short review with pros, cons and all the important references, which could guide you to the most appropriate or most used methods in whatever field. Ask for it. Ask for it, read it. If the study has a flaw at this point, it’s easier to correct it now than later.
+</div>
+<div class="alert alert-warning">
+
+- Is the research question **defined and detailed** at the end of the review? Does it have a main objective? Do they plan further analyses depending on the results? Do researchers give enough information for sample size calculation? With these points you can avoid getting stuck in the middle of a study for a long time. The scientific method is always a good guide if things go unexpected.
+</div>
+<div class="alert alert-warning">
+
+- Data? Ok, they have planned something taking into account their available knowledge. But how about the **resources**? Can they collect all the data they need? If not, how can the design be adapted? Often, they have to change something in the research question, and start again. But in the worst case it takes much less time than not doing things right from the beginning.
+</div>
+<div class="alert alert-info">
+
+- Have they -researchers, clinicians, whoever-, met **all three tips above**? Then, your chances of helping them to answer the question will increase, and even the time to the answer can decrease substantially.
+</div>
+
+In an ideal world, everyone follows good methods and asks the right questions... But sometimes things go wrong, and the statistician hasn't usually many chances to realise what's really going on. Here are two examples:
+
+#### One example:
+
+It was about a pioneer study in some pathology in children. I think it was multicenter, observational -cohort-, and it evaluated some outcomes at the end. I don't remember all the details, but the statisticians told me that got stuck -see point 2- with one covariate that was incorrectly defined. In fact, it mixed patients of potentially very different categories!. And the worst part was that... the doctors who designed the study were aware of this drawback. But they didn't warn of it, and they didn't discussed it with statisticians. That is a loss of time. They knew that they should have retrieved another covariate, so those groups could be separated. At the same time, statisticians were thinking of changing the type of analysis...
+
+#### Another example:
+
+This had more severe errors, in the sense of a question badly supported by previous knowledge, and horribly tested. On the other hand, the statistical methods used were really good, and also broadly applicable to the type of data used. I'm going to be more explicit here:
+
+That study, about psychology, was based on measuring the changes on tiny blood vessels -capillars- in some place inside the "brain". But, for doing that, they measured those changes in a poorly related part of the brain!. The neuronal mass that lies inside the skull, is not an unifom entity: is an entire system, composed by multiple, different "organs". The cortex is different from the thalamus, from the locus coeruleus, from the putamen... Anyway, the book "Carpenter's" is a good place to start studying neuroanatomy.
+
+When I asked the biostatistician if those people were sure of what they were doing, the answer was: "researchers told me that this is supported by scientific literature". So I was curious enough to look into Google. And then to look into PubMed for evidence. No background was found other than this single study.
+
+The technique they used was the Hemoencephalography (HEG). It measures the changes of capillar blood flow in both frontal lobes of the brain cortex, using an infrared light against red blood cells -more info in the links above-. It seems much better known in other fields of Psychology, used for neurofeedback, based on that vascular changes may reflect neural activity in that exact place. Unfortunately, its use is limited to superficial parts of the brain, so the infrared light can reach the capillars through the skin. Thus is not able to assess deep frontal areas, only higher ones. This technique also has life-saving applications in the fields of Anaesthesiology and Critical Care -see the second picture below-, where blood oxygen saturation in brain hemispheres can be acutely altered by an infarct or emboli, and thanks to this device can be early detected and treated.
+
+If you search in PubMed for the word "Hemoencephalography", you will only find -up to today- one study that uses it for neurofeedback in migraines -which have an obvious cortical component, able to be studied by HEG-. So there is not any scientific evidence at all for its use in other capillars than frontal ones. Unsurprisingly, the poor statistician explained that had ended up with uninterpretable results. Maybe if the researchers complied with the conditions in point 1, the study would have been completely redesigned -because the inner parts of the brain can be studied by proton emission tomography or by functional MRI-. In that case, the statistical aspects would've been way more rewarding.
+
+To end this post, just some pictures of cool brain monitoring in Anaesthesia:
+
+- Electroencephalography monitor with bi-spectral index and raw billateral input (heatmaps!):
+
+![Bilateral BIS](/images/medicine/bis2.jpg)
+
+- Variety of stickers to watch brain electricity (BIS monitor) and oxymetry changes with near-infrared light (INVOS, with a mechanism similar to HEG):
+
+![NIRS sensors](/images/medicine/nirs.jpg)
+
+
