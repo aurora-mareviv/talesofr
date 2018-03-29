@@ -50,7 +50,7 @@ wdirRoot <- gsub("\\content\\/post", "", wdir)
 
 # Introduction &nbsp; <span class="fa fa-cogs"></span> 
 
-The last two days arrived at my twitter feed some discussions on how bad are the following sentences at the beginning of your R script/notebook, sparked by @[JennyBryan](https://twitter.com/JennyBryan)'s slides at the [IASC-ARS/NZSA Conference](http://www.nzsa2017.com/):
+The last two days arrived at my twitter feed some discussions on how bad are the following sentences at the beginning of your R script/notebook, sparked by @[JennyBryan](https://twitter.com/JennyBryan){target="_blank"}'s slides at the [IASC-ARS/NZSA Conference](http://www.nzsa2017.com/){target="_blank"}:
 
 > `setwd()`
 
@@ -66,9 +66,9 @@ and
 `r htmltools::HTML("{{< tweet 940582516532105217 >}}")`
 </center> 
 
-Jenny Bryan offered a detailed explanation for this, as well as some fixes, in her [tidyverse blog post](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/). The main idea was:  
+Jenny Bryan offered a detailed explanation for this, as well as some fixes, in her [tidyverse blog post](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/){target="_blank"}. The main idea was:  
 
-- To ensure reproducibility within a stable working directory tree. She proposes the very concise `here::here()` but other methods are available such as the  [`template`](https://github.com/Pakillo/template) or the [`ProjectTemplate`](http://projecttemplate.net/getting_started.html) packages..   
+- To ensure reproducibility within a stable working directory tree. She proposes the very concise `here::here()` but other methods are available such as the  [`template`](https://github.com/Pakillo/template){target="_blank"} or the [`ProjectTemplate`](http://projecttemplate.net/getting_started.html){target="_blank"} packages..   
 - To avoid break havoc in other's computers with `rm(list = ls())`!.
 
 All of this buzz around project self-containment and reproducibility motivated me to finish a minimal directory tree that (with some variations) I have been using for this year's data analysis endeavours.  
@@ -89,7 +89,7 @@ I also added some more features to the tree:
 - A <span class="texttt">Git</span> repository so the tree can be conveniently cloned or downloaded, with a .gitignore file:   
 
 <div class="button well alert alert-info text-center" id="myButton" onmouseover="alertWarning()"  onmouseout="alertInfo()">
-[`git clone https://github.com/aurora-mareviv/ProjectR`](https://github.com/aurora-mareviv/ProjectR)  
+[`git clone https://github.com/aurora-mareviv/ProjectR`](https://github.com/aurora-mareviv/ProjectR){target="_blank"}  
 </div>
 
 
@@ -236,7 +236,7 @@ They have no idea of coding so I have to give them tools that:
 # Future improvements
 
 - Add a *Makefile*?
-- Use [Travis.ci](https://travis-ci.org/)?  
+- Use [Travis.ci](https://travis-ci.org/){target="_blank"}?  
 - Etc...
 
 

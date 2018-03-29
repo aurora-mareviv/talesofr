@@ -53,19 +53,19 @@ wdirRoot <- gsub("\\content\\/post", "", wdir)
 
 </div>
 
-These days, between the 19th and 21st of February, has taken place the learning activity titled "**An Introduction to the Joint Modeling of Longitudinal and Survival Data, with Applications in R**" organized by the Interdisciplinary Group of Biostatistics ([ICBUSC](http://icbusc.com/)), directed by Professor Carmen Cadarso-Suárez, from the [University of Santiago de Compostela](http://www.usc.es/en/index.html). 
+These days, between the 19th and 21st of February, has taken place the learning activity titled "**An Introduction to the Joint Modeling of Longitudinal and Survival Data, with Applications in R**" organized by the Interdisciplinary Group of Biostatistics ([ICBUSC](http://icbusc.com/){target="_blank"}), directed by Professor Carmen Cadarso-Suárez, from the [University of Santiago de Compostela](http://www.usc.es/en/index.html){target="_blank"}. 
 
 <!--MORE-->
 
 The international nature of this scientific activity has been marked by the presence of researchers from different European countries such as Germany, Portugal, Holland, Greece or Turkey. It also emphasizes its interdisciplinary nature, with attendees from different fields of research, such as statistics, biology, medicine, ecology or bioinformatics, belonging to different universities, biomedical institutions or the industry. 
 
-The training activity has been taught by the professor [Dimitris Rizopoulos](http://www.drizopoulos.com/) of the Erasmus University Medical Center in Rotterdam, specialist in [joint-modeling techniques](http://www.drizopoulos.com/courses/EMC/ESP72.pdf). Professor Rizopoulos is the author of a [book on joint modeling](https://www.crcpress.com/Joint-Models-for-Longitudinal-and-Time-to-Event-Data-With-Applications/Rizopoulos/p/book/9781439872864), as well as numerous publications and two related R packages: [JM](https://cran.r-project.org/web/packages/JM/index.html) and [JMbayes](https://cran.r-project.org/web/packages/JMbayes/index.html). 
+The training activity has been taught by the professor [Dimitris Rizopoulos](http://www.drizopoulos.com/){target="_blank"} of the Erasmus University Medical Center in Rotterdam, specialist in [joint-modeling techniques](http://www.drizopoulos.com/courses/EMC/ESP72.pdf){target="_blank"}. Professor Rizopoulos is the author of a [book on joint modeling](https://www.crcpress.com/Joint-Models-for-Longitudinal-and-Time-to-Event-Data-With-Applications/Rizopoulos/p/book/9781439872864){target="_blank"}, as well as numerous publications and two related R packages: [JM](https://cran.r-project.org/web/packages/JM/index.html){target="_blank"} and [JMbayes](https://cran.r-project.org/web/packages/JMbayes/index.html){target="_blank"}. 
 
 The Joint Modeling techniques presented during the scientific meeting allow for the simultaneous study of longitudinal and time-to-event data. **Longitudinal data** includes repeated measurements of individuals over time, and **time-to event data** represent the expected time before an event occurs (like death, an asthma crisis or a transplant). That combination of data frequently arises in the biomedical sciences, where it is common to analyze the evolution of a sick person over time. 
 
 This novel statistical tool is especially useful in the field of biomedicine. For instance, in patient follow-up studies after surgery; to design a personalised pattern of medical visits; to carry out predictions of survival based on the evolution of a patient, or updating those predictions in light of new data; identification of useful biomarkers; prediction of patient outcome with different chronic diseases such as diabetes, some types of cancer or cardiovascular disease.
 
-The applicability of these models has been illustrated through the JM and JMBayes R packages (by D Rizopoulos), as well as the packages [joineR](https://cran.r-project.org/web/packages/joineR/index.html) (by Philipson et al.), and [lcmm](https://cran.r-project.org/web/packages/lcmm/index.html) (by Proust-Lima et al.) 
+The applicability of these models has been illustrated through the JM and JMBayes R packages (by D Rizopoulos), as well as the packages [joineR](https://cran.r-project.org/web/packages/joineR/index.html){target="_blank"} (by Philipson et al.), and [lcmm](https://cran.r-project.org/web/packages/lcmm/index.html){target="_blank"} (by Proust-Lima et al.) 
 
 
 # An overview of joint modeling &nbsp; <span class="fa fa-cogs"></span> 
@@ -78,7 +78,7 @@ It basically combines (joins) the probability distributions from a linear mixed-
 - Time-Dependent accelerated failure time (*AFT*) Models.
 - Dynamic predictions when new values are added for the longitudinal variable, using Maximum Likelihood Estimates and empirical Bayes estimates. 
 
-Also, the [JM](https://cran.r-project.org/web/packages/JM/index.html) package has functions for *discrimination* and *callibration*, (of a single marker and between models): *sensitivity* & *specificity*, *time-dependent ROCs* and *AUC*.  
+Also, the [JM](https://cran.r-project.org/web/packages/JM/index.html){target="_blank"} package has functions for *discrimination* and *callibration*, (of a single marker and between models): *sensitivity* & *specificity*, *time-dependent ROCs* and *AUC*.  
 
 
 ### Applications for joint modeling  &nbsp; <span class="fa fa-pencil"></span> &nbsp; <span class="fa fa-heartbeat"></span> 
