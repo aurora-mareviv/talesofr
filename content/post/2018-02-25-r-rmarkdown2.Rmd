@@ -54,6 +54,34 @@ As the changes I made imply many modifications in paths, directories (some very 
  
 The steps I followed are detailed here: 
 
+## Install [Blogdown](https://github.com/rstudio/blogdown)
+
+```{r eval=FALSE}
+## Install from CRAN
+install.packages('blogdown')
+
+## Or, install from GitHub
+devtools::install_github('rstudio/blogdown')
+```
+
+## Install [Hugo](https://gohugo.io/)
+
+### ./From RStudio
+
+You can install the Hugo framework easily from within RStudio:
+
+```{r eval=FALSE}
+?install_hugo
+
+install_hugo()
+```
+
+### ./From other sources
+
+Depending on your operating system (MSWin, MacOSX, Linux distros...) Hugo has to be installed in a different way. 
+
+The [Hugo install page](https://gohugo.io/getting-started/installing/) is a good place to start!
+
 
 ## Git & GitHub repos  
 

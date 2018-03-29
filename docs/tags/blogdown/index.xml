@@ -17,7 +17,7 @@
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/02/r-blogdown-setup-in-github-2/</guid>
-      <description>An updated tutorial to set up a blogdown blog  Git &amp;amp; GitHub repos RStudio and blogdown setup  Customising paths and styles Modify config.toml file Custom css Custom javascript MathJax Site build with blogdown   Deploying the site Updating the local git  repository Pushing to GitHub  Add R code A new post in blogdown Deploying the site with the new post  This .Rmd source code   An updated tutorial to set up a blogdown blog  This is an updated blog post from the previous version: R Blogdown Setup in GiHub.</description>
+      <description>An updated tutorial to set up a blogdown blog  Install Blogdown Install Hugo ./From RStudio ./From other sources  Git &amp;amp; GitHub repos RStudio and blogdown setup  Customising paths and styles Modify config.toml file Custom css Custom javascript MathJax Site build with blogdown   Deploying the site Updating the local git  repository Pushing to GitHub  Add R code A new post in blogdown Deploying the site with the new post  This .</description>
     </item>
     
     <item>

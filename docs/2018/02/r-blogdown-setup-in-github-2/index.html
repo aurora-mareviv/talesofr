@@ -28,15 +28,15 @@
     
 
     
-    <meta name="description" content="An updated tutorial to set up a blogdown blog  Git &amp; GitHub repos RStudio and blogdown setup  Customising paths and styles Modify config.toml file Custom css Custom javascript MathJax Site build with blogdown   Deploying the site Updating the local git  repository Pushing to GitHub  Add R code A new post in blogdown Deploying the site with the new post  This .Rmd source code   An updated tutorial to set up a blogdown blog  This is an updated blog post from the previous version: R Blogdown Setup in GiHub.">
-    <meta property="og:description" content="An updated tutorial to set up a blogdown blog  Git &amp; GitHub repos RStudio and blogdown setup  Customising paths and styles Modify config.toml file Custom css Custom javascript MathJax Site build with blogdown   Deploying the site Updating the local git  repository Pushing to GitHub  Add R code A new post in blogdown Deploying the site with the new post  This .Rmd source code   An updated tutorial to set up a blogdown blog  This is an updated blog post from the previous version: R Blogdown Setup in GiHub.">
+    <meta name="description" content="An updated tutorial to set up a blogdown blog  Install Blogdown Install Hugo ./From RStudio ./From other sources  Git &amp; GitHub repos RStudio and blogdown setup  Customising paths and styles Modify config.toml file Custom css Custom javascript MathJax Site build with blogdown   Deploying the site Updating the local git  repository Pushing to GitHub  Add R code A new post in blogdown Deploying the site with the new post  This .">
+    <meta property="og:description" content="An updated tutorial to set up a blogdown blog  Install Blogdown Install Hugo ./From RStudio ./From other sources  Git &amp; GitHub repos RStudio and blogdown setup  Customising paths and styles Modify config.toml file Custom css Custom javascript MathJax Site build with blogdown   Deploying the site Updating the local git  repository Pushing to GitHub  Add R code A new post in blogdown Deploying the site with the new post  This .">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="R Blogdown Setup in GitHub (2)">
     <meta property="og:url" content="/2018/02/r-blogdown-setup-in-github-2/">
     <meta property="og:site_name" content="Tales of R - Rmarkdown Blog">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Tales of R - Rmarkdown Blog">
-    <meta name="twitter:description" content="An updated tutorial to set up a blogdown blog  Git &amp; GitHub repos RStudio and blogdown setup  Customising paths and styles Modify config.toml file Custom css Custom javascript MathJax Site build with blogdown   Deploying the site Updating the local git  repository Pushing to GitHub  Add R code A new post in blogdown Deploying the site with the new post  This .Rmd source code   An updated tutorial to set up a blogdown blog  This is an updated blog post from the previous version: R Blogdown Setup in GiHub.">
+    <meta name="twitter:description" content="An updated tutorial to set up a blogdown blog  Install Blogdown Install Hugo ./From RStudio ./From other sources  Git &amp; GitHub repos RStudio and blogdown setup  Customising paths and styles Modify config.toml file Custom css Custom javascript MathJax Site build with blogdown   Deploying the site Updating the local git  repository Pushing to GitHub  Add R code A new post in blogdown Deploying the site with the new post  This .">
     
       <meta name="twitter:creator" content="@maureviv">
     
@@ -317,6 +317,11 @@
 <div id="TOC">
 <ul>
 <li><a href="#an-updated-tutorial-to-set-up-a-blogdown-blog">An updated tutorial to set up a <span class="texttt">blogdown</span> blog   <span class="fa fa-newspaper-o"></span></a><ul>
+<li><a href="#install-blogdown">Install <a href="https://github.com/rstudio/blogdown">Blogdown</a></a></li>
+<li><a href="#install-hugo">Install <a href="https://gohugo.io/">Hugo</a></a><ul>
+<li><a href="#from-rstudio">./From RStudio</a></li>
+<li><a href="#from-other-sources">./From other sources</a></li>
+</ul></li>
 <li><a href="#git-github-repos">Git &amp; GitHub repos</a></li>
 <li><a href="#rstudio-and-blogdown-setup">RStudio and <span class="texttt">blogdown</span> setup</a></li>
 </ul></li>
@@ -351,6 +356,29 @@
 <li>Made some other fixes to the <code>config.toml</code> file.</li>
 </ul>
 <p>The steps I followed are detailed here:</p>
+<div id="install-blogdown" class="section level2">
+<h2>Install <a href="https://github.com/rstudio/blogdown">Blogdown</a></h2>
+<pre class="r"><code>## Install from CRAN
+install.packages(&#39;blogdown&#39;)
+
+## Or, install from GitHub
+devtools::install_github(&#39;rstudio/blogdown&#39;)</code></pre>
+</div>
+<div id="install-hugo" class="section level2">
+<h2>Install <a href="https://gohugo.io/">Hugo</a></h2>
+<div id="from-rstudio" class="section level3">
+<h3>./From RStudio</h3>
+<p>You can install the Hugo framework easily from within RStudio:</p>
+<pre class="r"><code>?install_hugo
+
+install_hugo()</code></pre>
+</div>
+<div id="from-other-sources" class="section level3">
+<h3>./From other sources</h3>
+<p>Depending on your operating system (MSWin, MacOSX, Linux distros…) Hugo has to be installed in a different way.</p>
+<p>The <a href="https://gohugo.io/getting-started/installing/">Hugo install page</a> is a good place to start!</p>
+</div>
+</div>
 <div id="git-github-repos" class="section level2">
 <h2>Git &amp; GitHub repos</h2>
 <ul>
@@ -935,7 +963,7 @@ git commit -m &quot;Adding a new post&quot; # adds all files to the local repo, 
                   Feb 2, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather">An updated tutorial to set up a blogdown blog  Git &amp; GitHub repos RStudio and blogdown setup  Customising paths and styles Modify config.toml file Custom css Custom javascript MathJax Site build with blogdown   Deploying the site Updating the local git  repository Pushing to GitHub  Add R code A new post in blogdown Deploying the site with the new post  This .Rmd source code   An updated tutorial to set up a blogdown blog  This is an updated blog post from the previous version: R Blogdown Setup in GiHub.</div>
+              <div class="media-content hide-xs font-merryweather">An updated tutorial to set up a blogdown blog  Install Blogdown Install Hugo ./From RStudio ./From other sources  Git &amp; GitHub repos RStudio and blogdown setup  Customising paths and styles Modify config.toml file Custom css Custom javascript MathJax Site build with blogdown   Deploying the site Updating the local git  repository Pushing to GitHub  Add R code A new post in blogdown Deploying the site with the new post  This .</div>
             </div>
             <div style="clear:both;"></div>
             <hr>
