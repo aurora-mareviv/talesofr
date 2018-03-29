@@ -42,7 +42,7 @@ wdirRoot <- gsub("\\content\\/post", "", wdir)
 
 # An updated tutorial to set up a <span class="texttt">blogdown</span> blog &nbsp; <span class="fa fa-newspaper-o"></span> 
 
-This is an updated blog post from the previous version: [R Blogdown Setup in GiHub](https://aurora-mareviv.github.io/talesofr/2017/08/r-blogdown-setup-in-gihub/). 
+This is an updated blog post from the previous version: [R Blogdown Setup in GiHub](https://aurora-mareviv.github.io/talesofr/2017/08/r-blogdown-setup-in-github/). 
 
 <!--MORE--> 
 Inspired by this great blog, by Elio Campitelli: [eliocamp.github.io/codigo-r](https://eliocamp.github.io/codigo-r/) and his settings on the hugo-tranquilpeak theme, by [Louis Barranqueiro](https://github.com/LouisBarranqueiro) & [Thibaud Lepr&ecirc;tre](https://github.com/kakawait).  
