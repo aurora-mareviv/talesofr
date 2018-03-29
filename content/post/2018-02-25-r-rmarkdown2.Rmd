@@ -71,9 +71,9 @@ devtools::install_github('rstudio/blogdown')
 You can install the Hugo framework easily from within RStudio:
 
 ```{r eval=FALSE}
-?install_hugo
+?blogdown::install_hugo
 
-install_hugo()
+blogdown::install_hugo()
 ```
 
 ### ./From other sources
