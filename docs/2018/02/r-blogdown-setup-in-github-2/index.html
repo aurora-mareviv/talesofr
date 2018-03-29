@@ -317,8 +317,8 @@
 <div id="TOC">
 <ul>
 <li><a href="#an-updated-tutorial-to-set-up-a-blogdown-blog">An updated tutorial to set up a <span class="texttt">blogdown</span> blog   <span class="fa fa-newspaper-o"></span></a><ul>
-<li><a href="#install-blogdown">Install <a href="https://github.com/rstudio/blogdown">Blogdown</a></a></li>
-<li><a href="#install-hugo">Install <a href="https://gohugo.io/">Hugo</a></a><ul>
+<li><a href="#install-blogdown">Install <a href="https://github.com/rstudio/blogdown" target="_blank">Blogdown</a></a></li>
+<li><a href="#install-hugo">Install <a href="https://gohugo.io/" target="_blank">Hugo</a></a><ul>
 <li><a href="#from-rstudio">./From RStudio</a></li>
 <li><a href="#from-other-sources">./From other sources</a></li>
 </ul></li>
@@ -346,9 +346,9 @@
 
 <div id="an-updated-tutorial-to-set-up-a-blogdown-blog" class="section level1">
 <h1>An updated tutorial to set up a <span class="texttt">blogdown</span> blog   <span class="fa fa-newspaper-o"></span></h1>
-<p>This is an updated blog post from the previous version: <a href="https://aurora-mareviv.github.io/talesofr/2017/08/r-blogdown-setup-in-github/">R Blogdown Setup in GiHub</a>.</p>
+<p>This is an updated blog post from the previous version: <a href="https://aurora-mareviv.github.io/talesofr/2017/08/r-blogdown-setup-in-github/" target="_blank">R Blogdown Setup in GiHub</a>.</p>
 <!--MORE-->
-<p>Inspired by this great blog, by Elio Campitelli: <a href="https://eliocamp.github.io/codigo-r/">eliocamp.github.io/codigo-r</a> and his settings on the hugo-tranquilpeak theme, by <a href="https://github.com/LouisBarranqueiro">Louis Barranqueiro</a> &amp; <a href="https://github.com/kakawait">Thibaud Leprêtre</a>.</p>
+<p>Inspired by this great blog, by Elio Campitelli: <a href="https://eliocamp.github.io/codigo-r/">eliocamp.github.io/codigo-r</a> and his settings on the hugo-tranquilpeak theme, by <a href="https://github.com/LouisBarranqueiro" target="_blank">Louis Barranqueiro</a> &amp; <a href="https://github.com/kakawait" target="_blank">Thibaud Leprêtre</a>.</p>
 <p>As the changes I made imply many modifications in paths, directories (some very subtle), they invalidate much of my previous tutorial. The changes I basically made are:</p>
 <ul>
 <li>I still use Github pages for hosting. However, I changed the rendering folder from <code>master</code> to <code>docs</code>.<br />
@@ -357,7 +357,7 @@
 </ul>
 <p>The steps I followed are detailed here:</p>
 <div id="install-blogdown" class="section level2">
-<h2>Install <a href="https://github.com/rstudio/blogdown">Blogdown</a></h2>
+<h2>Install <a href="https://github.com/rstudio/blogdown" target="_blank">Blogdown</a></h2>
 <pre class="r"><code>## Install from CRAN
 install.packages(&#39;blogdown&#39;)
 
@@ -365,7 +365,7 @@ install.packages(&#39;blogdown&#39;)
 devtools::install_github(&#39;rstudio/blogdown&#39;)</code></pre>
 </div>
 <div id="install-hugo" class="section level2">
-<h2>Install <a href="https://gohugo.io/">Hugo</a></h2>
+<h2>Install <a href="https://gohugo.io/" target="_blank">Hugo</a></h2>
 <div id="from-rstudio" class="section level3">
 <h3>./From RStudio</h3>
 <p>You can install the Hugo framework easily from within RStudio:</p>
@@ -376,15 +376,15 @@ blogdown::install_hugo()</code></pre>
 <div id="from-other-sources" class="section level3">
 <h3>./From other sources</h3>
 <p>Depending on your operating system (MSWin, MacOSX, Linux distros…) Hugo has to be installed in a different way.</p>
-<p>The <a href="https://gohugo.io/getting-started/installing/">Hugo install page</a> is a good place to start!</p>
+<p>The <a href="https://gohugo.io/getting-started/installing/" target="_blank">Hugo install page</a> is a good place to start!</p>
 </div>
 </div>
 <div id="git-github-repos" class="section level2">
 <h2>Git &amp; GitHub repos</h2>
 <ul>
-<li><span class="fa fa-github"></span> Set up a GitHub account, following for example <a href="https://www.wikihow.com/Create-an-Account-on-GitHub">this</a>.<br />
+<li><span class="fa fa-github"></span> Set up a GitHub account, following for example <a href="https://www.wikihow.com/Create-an-Account-on-GitHub" target="_blank">this</a>.<br />
 </li>
-<li><span class="fa fa-github"></span> Set up a new <a href="https://github.com/">GitHub</a> repo with a name of your choice (in my case <span class="texttt">talesofr</span>). See <a href="https://help.github.com/articles/create-a-repo/">this</a> and <a href="https://tclavelle.github.io/blog/blogdown_github/">this</a>.<br />
+<li><span class="fa fa-github"></span> Set up a new <a href="https://github.com/" target="_blank">GitHub</a> repo with a name of your choice (in my case <span class="texttt">talesofr</span>). See <a href="https://help.github.com/articles/create-a-repo/" target="_blank">this</a> and <a href="https://tclavelle.github.io/blog/blogdown_github/" target="_blank">this</a>.<br />
 </li>
 <li><span class="fa fa-github"></span> Activate GitHub pages. For this, you must go to the <span class="texttt">/settings</span> section of your repo and find the epigraph “GitHub Pages”. In the dropdown menu, select:   <span class="texttt">master branch /docs folder</span> and save.</li>
 </ul>
@@ -396,13 +396,13 @@ blogdown::install_hugo()</code></pre>
 <li>Create a <code>git</code> local repo in your machine:
 <ul>
 <li>Create manually a new directory called like your repository, e.g. <span class="texttt">talesofr</span>.</li>
-<li>Run in the terminal (Windows users have to install <a href="https://git-scm.com/downloads"><code>git</code></a> first):</li>
+<li>Run in the terminal (Windows users have to install <a href="https://git-scm.com/downloads" target="_blank"><code>git</code></a> first):</li>
 </ul>
 <pre class="bash"><code>cd /Git/talesofr # your path may be different
 git init # initiates repo in the directory
 git remote add origin https://github.com/[USERNAME]/talesofr # connects git local repo to remote Github repo
 git pull origin master # in case you have LICENSE and Readme.md files in the GitHub repo, they&#39;re downloaded to your machine</code></pre></li>
-<li>You can add a <em>.gitignore</em> text file to the root directory of your repo. This tells <code>git</code> what files <em>not to add</em> to the repo, even if they are into the folder. One example of <em>.gitignore</em> file is <a href="https://github.com/aurora-mareviv/talesofr/blob/master/.gitignore">this</a>.</li>
+<li>You can add a <em>.gitignore</em> text file to the root directory of your repo. This tells <code>git</code> what files <em>not to add</em> to the repo, even if they are into the folder. One example of <em>.gitignore</em> file is <a href="https://github.com/aurora-mareviv/talesofr/blob/master/.gitignore" target="_blank">this</a>.</li>
 <li>For now, your repo is ready. We will now focus in creating &amp; customising our Blogdown.</li>
 </ul>
 </div>
@@ -415,7 +415,7 @@ git pull origin master # in case you have LICENSE and Readme.md files in the Git
 </ul>
 <pre class="r"><code>install.packages(&quot;blogdown&quot;)</code></pre>
 <ul>
-<li>In RStudio, select the <em>Menu &gt; File &gt; New Project</em> following the lower half of these <a href="https://bookdown.org/yihui/blogdown/rstudio-ide.html">instructions</a>. The wizard for setting up a Hugo Blogdown project should be available in your RStudio version.</li>
+<li>In RStudio, select the <em>Menu &gt; File &gt; New Project</em> following the lower half of these <a href="https://bookdown.org/yihui/blogdown/rstudio-ide.html" target="_blank">instructions</a>. The wizard for setting up a Hugo Blogdown project should be available in your RStudio version.</li>
 </ul></li>
 </ul>
 <div class="figure">
@@ -480,7 +480,7 @@ enableEmoji = true
 <div id="custom-css" class="section level2">
 <h2>Custom css</h2>
 <p>Now, we can add arbitrary classes to our <em>css</em> file! (see above).</p>
-<p>Since I started writing in Bootstrap, I <span class="fa fa-heart-o"></span> it a lot. Since this theme already has bootstrap classes, I brought some others I didn’t find in the theme (they’re <a href="https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md">available</a> for <em>.md</em> files, but currently not for <em>.Rmd</em>)</p>
+<p>Since I started writing in Bootstrap, I <span class="fa fa-heart-o"></span> it a lot. Since this theme already has bootstrap classes, I brought some others I didn’t find in the theme (they’re <a href="https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md" target="_blank">available</a> for <em>.md</em> files, but currently not for <em>.Rmd</em>)</p>
 <div class="well alert alert-danger text-center">
 <p><span class="fa fa-minus-circle"></span> alert-danger</p>
 </div>
@@ -561,7 +561,7 @@ a:hover {
 <pre class="html"><code>&lt;div class=&quot;well alert alert-danger text-center&quot;&gt;
   &lt;span class=&quot;fa fa-minus-circle&quot;&gt;&lt;/span&gt; alert-danger
 &lt;/div&gt;</code></pre>
-<p>Also, we have <a href="http://fontawesome.io/icons/">font-awesome</a> icons! <span class="fa fa-gift"></span></p>
+<p>Also, we have <a href="http://fontawesome.io/icons/" target="_blank">font-awesome</a> icons! <span class="fa fa-gift"></span></p>
 <div id="update-hugo-shortcodes-in-.rmd" class="section level4">
 <h4>Update! Hugo shortcodes in <em>.Rmd</em> !</h4>
 <p>Searching through blogdown/issues in GitHub, I found this good trick by Yihui:<br />
@@ -584,7 +584,7 @@ You can add Hugo shortcodes if you wrap them with the function <code>htmltools:H
 <pre class="html"><code>&lt;div class=&quot;button well alert alert-danger text-center&quot; id=&quot;myButton&quot; onclick=&quot;alertColor()&quot;&gt;
   &lt;span id=&quot;toInfo&quot;&gt; &lt;span class=&quot;fa fa-minus-circle&quot;&gt;&lt;/span&gt;alert-danger &lt;/span&gt;
 &lt;/div&gt;</code></pre>
-<p>And <a href="https://github.com/aurora-mareviv/aurora-mareviv.github.io/blob/master/static/js/myjs.js">here</a> is the javascript function that you can copy into <code>/static/js/myjs.js</code>:</p>
+<p>And <a href="https://github.com/aurora-mareviv/aurora-mareviv.github.io/blob/master/static/js/myjs.js" target="_blank">here</a> is the javascript function that you can copy into <code>/static/js/myjs.js</code>:</p>
 <pre class="js"><code>function alertColor() {
   var result = &quot;&lt;span class=&#39;fa fa-info-circle&#39;&gt;&lt;/span&gt;&amp;nbsp;alert-info&quot;;
   document.getElementById(&quot;toInfo&quot;).innerHTML = result; 
@@ -595,7 +595,7 @@ You can add Hugo shortcodes if you wrap them with the function <code>htmltools:H
 </div>
 <div id="mathjax" class="section level2">
 <h2>MathJax</h2>
-<p>To correctly display LaTeX formulas, we must follow Yihui Xie’s <a href="https://bookdown.org/yihui/blogdown/templates.html">advice</a> in older versions of the Hugo theme.<br />
+<p>To correctly display LaTeX formulas, we must follow Yihui Xie’s <a href="https://bookdown.org/yihui/blogdown/templates.html" target="_blank">advice</a> in older versions of the Hugo theme.<br />
 We will simply add the following code at the bottom of our <span class="texttt"> /themes/hugo-tranquilpeak-theme/layouts/partials/script.html </span>file:</p>
 <pre class="html"><code>&lt;script src=&quot;//yihui.name/js/math-code.js&quot;&gt;&lt;/script&gt;
 &lt;script async
@@ -624,7 +624,7 @@ git commit -m &quot;Starting my Hugo blog&quot; # adds all files to the local re
 <div id="pushing-to-github" class="section level2">
 <h2>Pushing to GitHub</h2>
 <pre class="bash"><code>git push origin master # we push the changes from the local git repo to the remote repo (GitHub repo)</code></pre>
-<p>Just go to the page <span class="texttt"><a href="https://aurora-mareviv.github.io/talesofr">https://[USERNAME].github.io/[REPO_NAME]</a></span> and enjoy your blog!</p>
+<p>Just go to the page <span class="texttt"><a href="https://aurora-mareviv.github.io/talesofr" target="_blank">https://[USERNAME].github.io/[REPO_NAME]</a></span> and enjoy your blog!</p>
 <hr>
 </div>
 </div>
@@ -690,8 +690,8 @@ git commit -m &quot;Adding a new post&quot; # adds all files to the local repo, 
 </div>
 <div id="this-.rmd-source-code" class="section level1">
 <h1>This <span class="texttt">.Rmd</span> source code</h1>
-<p>You can download it from <a href="https://github.com/aurora-mareviv/talesofr/blob/master/content/post/2018-02-25-r-rmarkdown2.Rmd">here</a></p>
-<p>Further customisation can be done thanks to the incredible user documentation for the <a href="https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md">hugo-tranquilpeak-theme</a></p>
+<p>You can download it from <a href="https://github.com/aurora-mareviv/talesofr/blob/master/content/post/2018-02-25-r-rmarkdown2.Rmd" target="_blank">here</a></p>
+<p>Further customisation can be done thanks to the incredible user documentation for the <a href="https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md" target="_blank">hugo-tranquilpeak-theme</a></p>
 <div class="figure">
 <img src="../../../images/hexbins2.png" />
 
