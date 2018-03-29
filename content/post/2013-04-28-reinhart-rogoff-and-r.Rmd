@@ -56,9 +56,9 @@ Among other statements, Reinhart and Rogoff basically collected <a title="http:/
 
 <div class="alert alert-success">
 
-- Many politicians, institutions, countries or even the [European Union](http://www.reuters.com/article/2013/04/17/global-economy-debt-idUSL2N0D404P20130417), have assumed quickly these facts, without revisiting or trying to reproduce them. This happens all the time, but it <em>shouldn't</em> happen. It increases the chances that flawed studies reach the status of 'science'. Sometimes with dramatic consequences.
+- Many politicians, institutions, countries or even the [European Union](http://www.reuters.com/article/2013/04/17/global-economy-debt-idUSL2N0D404P20130417){target="_blank"}, have assumed quickly these facts, without revisiting or trying to reproduce them. This happens all the time, but it <em>shouldn't</em> happen. It increases the chances that flawed studies reach the status of 'science'. Sometimes with dramatic consequences.
 	
-- A scientific research should be reproducible. It means it should render the same results when repeating the study. But when Herndon tried to replicate it, he found big [errors](http://www.bbc.co.uk/news/magazine-22223190) -bad excel coding, data collected selectively- and a dubious weighting method, that when corrected, gave completely different results.
+- A scientific research should be reproducible. It means it should render the same results when repeating the study. But when Herndon tried to replicate it, he found big [errors](http://www.bbc.co.uk/news/magazine-22223190){target="_blank"} -bad excel coding, data collected selectively- and a dubious weighting method, that when corrected, gave completely different results.
 
 </div>
 

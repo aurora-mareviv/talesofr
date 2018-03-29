@@ -1,6 +1,6 @@
 ---
 title: "R Blogdown Setup in GitHub (2)"
-author: "Aurora Baluja"
+author: "aurora-mareviv"
 date: 2018-02-25
 categories: ["R"]
 tags: ["R Markdown", "plot", "blogdown", "#rstats"]
@@ -314,7 +314,7 @@ Here is the code of the button:
 </div>
 ```
 
-And [here](https://github.com/aurora-mareviv/aurora-mareviv.github.io/blob/master/static/js/myjs.js){target="_blank"} is the javascript function that you can copy into `/static/js/myjs.js`:
+And [here](https://github.com/aurora-mareviv/talesofr/blob/master/static/js/myjs.js){target="_blank"} is the javascript function that you can copy into `/static/js/myjs.js`:
 
 ```{js eval=FALSE}
 function alertColor() {
