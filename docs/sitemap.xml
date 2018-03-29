@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>/2013/11/using-r-from-scratch/</loc>
+    <lastmod>2013-11-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2013/07/power-sample-size-mitochondrial-dna/</loc>
     <lastmod>2013-07-01T00:00:00+00:00</lastmod>
   </url>
@@ -142,7 +147,7 @@
   
   <url>
     <loc>/tags/barplot/</loc>
-    <lastmod>2013-04-28T00:00:00+00:00</lastmod>
+    <lastmod>2013-11-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -184,7 +189,13 @@
   
   <url>
     <loc>/tags/chi-square/</loc>
-    <lastmod>2013-05-07T00:00:00+00:00</lastmod>
+    <lastmod>2013-11-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/classes/</loc>
+    <lastmod>2013-11-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -208,7 +219,7 @@
   
   <url>
     <loc>/tags/database/</loc>
-    <lastmod>2013-05-18T00:00:00+00:00</lastmod>
+    <lastmod>2013-11-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -238,7 +249,13 @@
   
   <url>
     <loc>/tags/factors/</loc>
-    <lastmod>2013-05-07T00:00:00+00:00</lastmod>
+    <lastmod>2013-11-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/fisher-test/</loc>
+    <lastmod>2013-11-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -280,7 +297,7 @@
   
   <url>
     <loc>/tags/graphs/</loc>
-    <lastmod>2013-05-07T00:00:00+00:00</lastmod>
+    <lastmod>2013-11-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -327,6 +344,12 @@
   </url>
   
   <url>
+    <loc>/tags/kolmogorovsmirnov/</loc>
+    <lastmod>2013-11-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/kubuntu/</loc>
     <lastmod>2013-05-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -335,6 +358,12 @@
   <url>
     <loc>/tags/latex/</loc>
     <lastmod>2013-06-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/levene/</loc>
+    <lastmod>2013-11-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -395,6 +424,12 @@
   <url>
     <loc>/tags/neuron/</loc>
     <lastmod>2013-06-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/notepad&#43;&#43;/</loc>
+    <lastmod>2013-11-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -477,6 +512,12 @@
   </url>
   
   <url>
+    <loc>/tags/r-commander/</loc>
+    <lastmod>2013-11-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/r-markdown/</loc>
     <lastmod>2018-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -484,7 +525,7 @@
   
   <url>
     <loc>/tags/r-studio/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+    <lastmod>2013-11-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -502,7 +543,7 @@
   
   <url>
     <loc>/tags/regression/</loc>
-    <lastmod>2013-04-28T00:00:00+00:00</lastmod>
+    <lastmod>2013-11-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -561,6 +602,12 @@
   </url>
   
   <url>
+    <loc>/tags/strings/</loc>
+    <lastmod>2013-11-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/sweave/</loc>
     <lastmod>2013-05-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -586,7 +633,7 @@
   
   <url>
     <loc>/tags/templates/</loc>
-    <lastmod>2013-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2013-11-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -635,6 +682,12 @@
   <url>
     <loc>/tags/watercolor/</loc>
     <lastmod>2013-04-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/wilcoxon/</loc>
+    <lastmod>2013-11-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
