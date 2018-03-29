@@ -41,21 +41,22 @@ output:
 </ul></li>
 <li><a href="#writing-a-.rnw-file">WRITING A .RNW FILE</a></li>
 <li><a href="#edit-for-texworks-in-ubuntu">EDIT FOR TEXWORKS IN UBUNTU</a></li>
+<li><a href="#further-readings">FURTHER READINGS</a></li>
 </ul>
 </div>
 
 <div id="introduction" class="section level2">
 <h2>INTRODUCTION</h2>
-<p><a href="http://jeromyanglim.blogspot.com.es/2010/02/getting-started-with-sweave-r-latex.html">Sweave</a> is nothing more, nothing less than one of the best ways R can connect with a text editor, in this case <a href="https://en.wikibooks.org/wiki/LaTeX/Introduction">LaTeX</a>.</p>
+<p><a href="http://jeromyanglim.blogspot.com.es/2010/02/getting-started-with-sweave-r-latex.html" target="_blank">Sweave</a> is nothing more, nothing less than one of the best ways R can connect with a text editor, in this case <a href="https://en.wikibooks.org/wiki/LaTeX/Introduction" target="_blank">LaTeX</a>.</p>
 <p>So you don’t know anyting about LaTeX? neither did I 8 months ago… The hyperlinks in this post will take you to some great pages, to learn different things in an organised way. Here’s how I did it (with lots of help from google though!).</p>
 <p>It’s important to take it step by step…</p>
 {{< youtube QHH3iSeDBLo>}}
 <p><br></p>
-<p>Second, you need to install R, from <a href="https://cran.r-project.org/">here</a>. Once you have installed it, you will need to install a LaTeX distribution (my preferred LaTeX editor is TeXworks, and I have MiKTeX in MS Windows).</p>
+<p>Second, you need to install R, from <a href="https://cran.r-project.org/" target="_blank">here</a>. Once you have installed it, you will need to install a LaTeX distribution (my preferred LaTeX editor is TeXworks, and I have MiKTeX in MS Windows).</p>
 <ul>
-<li><p>If you are a MS Windows user, you will find useful this one: <a href="https://miktex.org/download">MiKTeX</a>.</p></li>
-<li><p>For Linux users, here can be <a href="https://kile.sourceforge.io/">Kile</a> (from KDE), <a href="http://www.tug.org/texworks/">TeXworks</a>, or other alternatives. First of all you should install LaTeX (e.g. TeX Live), and configure it with these <a href="https://dzone.com/articles/installing-latex-ubuntu">tips</a></p></li>
-<li><p>For Mac users, you can follow this <a href="https://www.latex-project.org/get/">link (valid for other OSes)</a> which provides instructions to install TeXmaker. You will be able to install TeXworks from <a href="http://www.tug.org/texworks/">here</a>.</p></li>
+<li><p>If you are a MS Windows user, you will find useful this one: <a href="https://miktex.org/download" target="_blank">MiKTeX</a>.</p></li>
+<li><p>For Linux users, here can be <a href="https://kile.sourceforge.io/" target="_blank">Kile</a> (from KDE), <a href="http://www.tug.org/texworks/" target="_blank">TeXworks</a>, or other alternatives. First of all you should install LaTeX (e.g. TeX Live), and configure it with these <a href="https://help.ubuntu.com/community/LaTeX" target="_blank">tips</a>.</p></li>
+<li><p>For Mac users, you can follow this <a href="https://www.latex-project.org/get/" target="_blank">link (valid for other OSes)</a> which provides instructions to install TeXmaker. You will be able to install TeXworks from <a href="http://www.tug.org/texworks/" target="_blank">here</a>.</p></li>
 <li><p><strong>NOTE</strong>: Both, MiKTeX and TeXmaker have portable versions, easy to carry in a pendrive!</p></li>
 </ul>
 <p>What TeX editor did you install? If you have TeXworks, the way to configure Sweave is pretty quick and easy. If you are a beginner, this may be the best option.</p>
@@ -100,9 +101,9 @@ output:
 </div>
 <div id="writing-a-.rnw-file" class="section level2">
 <h2>WRITING A .RNW FILE</h2>
-<p>Let’s write something in a new Sweave file!. To this, you must create a new text file (e.g. <code>myfirstsweave.txt</code>) , and change its extension to <code>.Rnw</code> (see <a href="https://support.microsoft.com/es-es/products/windows?os=windows-10">this</a> for more help for MSWin users):</p>
+<p>Let’s write something in a new Sweave file!. To this, you must create a new text file (e.g. <code>myfirstsweave.txt</code>) , and change its extension to <code>.Rnw</code> (see <a href="https://support.microsoft.com/es-es/products/windows?os=windows-10" target="_blank">this</a> for more help for MSWin users):</p>
 <p><code>myfirstsweave.Rnw</code></p>
-<p>This is a blank file, but you can paste the following <a href="https://stackoverflow.com/questions/8082429/plot-a-heart-in-r">code</a> to construct a template:</p>
+<p>This is a blank file, but you can paste the following <a href="https://stackoverflow.com/questions/8082429/plot-a-heart-in-r" target="_blank">code</a> to construct a template:</p>
 {{< gist aurora-mareviv 30cb0fd72f1d1a233af0e4d3fc304907>}}
 <p>Once you have your template, you must… “compile” it. First, you can highlight the code with nice colours clicking:</p>
 <p><code>Format &gt;&gt; Syntax Coloring &gt;&gt; LaTeX</code></p>
@@ -133,9 +134,16 @@ sudo apt-get install texworks</code></pre>
 <code>sh: 1: /usr/bin/texi2dvi: not found</code></p>
 </div>
 <p><code>Texi2dvi</code> appears to be a script that allows direct compilation of a <code>.pdf</code> from a <code>.Rnw</code> file.</p>
-<p>Maybe it’s not the cleanest solution, but I copied the <a href="http://ftp.gnu.org/gnu/texinfo/texi2dvi">source code of <code>texi2dvi</code></a> and created a script with it: (<code>sudo gedit</code> if you are running Ubuntu, <code>sudo kate</code> if Kubuntu).</p>
+<p>Maybe it’s not the cleanest solution, but I copied the <a href="http://ftp.gnu.org/gnu/texinfo/texi2dvi" target="_blank">source code of <code>texi2dvi</code></a> and created a script with it: (<code>sudo gedit</code> if you are running Ubuntu, <code>sudo kate</code> if Kubuntu).</p>
 <p>Open up a Terminal and type:</p>
 <pre class="bash"><code>sudo kate /usr/bin/texi2dvi</code></pre>
 <p>Then you can paste the code into this script, and save the changes. To <strong>make it executable</strong>, type in the Terminal:</p>
 <pre class="bash"><code>sudo chmod 755 /usr/bin/texi2dvi</code></pre>
+</div>
+<div id="further-readings" class="section level2">
+<h2>FURTHER READINGS</h2>
+<ul>
+<li><p>This <a href="https://stat.ethz.ch/R-manual/R-devel/library/utils/doc/Sweave.pdf" target="_blank">Sweave manual</a>, updated in 2017 by Friedrich Leisch and the R-core Team.</p></li>
+<li><p>These <a href="../../../post/data/Sweave-custom-Ihaka.pdf" target="_blank">Sweave customization tips</a>, written by Ross Ihaka himself.</p></li>
+</ul>
 </div>
