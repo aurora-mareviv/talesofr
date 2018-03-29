@@ -147,6 +147,15 @@
     </item>
     
     <item>
+      <title>Converter</title>
+      <link>/tags/converter/</link>
+      <pubDate>Sun, 30 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/converter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Database</title>
       <link>/tags/database/</link>
       <pubDate>Sat, 18 May 2013 00:00:00 +0000</pubDate>
@@ -170,6 +179,15 @@
       <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/edaic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Eps</title>
+      <link>/tags/eps/</link>
+      <pubDate>Sun, 30 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/eps/</guid>
       <description></description>
     </item>
     
@@ -320,7 +338,7 @@
     <item>
       <title>Latex</title>
       <link>/tags/latex/</link>
-      <pubDate>Thu, 02 May 2013 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 30 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/latex/</guid>
       <description></description>
@@ -584,6 +602,15 @@
       <pubDate>Thu, 02 May 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/sweave/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Template</title>
+      <link>/tags/template/</link>
+      <pubDate>Sun, 30 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/template/</guid>
       <description></description>
     </item>
     

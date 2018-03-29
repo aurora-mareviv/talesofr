@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Eps on Tales of R - Rmarkdown Blog</title>
+    <link>/tags/eps/</link>
+    <description>Recent content in Eps on Tales of R - Rmarkdown Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Jun 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/eps/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>An .EPS to .PDF converter (using LaTeX!)</title>
+      <link>/2013/06/eps-to-pdf-converter-latex/</link>
+      <pubDate>Sun, 30 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/06/eps-to-pdf-converter-latex/</guid>
+      <description>I am about to go on a short holiday, so I was tidying the code lines I had scattered around before leaving… And I found this: a minimal EPS to PDF converter, which is barely a LaTeX template.
+It is intended for transforming an .EPS graph to the .PDF format. You can copy &amp;amp; paste this whole code into a blank text file (but with .TEX extension) and run it with a TeX editor.</description>
+    </item>
+    
+  </channel>
+</rss>

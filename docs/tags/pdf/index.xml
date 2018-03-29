@@ -21,5 +21,15 @@
 This is my first use case of “pdf mining” with R, and also a fairly simple one. However, more complex and very fine examples of this can be found elsewhere, using both pdftools and tabulizer packages.</description>
     </item>
     
+    <item>
+      <title>An .EPS to .PDF converter (using LaTeX!)</title>
+      <link>/2013/06/eps-to-pdf-converter-latex/</link>
+      <pubDate>Sun, 30 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/06/eps-to-pdf-converter-latex/</guid>
+      <description>I am about to go on a short holiday, so I was tidying the code lines I had scattered around before leaving… And I found this: a minimal EPS to PDF converter, which is barely a LaTeX template.
+It is intended for transforming an .EPS graph to the .PDF format. You can copy &amp;amp; paste this whole code into a blank text file (but with .TEX extension) and run it with a TeX editor.</description>
+    </item>
+    
   </channel>
 </rss>
