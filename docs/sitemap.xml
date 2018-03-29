@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>/2013/07/power-sample-size-mitochondrial-dna/</loc>
+    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2013/06/eps-to-pdf-converter-latex/</loc>
     <lastmod>2013-06-30T00:00:00+00:00</lastmod>
   </url>
@@ -160,6 +165,12 @@
   </url>
   
   <url>
+    <loc>/tags/calculator/</loc>
+    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/carmenreinhart/</loc>
     <lastmod>2013-04-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -274,6 +285,12 @@
   </url>
   
   <url>
+    <loc>/tags/haplogroup/</loc>
+    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/heart/</loc>
     <lastmod>2013-04-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -348,6 +365,12 @@
   <url>
     <loc>/tags/miktex/</loc>
     <lastmod>2013-05-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/mitochondrial/</loc>
+    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -436,6 +459,12 @@
   </url>
   
   <url>
+    <loc>/tags/power/</loc>
+    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/psychology/</loc>
     <lastmod>2013-06-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -450,6 +479,12 @@
   <url>
     <loc>/tags/r-markdown/</loc>
     <lastmod>2018-02-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/r-studio/</loc>
+    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -504,6 +539,12 @@
   <url>
     <loc>/tags/sepsis/</loc>
     <lastmod>2017-08-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/shiny/</loc>
+    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

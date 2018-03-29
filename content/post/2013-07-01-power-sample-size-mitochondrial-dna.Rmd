@@ -1,0 +1,83 @@
+---
+title: Power and sample size calculator for mitochondrial DNA association studies
+  (Shiny)
+author: mareviv
+date: '2013-07-01'
+slug: power-sample-size-mitochondrial-dna
+categories:
+  - R
+  - medicine
+tags:
+  - calculator
+  - haplogroup
+  - mitochondrial
+  - power
+  - R-studio
+  - Shiny 
+  - '#rstats'
+thumbnailImagePosition: left
+thumbnailImage: ./images/mthapower/mtDNA.png
+metaAlignment: center
+disable_comments: false
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: "/css/my-style.css"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, echo=TRUE, eval=TRUE, warning=FALSE, message=FALSE, comment="  ")
+# https:\/\/aurora-mareviv.github.io\/talesofr
+```
+
+```{r results='hide', echo=FALSE}
+# Installs missing libraries on render!
+list.of.packages <- c("rmarkdown", "shiny", "ggplot2")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages, repos='https://cran.rstudio.com/')
+```
+
+```{r echo=FALSE}
+wdir <- getwd() 
+# la carpeta donde guardo los datos
+datadir <- paste(wdir, "/data", sep="")
+# y la carpeta inmediatamente por encima
+wdirRoot <- gsub("\\content\\/post", "", wdir) 
+```
+
+
+The functions detailed inside the piece of code below (in a Gist) has been useful for me when I had to calculate many possible scenarios of statistical power and sample size. The formulae were taken from the article of [Samuels et al., AJHG 2006](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1424681/){target="_blank"}, and the script showed even useful for making a variety of comparative plots.
+
+This is intended for estimating power/ sample size in association studies, involving mitochondrial [DNA haplogroups](http://en.wikipedia.org/wiki/Human_mitochondrial_DNA_haplogroup){target="_blank"} (which are categories whose frequencies depend on each other), on a Chi-square test basis. The problem with scripts is that sometimes they aren't as friendly to many people as GUIs are. To solve this, there are many solutions but, as I don't have programming background (apart from R), the most straightforward for me was [Shiny](http://www.rstudio.com/shiny/){target="_blank"}.
+
+Shiny is a friendly interface which allows for great interactive features (see its [Tutorial](http://rstudio.github.io/shiny/tutorial/#welcome){target="_blank"}), and it loads onto the web browser from an open R console, just by clicking:
+
+[`https://aurora.shinyapps.io/mtDNA_power_calc/`](https://aurora.shinyapps.io/mtDNA_power_calc/){target="_blank"}
+
+This Gist, displays a simple graph using two power/number-of-cases values (it was hard for me to show the graph, mostly thanks to Stackoverflow and to MadScone):
+
+```{r eval=FALSE}
+library(shiny)
+shiny::runGist('5895082')
+```
+
+Where 5895082 is the ID of the Gist. Here is the source:
+
+`r htmltools::HTML("{{< gist aurora-mareviv 5895082>}}")`
+
+To work with files inside your computer, just run R from the same directory of the files ui.R and server.R, and execute the Gist with the command:
+
+```{r eval=FALSE}
+runApp()
+```
+
+If this doesn't work, you can paste the complete path to the ui and server files:
+
+```{r eval=FALSE}
+runApp("path/to/directory")
+```
+
+![Structure of the human mitochondrial genome. Photo credit: Wikipedia](/images/mthapower/mtDNA.png) 
+
+

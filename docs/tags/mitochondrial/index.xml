@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mitochondrial on Tales of R - Rmarkdown Blog</title>
+    <link>/tags/mitochondrial/</link>
+    <description>Recent content in Mitochondrial on Tales of R - Rmarkdown Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jul 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/mitochondrial/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Power and sample size calculator for mitochondrial DNA association studies (Shiny)</title>
+      <link>/2013/07/power-sample-size-mitochondrial-dna/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/07/power-sample-size-mitochondrial-dna/</guid>
+      <description>The functions detailed inside the piece of code below (in a Gist) has been useful for me when I had to calculate many possible scenarios of statistical power and sample size. The formulae were taken from the article of Samuels et al., AJHG 2006, and the script showed even useful for making a variety of comparative plots.
+This is intended for estimating power/ sample size in association studies, involving mitochondrial DNA haplogroups (which are categories whose frequencies depend on each other), on a Chi-square test basis.</description>
+    </item>
+    
+  </channel>
+</rss>
