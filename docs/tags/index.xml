@@ -75,6 +75,24 @@
     </item>
     
     <item>
+      <title>Android</title>
+      <link>/tags/android/</link>
+      <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>App</title>
+      <link>/tags/app/</link>
+      <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/app/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Barplot</title>
       <link>/tags/barplot/</link>
       <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
@@ -174,11 +192,38 @@
     </item>
     
     <item>
+      <title>Cran</title>
+      <link>/tags/cran/</link>
+      <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/cran/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Database</title>
       <link>/tags/database/</link>
       <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Debian</title>
+      <link>/tags/debian/</link>
+      <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Debian Wheezy</title>
+      <link>/tags/debian-wheezy/</link>
+      <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/debian-wheezy/</guid>
       <description></description>
     </item>
     
@@ -269,6 +314,24 @@
       <pubDate>Tue, 07 May 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/ggplot2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gnuroot</title>
+      <link>/tags/gnuroot/</link>
+      <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/gnuroot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google Play</title>
+      <link>/tags/google-play/</link>
+      <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/google-play/</guid>
       <description></description>
     </item>
     
@@ -401,7 +464,7 @@
     <item>
       <title>Linux</title>
       <link>/tags/linux/</link>
-      <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
       
       <guid>/tags/linux/</guid>
       <description></description>
@@ -579,11 +642,47 @@
     </item>
     
     <item>
+      <title>R</title>
+      <link>/tags/r/</link>
+      <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>R Commander</title>
       <link>/tags/r-commander/</link>
       <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/r-commander/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R Console Free</title>
+      <link>/tags/r-console-free/</link>
+      <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/r-console-free/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R Fiddle</title>
+      <link>/tags/r-fiddle/</link>
+      <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/r-fiddle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R Instructor</title>
+      <link>/tags/r-instructor/</link>
+      <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/r-instructor/</guid>
       <description></description>
     </item>
     
@@ -705,6 +804,15 @@
     </item>
     
     <item>
+      <title>Statistical</title>
+      <link>/tags/statistical/</link>
+      <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/statistical/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Strings</title>
       <link>/tags/strings/</link>
       <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
@@ -719,6 +827,15 @@
       <pubDate>Thu, 02 May 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/sweave/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tablet</title>
+      <link>/tags/tablet/</link>
+      <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/tablet/</guid>
       <description></description>
     </item>
     

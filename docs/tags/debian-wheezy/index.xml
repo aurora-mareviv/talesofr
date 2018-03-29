@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Debian Wheezy on Tales of R - Rmarkdown Blog</title>
+    <link>/tags/debian-wheezy/</link>
+    <description>Recent content in Debian Wheezy on Tales of R - Rmarkdown Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 Sep 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/debian-wheezy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Install R in Android, via GNURoot -no root required!</title>
+      <link>/2014/09/r-in-android-gnuroot/</link>
+      <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/2014/09/r-in-android-gnuroot/</guid>
+      <description>Playing with my tablet some time ago, I wondered if installing R could be possible. You know, a small android device “to the power of R”…
+After searching on Google from time to time, I came across some interesting possibilities:
+ R Instructor, created “to bridge the gap between authoritative (but expensive) reference textbooks and free but often technical and difficult to understand help files”.
+ R Console Free. provides the necessary C, C++ and Fortran compilers to build and install R packages.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Tales of R - Rmarkdown Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Jun 2013 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Sep 2014 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Android</title>
+      <link>/categories/android/</link>
+      <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/android/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Anesthesia</title>

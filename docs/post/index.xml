@@ -79,6 +79,18 @@ However, I wanted to explore other blog templates, hosted in GiHub, like:</descr
     </item>
     
     <item>
+      <title>Install R in Android, via GNURoot -no root required!</title>
+      <link>/2014/09/r-in-android-gnuroot/</link>
+      <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/2014/09/r-in-android-gnuroot/</guid>
+      <description>Playing with my tablet some time ago, I wondered if installing R could be possible. You know, a small android device “to the power of R”…
+After searching on Google from time to time, I came across some interesting possibilities:
+ R Instructor, created “to bridge the gap between authoritative (but expensive) reference textbooks and free but often technical and difficult to understand help files”.
+ R Console Free. provides the necessary C, C++ and Fortran compilers to build and install R packages.</description>
+    </item>
+    
+    <item>
       <title>...start using R, from scratch!</title>
       <link>/2013/11/using-r-from-scratch/</link>
       <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>

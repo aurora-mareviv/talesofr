@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>/2014/09/r-in-android-gnuroot/</loc>
+    <lastmod>2014-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2013/11/using-r-from-scratch/</loc>
     <lastmod>2013-11-14T00:00:00+00:00</lastmod>
   </url>
@@ -135,8 +140,26 @@
   </url>
   
   <url>
+    <loc>/categories/android/</loc>
+    <lastmod>2014-09-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/android/</loc>
+    <lastmod>2014-09-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/anesthesia/</loc>
     <lastmod>2013-06-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/app/</loc>
+    <lastmod>2014-09-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -183,7 +206,7 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2013-06-11T00:00:00+00:00</lastmod>
+    <lastmod>2014-09-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -218,8 +241,26 @@
   </url>
   
   <url>
+    <loc>/tags/cran/</loc>
+    <lastmod>2014-09-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/database/</loc>
     <lastmod>2013-11-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/debian/</loc>
+    <lastmod>2014-09-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/debian-wheezy/</loc>
+    <lastmod>2014-09-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -280,6 +321,18 @@
   <url>
     <loc>/tags/ggplot2/</loc>
     <lastmod>2013-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/gnuroot/</loc>
+    <lastmod>2014-09-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/google-play/</loc>
+    <lastmod>2014-09-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -368,26 +421,26 @@
   </url>
   
   <url>
-    <loc>/tags/linux/</loc>
-    <lastmod>2013-04-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/categories/linux/</loc>
     <lastmod>2013-06-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/medicine/</loc>
-    <lastmod>2013-06-11T00:00:00+00:00</lastmod>
+    <loc>/tags/linux/</loc>
+    <lastmod>2014-09-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/medicine/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/medicine/</loc>
+    <lastmod>2013-06-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -512,8 +565,32 @@
   </url>
   
   <url>
+    <loc>/tags/r/</loc>
+    <lastmod>2014-09-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/r-commander/</loc>
     <lastmod>2013-11-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/r-console-free/</loc>
+    <lastmod>2014-09-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/r-fiddle/</loc>
+    <lastmod>2014-09-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/r-instructor/</loc>
+    <lastmod>2014-09-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -602,6 +679,12 @@
   </url>
   
   <url>
+    <loc>/tags/statistical/</loc>
+    <lastmod>2014-09-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/strings/</loc>
     <lastmod>2013-11-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -610,6 +693,12 @@
   <url>
     <loc>/tags/sweave/</loc>
     <lastmod>2013-05-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/tablet/</loc>
+    <lastmod>2014-09-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

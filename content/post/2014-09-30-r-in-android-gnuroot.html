@@ -1,0 +1,103 @@
+---
+title: Install R in Android, via GNURoot -no root required!
+author: mareviv
+date: '2014-09-30'
+slug: r-in-android-gnuroot
+categories:
+  - R
+  - android
+tags:
+  - Android
+  - App
+  - CRAN
+  - Debian
+  - Debian Wheezy
+  - GNURoot
+  - Google Play
+  - Linux
+  - R
+  - R Console Free
+  - R Instructor
+  - R-fiddle
+  - Statistical
+  - Tablet
+  - '#rstats'
+thumbnailImagePosition: left
+thumbnailImage: ./images/android/androidr.png
+metaAlignment: center
+disable_comments: false
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: "/css/my-style.css"
+---
+
+  <link rel="stylesheet" href="/css/my-style.css" type="text/css" />
+
+
+<p>Playing with my tablet some time ago, I wondered if installing R could be possible. You know, a small android device “to the power of R”…</p>
+<p>After searching on Google from time to time, I came across some interesting possibilities:</p>
+<ul>
+<li><p><a href="http://www.rinstructor.com/" target="_blank">R Instructor</a>, created “to bridge the gap between authoritative (but expensive) reference textbooks and free but often technical and difficult to understand help files”.</p></li>
+<li><p><a href="https://play.google.com/store/apps/details?id=com.appsopensource.R&amp;hl=es" target="_blank">R Console Free</a>. provides the necessary C, C++ and Fortran compilers to build and install R packages.</p></li>
+<li><p>There’s always possible to root your device and install a <a href="http://www.linux-magazine.com/Online/Features/Convert-an-Android-Device-to-Linux" target="_blank">Linux distribution for Android</a>, which will let you install any repository/package, just like in any linux console.</p></li>
+<li><p>Running R from your dedicated <a href="http://www.linkedin.com/groups/R-on-Android-Is-it-77616.S.136698839" target="_blank">R</a> <a href="http://handlesman.blogspot.com.es/2013/03/r-on-android.html" target="_blank">server</a> or from an external one (see <a href="http://www.r-fiddle.org/#/" target="_blank">R-fiddle</a>), using your own browser. I see this option as particularly useful for those who want maximum performance.</p></li>
+<li><p>Some additional thoughts on this topic are also stored in these <a href="http://stackoverflow.com/questions/5702028/is-it-possible-to-run-r-from-a-tablet-using-honeycomb-android-3-0" target="_blank">Stack Overflow</a> <a href="http://stackoverflow.com/questions/13047994/are-there-any-android-version-of-r-without-rooting-the-device" target="_blank">pages</a>.</p></li>
+<li><p>Without needing to root my device, I found <a href="https://play.google.com/store/apps/details?id=champion.gnuroot" target="_blank"><strong>GNURoot</strong></a>, an app that “provides a method for you to install and use GNU/Linux distributions and their associated applications/packages alongside Android”.</p></li>
+</ul>
+<p>Finally, my preferred solution came with GNURoot (see this <a href="http://www.r-ohjelmointi.org/?p=1434">tutorial</a>), and here’s how I managed to install the newest CRAN repositories! (NOTE: It should work “out of the box” but, as problems might appear, some experience with Linux is always advisable).</p>
+<ol style="list-style-type: decimal">
+<li><p>Install the .apk of GNURoot in your Android device. Don’t forget to donate if you like it! :)</p></li>
+<li><p>Following the app <a href="https://play.google.com/store/apps/details?id=champion.gnuroot" target="_blank">instructions</a>, download and install a linux distribution to run. In my case, I chose the .apk <a href="https://play.google.com/store/apps/details?id=champion.gnuroot.wheezy" target="_blank">GNURoot Wheezy</a> (a Debian Wheezy distro without Xterms). EDIT: Just be sure of having enough memory for it in your device</p></li>
+<li><p>Once installed, just follow the steps to launch the Rootfs (Wheezy) as Fake Root. You will see a bash prompt, from which you can access a complete linux directory tree. This is the same as if you were in a computer (however, if you aren’t root you won’t be able to access the directories via your file browser from Android)</p>
+<div style="width:40%; height:50%">
+<div class="figure">
+<img src="/images/android/screenshot_2014-09-30-23-20-00.png" />
+
+</div>
+</div>
+<p><br></p></li>
+<li><p>Now, we just have to update and upgrade:</p>
+<pre class="bash"><code>apt-get update
+apt-get upgrade</code></pre></li>
+<li><p>Then, update the sources.list file. We don’t have any graphical text editor (like gedit or kate)… but we have <a href="http://www.nano-editor.org/">nano</a>!:</p>
+<pre class="bash"><code>nano /etc/apt/sources.list</code></pre>
+<div style="width:40%; height:50%">
+<div class="figure">
+<img src="/images/android/screenshot_2014-09-30-23-27-48.png" />
+
+</div>
+</div>
+<p><br></p></li>
+</ol>
+<p>Using the volume up + “W/S/A/D” you can move between the lines. Or alternatively, you can install a convenient keyboard with arrow buttons, like <a href="https://play.google.com/store/apps/details?id=org.pocketworkstation.pckeyboard&amp;hl=es" target="_blank">Hacker’s Keyboard</a>! (thanks to <a href="http://www.r-ohjelmointi.org/?p=1434" target="_blank">JTT</a>!)</p>
+<p>Following instructions from <a href="http://cran.r-project.org/" target="_blank">CRAN</a>, I added the following line to sources.list:</p>
+<p><code>deb http://&lt;favorite-cran-mirror&gt;/bin/linux/debian wheezy-cran3/</code></p>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Exit saving changes. But before “update and upgrade” again, don’t forget to add the key for the repository running the following:</p>
+<pre class="bash"><code>apt-key adv --keyserver keys.gnupg.net --recv-key 381BA480</code></pre></li>
+<li><p>Update and upgrade…. voilà!</p>
+<pre class="bash"><code>apt-get update
+apt-get upgrade
+apt-get install r-base r-base-dev</code></pre></li>
+<li><p>Now, you only have to run R just like in any bash console:</p>
+<div style="width:40%; height:50%">
+<div class="figure">
+<img src="/images/android/screenshot_2014-10-01-00-00-29.png" />
+
+</div>
+</div></li>
+</ol>
+<div id="r-graphs" class="section level2">
+<h2>R GRAPHS</h2>
+<p>With this method you only have a prompt, without any graphical interface. ¿How do I make and see plots here?. If R runs from “inside” Android one option is to connect your Linux to an <a href="https://play.google.com/store/apps/details?id=x.org.server&amp;hl=es" target="_blank">X-server app</a> (thanks, J. Liebig). However, due to memory issues, I couldn’t put in practice this idea and see what happens. Try at your own risk! :)</p>
+<p>Fortunately, there’s always possible to <a href="http://rfunction.com/archives/812" target="_blank">print R graphs</a> in various formats, with the inconvenient that you have to browse to the plot’s location in Android -every time you need to check the output.</p>
+<pre class="r"><code>setwd(&quot;/sdcard&quot;)
+data(cars)
+pdf(&quot;cars.pdf&quot;)
+plot(cars)
+dev.off()</code></pre>
+<p>Here I leave a small script to begin playing with R on Android. Hope you enjoy it!</p>
+{{< gist aurora-mareviv f12bc0ff63ec1b9ff6b2>}}
+</div>
