@@ -12,7 +12,7 @@ tags:
   - PDF
   - template
 thumbnailImagePosition: left
-thumbnailImage: ./images/sweave/LaTeX_PDF_cover.png
+thumbnailImage: ./images/sweave/LaTeX_PDF_cover1.png
 metaAlignment: center
 disable_comments: false
 output:
