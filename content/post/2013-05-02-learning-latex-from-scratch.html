@@ -1,0 +1,67 @@
+---
+title: ...learning LaTeX, from scratch!
+author: mareviv
+date: '2013-05-02'
+slug: learning-latex-from-scratch
+categories:
+  - R
+tags:
+  - '#rstats'
+  - LaTeX
+  - MiKTeX
+  - Sweave
+  - templates
+  - TeX
+  - TeXmaker
+  - TeXworks
+thumbnailImagePosition: left
+thumbnailImage: ./images/sweave/LaTeX_cover.png
+metaAlignment: center
+disable_comments: false
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: "/css/my-style.css"
+---
+
+  <link rel="stylesheet" href="/css/my-style.css" type="text/css" />
+
+
+<blockquote>
+<p>“<a href="https://www.latex-project.org/" target="_blank">LaTeX</a> is a high-quality typesetting system; it includes features designed for the production of technical and scientific documentation, and is the de facto standard for the communication and publication of scientific documents.”</p>
+</blockquote>
+<p><br></p>
+<p>It is also… <strong>Free</strong> and <strong>Open</strong>. Specially designed for beautiful documents even when they include special language: <em><a href="http://msenux2.redwoods.edu/MathDept/courses/math45/WritingScientificPapers/project_latex.pdf" target="_blank">mathematic</a> formulae, <a href="http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf" target="_blank">phonetic</a> symbols, <a href="http://tex.stackexchange.com/questions/37345/set-music-in-latex-with-abc-or-lilypond" target="_blank">musical</a> notation</em>…</p>
+<p>The mix of normal text with special languages is indeed much better arranged in LaTeX than in any other text editor, so maybe it can be interesting for you!.</p>
+<div id="install-latex" class="section level3">
+<h3>Install LaTeX</h3>
+<p>If you want to start using LaTeX, first you have to install it. Here is a <a href="https://aurora-mareviv.github.io/talesofr/2013/05/start-using-sweave-from-scratch/" target="_blank">previous post</a> with something about LaTeX installation and useful links. In particular, I like the LaTeX editor “<a href="http://miktex.org/download" target="_blank">TeXworks</a>” for having a simpler GUI -graphic interface-, so that’s what I’m gonna use for this tutorial.</p>
+<p>Once installed a LaTeX distribution and a TeX editor (you have both with MiKTeX), you can open TeXworks. Here’s what it looks like:</p>
+<div class="figure">
+<img src="/images/sweave/latextemplate0.png" alt="TeXWorks blank file" />
+<p class="caption">TeXWorks blank file</p>
+</div>
+<p>To start making documents, I recommend you to choose one of the templates available:</p>
+<blockquote>
+<p>click: File &gt;&gt; New from Template &gt;&gt; choose Article</p>
+</blockquote>
+<p><br></p>
+<div class="figure">
+<img src="/images/sweave/latextemplate.png" alt="Choosing format" />
+<p class="caption">Choosing format</p>
+</div>
+<p>Then, a template will appear. You can highlight the code going to:</p>
+<blockquote>
+<p>Format &gt;&gt; Syntax coloring &gt;&gt; LaTeX</p>
+</blockquote>
+<p><br></p>
+<p>It should look like this:</p>
+<div class="figure">
+<img src="/images/sweave/latextemplate2.png" alt="A LaTeX article template" />
+<p class="caption">A LaTeX article template</p>
+</div>
+<p><br> Read carefully this “source file”, that is, the original <code>.tex</code> file, for it provides basic instructions and tips for writing.</p>
+<p>Then, you can simply press the <em>green, round button</em> and see what happens… then change something in the source file… then press the button again… and so on.</p>
+<p>If you wish to learn to insert things like images, tables, etc… then… <a href="http://en.wikibooks.org/wiki/LaTeX" target="_blank">Wikibooks</a> is for you, take a look. I hope this tutorial has been useful!.</p>
+</div>

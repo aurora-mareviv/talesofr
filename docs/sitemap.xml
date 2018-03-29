@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>/2013/05/learning-latex-from-scratch/</loc>
+    <lastmod>2013-05-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2013/05/start-using-sweave-from-scratch/</loc>
     <lastmod>2013-05-01T00:00:00+00:00</lastmod>
   </url>
@@ -184,7 +189,7 @@
   
   <url>
     <loc>/tags/latex/</loc>
-    <lastmod>2013-05-01T00:00:00+00:00</lastmod>
+    <lastmod>2013-05-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -202,7 +207,7 @@
   
   <url>
     <loc>/tags/miktex/</loc>
-    <lastmod>2013-05-01T00:00:00+00:00</lastmod>
+    <lastmod>2013-05-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -304,7 +309,7 @@
   
   <url>
     <loc>/tags/sweave/</loc>
-    <lastmod>2013-05-01T00:00:00+00:00</lastmod>
+    <lastmod>2013-05-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -321,8 +326,14 @@
   </url>
   
   <url>
+    <loc>/tags/templates/</loc>
+    <lastmod>2013-05-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/tex/</loc>
-    <lastmod>2013-05-01T00:00:00+00:00</lastmod>
+    <lastmod>2013-05-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -334,13 +345,13 @@
   
   <url>
     <loc>/tags/texmaker/</loc>
-    <lastmod>2013-05-01T00:00:00+00:00</lastmod>
+    <lastmod>2013-05-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/texworks/</loc>
-    <lastmod>2013-05-01T00:00:00+00:00</lastmod>
+    <lastmod>2013-05-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

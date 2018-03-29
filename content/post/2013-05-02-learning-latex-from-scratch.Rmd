@@ -1,0 +1,68 @@
+---
+title: ...learning LaTeX, from scratch!
+author: mareviv
+date: '2013-05-02'
+slug: learning-latex-from-scratch
+categories:
+  - R
+tags:
+  - '#rstats'
+  - LaTeX
+  - MiKTeX
+  - Sweave
+  - templates
+  - TeX
+  - TeXmaker
+  - TeXworks
+thumbnailImagePosition: left
+thumbnailImage: ./images/sweave/LaTeX_cover.png
+metaAlignment: center
+disable_comments: false
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: "/css/my-style.css"
+---
+
+> "[LaTeX](https://www.latex-project.org/){target="_blank"} is a high-quality typesetting system; it includes features designed for the production of technical and scientific documentation, and is the de facto standard for the communication and publication of scientific documents."  
+
+<br>
+
+It is also... **Free** and **Open**. Specially designed for beautiful documents even when they include special language: *[mathematic](http://msenux2.redwoods.edu/MathDept/courses/math45/WritingScientificPapers/project_latex.pdf){target="_blank"} formulae, [phonetic](http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf){target="_blank"} symbols, [musical](http://tex.stackexchange.com/questions/37345/set-music-in-latex-with-abc-or-lilypond){target="_blank"} notation*...
+
+The mix of normal text with special languages is indeed much better arranged in LaTeX than in any other text editor, so maybe it can be interesting for you!. 
+
+### Install LaTeX
+
+If you want to start using LaTeX, first you have to install it. Here is a [previous post](https://aurora-mareviv.github.io/talesofr/2013/05/start-using-sweave-from-scratch/){target="_blank"} with something about LaTeX installation and useful links. In particular, I like the LaTeX editor "[TeXworks](http://miktex.org/download){target="_blank"}" for having a simpler GUI -graphic interface-, so that’s what I’m gonna use for this tutorial.
+
+Once installed a LaTeX distribution and a TeX editor (you have both with MiKTeX), you can open TeXworks. Here’s what it looks like:
+
+![TeXWorks blank file](/images/sweave/latextemplate0.png)
+
+To start making documents, I recommend you to choose one of the templates available:
+
+> click: File >> New from Template >> choose Article
+
+<br>
+
+![Choosing format](/images/sweave/latextemplate.png)
+
+Then, a template will appear. You can highlight the code going to:
+
+> Format >> Syntax coloring >> LaTeX
+
+<br>
+
+It should look like this:
+
+![A LaTeX article template](/images/sweave/latextemplate2.png)
+
+<br>
+Read carefully this "source file", that is, the original `.tex` file, for it provides basic instructions and tips for writing.
+
+Then, you can simply press the *green, round button* and see what happens... then change something in the source file... then press the button again... and so on.
+
+If you wish to learn to insert things like images, tables, etc... then... [Wikibooks](http://en.wikibooks.org/wiki/LaTeX){target="_blank"} is for you, take a look. I hope this tutorial has been useful!.
+

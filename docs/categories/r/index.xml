@@ -79,6 +79,18 @@ However, I wanted to explore other blog templates, hosted in GiHub, like:</descr
     </item>
     
     <item>
+      <title>...learning LaTeX, from scratch!</title>
+      <link>/2013/05/learning-latex-from-scratch/</link>
+      <pubDate>Thu, 02 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/05/learning-latex-from-scratch/</guid>
+      <description>“LaTeX is a high-quality typesetting system; it includes features designed for the production of technical and scientific documentation, and is the de facto standard for the communication and publication of scientific documents.”
+ 
+It is also… Free and Open. Specially designed for beautiful documents even when they include special language: mathematic formulae, phonetic symbols, musical notation…
+The mix of normal text with special languages is indeed much better arranged in LaTeX than in any other text editor, so maybe it can be interesting for you!</description>
+    </item>
+    
+    <item>
       <title>…start using Sweave, from scratch!</title>
       <link>/2013/05/start-using-sweave-from-scratch/</link>
       <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
