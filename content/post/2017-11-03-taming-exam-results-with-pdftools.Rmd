@@ -47,11 +47,11 @@ wdirRoot <- gsub("\\content\\/post", "", wdir)
 
 # Introduction &nbsp; <span class="fa fa-cogs"></span> 
 
-There are several ways to mine tables and other content from a pdf, using R. After a lot of trial & error, here's how I managed to extract global exam results from an international, massive, yearly examination, the [EDAIC](https://www.esahq.org/education/edaic/exam-types/part-i-examination).  
+There are several ways to mine tables and other content from a pdf, using R. After a lot of trial & error, here's how I managed to extract global exam results from an international, massive, yearly examination, the [EDAIC](https://www.esahq.org/education/edaic/exam-types/part-i-examination){target="_blank"}.  
 
-This is my first use case of *"pdf mining"* with R, and also a fairly simple one.  However, more complex and very fine examples of this can be found elsewhere, using both [<span class="texttt">pdftools</span>](https://ropensci.org/blog/2016/03/01/pdftools-and-jeroen/) and [<span class="texttt">tabulizer</span>](https://github.com/ropensci/tabulizer) packages. 
+This is my first use case of *"pdf mining"* with R, and also a fairly simple one.  However, more complex and very fine examples of this can be found elsewhere, using both [<span class="texttt">pdftools</span>](https://ropensci.org/blog/2016/03/01/pdftools-and-jeroen/){target="_blank"} and [<span class="texttt">tabulizer</span>](https://github.com/ropensci/tabulizer){target="_blank"} packages. 
 
-As can be seen from the original [pdf](../../../content/post/data/EDAIC.pdf), exam results are anonymous. They consist on a numeric, 6-digit **code** and a binary result: "**FAIL / PASS**". I was particularly interested into seeing how many of them passed the exam, as some indirect measure of how *"hard"* it can be.   
+As can be seen from the original [pdf](../../../post/data/EDAIC.pdf){target="_blank"}, exam results are anonymous. They consist on a numeric, 6-digit **code** and a binary result: "**FAIL / PASS**". I was particularly interested into seeing how many of them passed the exam, as some indirect measure of how *"hard"* it can be.   
 
 # Mining the table &nbsp; <span class="fa fa-wrench"></span>
 
@@ -78,7 +78,7 @@ class(txt[1])
 
 These commands return a lenghty *blob* of text. Fortunately, there are some `\n` symbols that signal the new lines in the original document.  
 
-We will use these to split the *blob* into something more approachable, using [`tidyversal`](https://www.tidyverse.org/) methods...  
+We will use these to split the *blob* into something more approachable, using [`tidyversal`](https://www.tidyverse.org/){target="_blank"} methods...  
 
 - Split the *blob*.  
 - Transform the resulting `list` into a `character vector` with `unlist`.  
@@ -135,7 +135,7 @@ tx5 %>%
 
 From these results we see that the **EDAIC-Part 1** exam doesn't have a particularly high clearance rate.  It is currently done by medical specialists, but its dificulty relies in a *very* broad list of subjects covered, ranging from topics in applied physics, the entire human physiology, pharmacology, clinical medicine and latest guidelines. 
 
-The **EDAIC-Part 2** is an [oral examination](https://www.esahq.org/~/media/ESA/Files/EDUCATION/EDAIC%20Part%20II/Advice%20to%20candidates%20English.ashx) which may take place in English, French, German, Spanish or Scandinavian languages, in which the examinee is evaluated by 4 pairs of examiners in 4 different sessions of 1-hour duration. **Part 2** is currently considered the toughest by examinees.     
+The **EDAIC-Part 2** is an [oral examination](https://www.esahq.org/~/media/ESA/Files/EDUCATION/EDAIC%20Part%20II/Advice%20to%20candidates%20English.ashx){target="_blank"} which may take place in English, French, German, Spanish or Scandinavian languages, in which the examinee is evaluated by 4 pairs of examiners in 4 different sessions of 1-hour duration. **Part 2** is currently considered the toughest by examinees.     
 
 Despite being a hard test to pass -and also the exam fee-, it's becoming increasingly popular among anesthesiologists and critical care specialists that wish to stay up-to date with the current medical knowledge and practice.  
 
