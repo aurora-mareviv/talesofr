@@ -24,6 +24,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE, echo=TRUE, eval=TRUE, warning=FALSE, message=FALSE, comment="  ")
+# https:\/\/aurora-mareviv.github.io\/talesofr
 ```
 
 ```{r results='hide', echo=FALSE}

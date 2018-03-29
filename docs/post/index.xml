@@ -79,6 +79,17 @@ However, I wanted to explore other blog templates, hosted in GiHub, like:</descr
     </item>
     
     <item>
+      <title>... ridiculously photogenic factors (heatmap with p-values)</title>
+      <link>/2013/05/ridiculously-photogenic-heatmap-p-values/</link>
+      <pubDate>Sun, 05 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/05/ridiculously-photogenic-heatmap-p-values/</guid>
+      <description>Some months ago, I had to explore a vast amount of categorical variables before making some multivariate analyses.
+One good way to know your raw data, to make new hypotheses…etc, is to calculate some pairwise “crude” chi-square tests of independence of your factors, but it can be very time-consuming.
+I mean, not time-consuming to make the tests (with a simple command it can be done), but to revise all of them.</description>
+    </item>
+    
+    <item>
       <title>...learning LaTeX, from scratch!</title>
       <link>/2013/05/learning-latex-from-scratch/</link>
       <pubDate>Thu, 02 May 2013 00:00:00 +0000</pubDate>

@@ -75,6 +75,15 @@
     </item>
     
     <item>
+      <title>Bioconductor</title>
+      <link>/tags/bioconductor/</link>
+      <pubDate>Sun, 05 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/bioconductor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Blogdown</title>
       <link>/tags/blogdown/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
@@ -93,6 +102,15 @@
     </item>
     
     <item>
+      <title>Chi Square</title>
+      <link>/tags/chi-square/</link>
+      <pubDate>Sun, 05 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/chi-square/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Economics</title>
       <link>/tags/economics/</link>
       <pubDate>Sun, 28 Apr 2013 00:00:00 +0000</pubDate>
@@ -107,6 +125,15 @@
       <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/edaic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Factors</title>
+      <link>/tags/factors/</link>
+      <pubDate>Sun, 05 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/factors/</guid>
       <description></description>
     </item>
     
@@ -131,9 +158,18 @@
     <item>
       <title>Ggplot2</title>
       <link>/tags/ggplot2/</link>
-      <pubDate>Sun, 28 Apr 2013 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 05 May 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/ggplot2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gplots</title>
+      <link>/tags/gplots/</link>
+      <pubDate>Sun, 05 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/gplots/</guid>
       <description></description>
     </item>
     
@@ -161,6 +197,24 @@
       <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/heart/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Heatmap</title>
+      <link>/tags/heatmap/</link>
+      <pubDate>Sun, 05 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/heatmap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Heatplot</title>
+      <link>/tags/heatplot/</link>
+      <pubDate>Sun, 05 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/heatplot/</guid>
       <description></description>
     </item>
     
@@ -273,11 +327,29 @@
     </item>
     
     <item>
+      <title>Pheatmap</title>
+      <link>/tags/pheatmap/</link>
+      <pubDate>Sun, 05 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/pheatmap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Plot</title>
       <link>/tags/plot/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/plot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Plyr</title>
+      <link>/tags/plyr/</link>
+      <pubDate>Sun, 05 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/plyr/</guid>
       <description></description>
     </item>
     
@@ -300,6 +372,15 @@
     </item>
     
     <item>
+      <title>Regheatmap</title>
+      <link>/tags/regheatmap/</link>
+      <pubDate>Sun, 05 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/regheatmap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Regression</title>
       <link>/tags/regression/</link>
       <pubDate>Sun, 28 Apr 2013 00:00:00 +0000</pubDate>
@@ -309,11 +390,29 @@
     </item>
     
     <item>
+      <title>Reshape</title>
+      <link>/tags/reshape/</link>
+      <pubDate>Sun, 05 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/reshape/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Sankey Diagram</title>
       <link>/tags/sankey-diagram/</link>
       <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/sankey-diagram/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scales</title>
+      <link>/tags/scales/</link>
+      <pubDate>Sun, 05 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/scales/</guid>
       <description></description>
     </item>
     
@@ -350,6 +449,15 @@
       <pubDate>Thu, 02 May 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/templates/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Test</title>
+      <link>/tags/test/</link>
+      <pubDate>Sun, 05 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/test/</guid>
       <description></description>
     </item>
     
