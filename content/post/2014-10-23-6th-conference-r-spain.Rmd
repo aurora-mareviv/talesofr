@@ -1,0 +1,38 @@
+---
+title: Happening just now... 6th Conference of the R Spanish User Community
+author: mareviv
+date: '2014-10-23'
+slug: 6th-conference-r-spain
+categories:
+  - R
+  - spanish
+tags:
+  - Conferences
+  - Jornadas de Usuarios de R
+  - R Spain
+  - R-es
+  - Santiago de Compostela
+  - '#rstats'
+thumbnailImagePosition: left
+thumbnailImage: ./images/conferences/r-es-conf2.png
+metaAlignment: center
+disable_comments: false
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: "/css/my-style.css"
+---
+
+The [R-Spain Conferences](http://r-es.org/VI+Jornadas){target="_blank"} have been taking place since 2009 as an expression of the growing interest that R elicits in many fileds. The organisers are the [Comunidad R Hispano](http://r-es.org/Comunidad){target="_blank"} (R-es). The community supports many groups and initiatives aimed to develop R knowledge and widen its use.
+
+To attend the talks by [streaming](http://r-es.org/Asistencia+remota+a+las+VI+Jornadas){target="_blank"} (they are in Spanish) you must [registrate](http://r-es.org/tiki-register.php){target="_blank"}.
+
+There is also a [scientific programme](http://r-es.org/Programa+de+las+VI+Jornadas){target="_blank"} with the presentations (some in English) here.
+
+<div style="margin:auto; width:40%; height:50%;">
+
+![](/images/conferences/r-es-conf.png)
+
+</div> 
+

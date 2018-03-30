@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>/2014/10/6th-conference-r-spain/</loc>
+    <lastmod>2014-10-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2014/09/r-in-android-gnuroot/</loc>
     <lastmod>2014-09-30T00:00:00+00:00</lastmod>
   </url>
@@ -140,13 +145,13 @@
   </url>
   
   <url>
-    <loc>/categories/android/</loc>
+    <loc>/tags/android/</loc>
     <lastmod>2014-09-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/android/</loc>
+    <loc>/categories/android/</loc>
     <lastmod>2014-09-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -231,6 +236,12 @@
   <url>
     <loc>/tags/collaboration/</loc>
     <lastmod>2013-06-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/conferences/</loc>
+    <lastmod>2014-10-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -391,6 +402,12 @@
   </url>
   
   <url>
+    <loc>/tags/jornadas-de-usuarios-de-r/</loc>
+    <lastmod>2014-10-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/kennethrogoff/</loc>
     <lastmod>2013-04-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -421,26 +438,26 @@
   </url>
   
   <url>
-    <loc>/categories/linux/</loc>
-    <lastmod>2013-06-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/linux/</loc>
     <lastmod>2014-09-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/medicine/</loc>
-    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
+    <loc>/categories/linux/</loc>
+    <lastmod>2013-06-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/medicine/</loc>
     <lastmod>2013-06-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/medicine/</loc>
+    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -559,14 +576,14 @@
   </url>
   
   <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2018-02-25T00:00:00+00:00</lastmod>
+    <loc>/tags/r/</loc>
+    <lastmod>2014-09-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/r/</loc>
-    <lastmod>2014-09-30T00:00:00+00:00</lastmod>
+    <loc>/categories/r/</loc>
+    <lastmod>2018-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -579,6 +596,12 @@
   <url>
     <loc>/tags/r-console-free/</loc>
     <lastmod>2014-09-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/r-es/</loc>
+    <lastmod>2014-10-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -597,6 +620,12 @@
   <url>
     <loc>/tags/r-markdown/</loc>
     <lastmod>2018-02-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/r-spain/</loc>
+    <lastmod>2014-10-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -645,6 +674,12 @@
   <url>
     <loc>/tags/sankey-diagram/</loc>
     <lastmod>2017-08-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/santiago-de-compostela/</loc>
+    <lastmod>2014-10-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

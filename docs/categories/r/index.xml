@@ -79,6 +79,17 @@ However, I wanted to explore other blog templates, hosted in GiHub, like:</descr
     </item>
     
     <item>
+      <title>Happening just now... 6th Conference of the R Spanish User Community</title>
+      <link>/2014/10/6th-conference-r-spain/</link>
+      <pubDate>Thu, 23 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/2014/10/6th-conference-r-spain/</guid>
+      <description>The R-Spain Conferences have been taking place since 2009 as an expression of the growing interest that R elicits in many fileds. The organisers are the Comunidad R Hispano (R-es). The community supports many groups and initiatives aimed to develop R knowledge and widen its use.
+To attend the talks by streaming (they are in Spanish) you must registrate.
+There is also a scientific programme with the presentations (some in English) here.</description>
+    </item>
+    
+    <item>
       <title>Install R in Android, via GNURoot -no root required!</title>
       <link>/2014/09/r-in-android-gnuroot/</link>
       <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
