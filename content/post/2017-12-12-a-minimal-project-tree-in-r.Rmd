@@ -88,7 +88,7 @@ I also added some more features to the tree:
 - Parametrize the `.Rmd` file.   
 - A <span class="texttt">Git</span> repository so the tree can be conveniently cloned or downloaded, with a .gitignore file:   
 
-<div class="button well alert alert-info text-center" id="myButton" onmouseover="alertWarning()"  onmouseout="alertInfo()">
+<div class="button well alert alert-info text-center" id="myButton" onmouseover="alertWarning('myButton')"  onmouseout="alertInfo('myButton')">
 [`git clone https://github.com/aurora-mareviv/ProjectR`](https://github.com/aurora-mareviv/ProjectR){target="_blank"}  
 </div>
 

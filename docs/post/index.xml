@@ -79,6 +79,16 @@ However, I wanted to explore other blog templates, hosted in GiHub, like:</descr
     </item>
     
     <item>
+      <title>R/Shiny for clinical trials: simple randomization tables</title>
+      <link>/2016/06/r-shiny-clinical-trials-randomization/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/2016/06/r-shiny-clinical-trials-randomization/</guid>
+      <description>One of the things I most like from R + Shiny is that it enables me to serve the power and flexibility of R in small “chunks” to cover different needs, allowing people not used to R to benefit from it. However, what I like most is that’s really fun and easy to program those utilities for a person without any specific programming background.
+Here’s a small hack done in R/Shiny: it covered an urgent need for a study involving patient randomisation to two branches of treatment, in what is commonly known as a clinical trial.</description>
+    </item>
+    
+    <item>
       <title>Compile BayesX from source code - via Fink in OSX 10.10</title>
       <link>/2015/06/compile-bayesx-via-fink-osx1010/</link>
       <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>

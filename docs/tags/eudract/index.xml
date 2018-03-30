@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Eudract on Tales of R - Rmarkdown Blog</title>
+    <link>/tags/eudract/</link>
+    <description>Recent content in Eudract on Tales of R - Rmarkdown Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 09 Jun 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/eudract/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>R/Shiny for clinical trials: simple randomization tables</title>
+      <link>/2016/06/r-shiny-clinical-trials-randomization/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/2016/06/r-shiny-clinical-trials-randomization/</guid>
+      <description>One of the things I most like from R + Shiny is that it enables me to serve the power and flexibility of R in small “chunks” to cover different needs, allowing people not used to R to benefit from it. However, what I like most is that’s really fun and easy to program those utilities for a person without any specific programming background.
+Here’s a small hack done in R/Shiny: it covered an urgent need for a study involving patient randomisation to two branches of treatment, in what is commonly known as a clinical trial.</description>
+    </item>
+    
+  </channel>
+</rss>

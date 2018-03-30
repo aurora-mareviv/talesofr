@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>/2016/06/r-shiny-clinical-trials-randomization/</loc>
+    <lastmod>2016-06-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2015/06/compile-bayesx-via-fink-osx1010/</loc>
     <lastmod>2015-06-18T00:00:00+00:00</lastmod>
   </url>
@@ -203,6 +208,12 @@
   </url>
   
   <url>
+    <loc>/tags/blind-study/</loc>
+    <lastmod>2016-06-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/blogdown/</loc>
     <lastmod>2018-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -239,8 +250,20 @@
   </url>
   
   <url>
+    <loc>/tags/chronic-pain/</loc>
+    <lastmod>2016-06-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/classes/</loc>
     <lastmod>2013-11-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/clinical-trial/</loc>
+    <lastmod>2016-06-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -317,6 +340,12 @@
   </url>
   
   <url>
+    <loc>/tags/eudract/</loc>
+    <lastmod>2016-06-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/excel/</loc>
     <lastmod>2013-05-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -361,6 +390,12 @@
   <url>
     <loc>/tags/ggplot2/</loc>
     <lastmod>2013-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/github/</loc>
+    <lastmod>2016-06-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -533,6 +568,12 @@
   </url>
   
   <url>
+    <loc>/tags/open-source/</loc>
+    <lastmod>2016-06-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/os-x/</loc>
     <lastmod>2013-05-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -612,7 +653,7 @@
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2014-09-30T00:00:00+00:00</lastmod>
+    <lastmod>2016-06-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -667,6 +708,12 @@
   <url>
     <loc>/tags/r-studio/</loc>
     <lastmod>2013-11-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/randomization/</loc>
+    <lastmod>2016-06-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -732,7 +779,13 @@
   
   <url>
     <loc>/tags/shiny/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+    <lastmod>2016-06-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/shinyapps/</loc>
+    <lastmod>2016-06-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

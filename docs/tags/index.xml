@@ -129,6 +129,15 @@
     </item>
     
     <item>
+      <title>Blind Study</title>
+      <link>/tags/blind-study/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/blind-study/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Blogdown</title>
       <link>/tags/blogdown/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
@@ -174,11 +183,29 @@
     </item>
     
     <item>
+      <title>Chronic Pain</title>
+      <link>/tags/chronic-pain/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/chronic-pain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Classes</title>
       <link>/tags/classes/</link>
       <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/classes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Clinical Trial</title>
+      <link>/tags/clinical-trial/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/clinical-trial/</guid>
       <description></description>
     </item>
     
@@ -291,6 +318,15 @@
     </item>
     
     <item>
+      <title>Eudract</title>
+      <link>/tags/eudract/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/eudract/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Excel</title>
       <link>/tags/excel/</link>
       <pubDate>Sat, 18 May 2013 00:00:00 +0000</pubDate>
@@ -359,6 +395,15 @@
       <pubDate>Tue, 07 May 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/ggplot2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>/tags/github/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/github/</guid>
       <description></description>
     </item>
     
@@ -597,6 +642,15 @@
     </item>
     
     <item>
+      <title>Open Source</title>
+      <link>/tags/open-source/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/open-source/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Os X</title>
       <link>/tags/os-x/</link>
       <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
@@ -707,7 +761,7 @@
     <item>
       <title>R</title>
       <link>/tags/r/</link>
-      <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>/tags/r/</guid>
       <description></description>
@@ -782,6 +836,15 @@
       <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/r-studio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Randomization</title>
+      <link>/tags/randomization/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/randomization/</guid>
       <description></description>
     </item>
     
@@ -878,9 +941,18 @@
     <item>
       <title>Shiny</title>
       <link>/tags/shiny/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>/tags/shiny/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shinyapps</title>
+      <link>/tags/shinyapps/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/shinyapps/</guid>
       <description></description>
     </item>
     

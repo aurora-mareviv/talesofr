@@ -34,6 +34,16 @@ In this context, patients usually undergo a wide variety of diagnostic and/or th
     </item>
     
     <item>
+      <title>R/Shiny for clinical trials: simple randomization tables</title>
+      <link>/2016/06/r-shiny-clinical-trials-randomization/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/2016/06/r-shiny-clinical-trials-randomization/</guid>
+      <description>One of the things I most like from R + Shiny is that it enables me to serve the power and flexibility of R in small “chunks” to cover different needs, allowing people not used to R to benefit from it. However, what I like most is that’s really fun and easy to program those utilities for a person without any specific programming background.
+Here’s a small hack done in R/Shiny: it covered an urgent need for a study involving patient randomisation to two branches of treatment, in what is commonly known as a clinical trial.</description>
+    </item>
+    
+    <item>
       <title>Power and sample size calculator for mitochondrial DNA association studies (Shiny)</title>
       <link>/2013/07/power-sample-size-mitochondrial-dna/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>

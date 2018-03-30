@@ -302,7 +302,7 @@ htmltools::HTML("{{< hl-text danger >}}
 
 We can also add really cool functions to enhance our post. **Click in the red button below!**:
 
-<div class="button well alert alert-danger text-center" id="myButton" onclick="alertInfoIcon()">
+<div class="button well alert alert-danger text-center" id="myButton" onclick="alertInfoIcon('myButton')">
   <span id="toInfo"><span class="fa fa-minus-circle"></span> alert-danger</span>
 </div> 
 
