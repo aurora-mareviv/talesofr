@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>/2015/06/compile-bayesx-via-fink-osx1010/</loc>
+    <lastmod>2015-06-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2014/10/6th-conference-r-spain/</loc>
     <lastmod>2014-10-23T00:00:00+00:00</lastmod>
   </url>
@@ -164,7 +169,13 @@
   
   <url>
     <loc>/tags/app/</loc>
-    <lastmod>2014-09-30T00:00:00+00:00</lastmod>
+    <lastmod>2015-06-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/apple-mac/</loc>
+    <lastmod>2015-06-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -176,6 +187,12 @@
   <url>
     <loc>/tags/barplot/</loc>
     <lastmod>2013-11-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/bayesx/</loc>
+    <lastmod>2015-06-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -240,6 +257,12 @@
   </url>
   
   <url>
+    <loc>/tags/compilation/</loc>
+    <lastmod>2015-06-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/conferences/</loc>
     <lastmod>2014-10-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -265,7 +288,7 @@
   
   <url>
     <loc>/tags/debian/</loc>
-    <lastmod>2014-09-30T00:00:00+00:00</lastmod>
+    <lastmod>2015-06-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -302,6 +325,12 @@
   <url>
     <loc>/tags/factors/</loc>
     <lastmod>2013-11-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/fink/</loc>
+    <lastmod>2015-06-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -445,7 +474,7 @@
   
   <url>
     <loc>/categories/linux/</loc>
-    <lastmod>2013-06-30T00:00:00+00:00</lastmod>
+    <lastmod>2015-06-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -506,6 +535,12 @@
   <url>
     <loc>/tags/os-x/</loc>
     <lastmod>2013-05-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/osx-10.10/</loc>
+    <lastmod>2015-06-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -698,6 +733,12 @@
   <url>
     <loc>/tags/shiny/</loc>
     <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/source-code/</loc>
+    <lastmod>2015-06-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bayesx on Tales of R - Rmarkdown Blog</title>
+    <link>/tags/bayesx/</link>
+    <description>Recent content in Bayesx on Tales of R - Rmarkdown Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Jun 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/bayesx/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Compile BayesX from source code - via Fink in OSX 10.10</title>
+      <link>/2015/06/compile-bayesx-via-fink-osx1010/</link>
+      <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/2015/06/compile-bayesx-via-fink-osx1010/</guid>
+      <description>My PC just passed away. My good old one since 2009… so I decided to buy a desktop computer running OSX 10.10 (although I cannot exclude the possibility of partitioning the disk and installing also Linux…). For now, I missed some apps, which I installed with Fink (a popular debian-based distro ported to Mac).
+One of the programs I was fiddling around with was BayesX: “Bayesian Inference in Structured Additive Regression Models”, authored by great people at Muenchen University, (specially Nadja and Thomas, whom I’m glad to know personally).</description>
+    </item>
+    
+  </channel>
+</rss>

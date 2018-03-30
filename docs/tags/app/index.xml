@@ -6,10 +6,20 @@
     <description>Recent content in App on Tales of R - Rmarkdown Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2015 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/app/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Compile BayesX from source code - via Fink in OSX 10.10</title>
+      <link>/2015/06/compile-bayesx-via-fink-osx1010/</link>
+      <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/2015/06/compile-bayesx-via-fink-osx1010/</guid>
+      <description>My PC just passed away. My good old one since 2009… so I decided to buy a desktop computer running OSX 10.10 (although I cannot exclude the possibility of partitioning the disk and installing also Linux…). For now, I missed some apps, which I installed with Fink (a popular debian-based distro ported to Mac).
+One of the programs I was fiddling around with was BayesX: “Bayesian Inference in Structured Additive Regression Models”, authored by great people at Muenchen University, (specially Nadja and Thomas, whom I’m glad to know personally).</description>
+    </item>
     
     <item>
       <title>Install R in Android, via GNURoot -no root required!</title>

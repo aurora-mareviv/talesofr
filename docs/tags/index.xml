@@ -86,9 +86,18 @@
     <item>
       <title>App</title>
       <link>/tags/app/</link>
-      <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>
       
       <guid>/tags/app/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Apple Mac</title>
+      <link>/tags/apple-mac/</link>
+      <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/apple-mac/</guid>
       <description></description>
     </item>
     
@@ -98,6 +107,15 @@
       <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/barplot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bayesx</title>
+      <link>/tags/bayesx/</link>
+      <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/bayesx/</guid>
       <description></description>
     </item>
     
@@ -183,6 +201,15 @@
     </item>
     
     <item>
+      <title>Compilation</title>
+      <link>/tags/compilation/</link>
+      <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/compilation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Conferences</title>
       <link>/tags/conferences/</link>
       <pubDate>Thu, 23 Oct 2014 00:00:00 +0000</pubDate>
@@ -221,7 +248,7 @@
     <item>
       <title>Debian</title>
       <link>/tags/debian/</link>
-      <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>
       
       <guid>/tags/debian/</guid>
       <description></description>
@@ -278,6 +305,15 @@
       <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/factors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fink</title>
+      <link>/tags/fink/</link>
+      <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/fink/</guid>
       <description></description>
     </item>
     
@@ -570,6 +606,15 @@
     </item>
     
     <item>
+      <title>Osx 10.10</title>
+      <link>/tags/osx-10.10/</link>
+      <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/osx-10.10/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>P Value</title>
       <link>/tags/p-value/</link>
       <pubDate>Tue, 07 May 2013 00:00:00 +0000</pubDate>
@@ -836,6 +881,15 @@
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/shiny/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Source Code</title>
+      <link>/tags/source-code/</link>
+      <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/source-code/</guid>
       <description></description>
     </item>
     

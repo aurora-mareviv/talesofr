@@ -1,0 +1,99 @@
+---
+title: Compile BayesX from source code - via Fink in OSX 10.10
+author: mareviv
+date: '2015-06-18'
+slug: compile-bayesx-via-fink-osx1010
+categories:
+  - linux
+tags:
+  - App
+  - Apple Mac
+  - BayesX
+  - Compilation
+  - Debian
+  - Fink
+  - OSX 10.10
+  - Source Code
+thumbnailImagePosition: left
+thumbnailImage: ./images/bayesx.gif
+metaAlignment: center
+disable_comments: false
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: "/css/my-style.css"
+---
+
+My PC just passed away. My good old one since 2009... so I decided to buy a desktop computer running OSX 10.10 (although I cannot exclude the possibility of partitioning the disk and installing also Linux...). For now, I missed some apps, which I installed with [Fink](http://www.finkproject.org/){target="_blank"} (a popular debian-based distro ported to Mac).
+
+One of the programs I was fiddling around with was [BayesX](http://www.statistik.lmu.de/~bayesx/bayesx.html){target="_blank"}: "Bayesian Inference in Structured Additive Regression Models", authored by great people at Muenchen University, (specially Nadja and Thomas, whom I'm glad to know personally).
+
+The problem is that I used to have both BayesX [binaries](https://www.uni-goettingen.de/de/download/550527.html){target="_blank"} for Linux and Windows, but now I needed one for my Mac. Here's how I did (pretty easy once I figured out how to do it!):
+<!-- http://www.statistik.lmu.de/~bayesx/bayesxdownload.html -->
+
+## 1. OBTAIN XCODE, XQUARTZ AND JAVA
+
+[Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12){target="_blank"}, [Xquartz](http://xquartz.macosforge.org/landing/){target="_blank"} and [Java](https://www.java.com/en/download/help/mac_install.xml){target="_blank"} are the first tools you will need in order to build Fink, and hence BayesX.
+
+## 2. INSTALL FINK
+
+Fink is a popular port of GNU-Linux for MacOS. You can install it easily following the [steps in this page](http://www.finkproject.org/download/index.php?phpLang=en){target="_blank"}.
+
+Because my OS was 10.10, I had to follow instructions to compile [Fink from source](http://www.finkproject.org/download/srcdist.php){target="_blank"}. Fortunately, the page provides a handy helper script to run in the terminal (for OSX 10.10). This script goes through all the steps. Open the Terminal and just either [run the script](http://apple.stackexchange.com/questions/80704/how-to-run-a-bash-script-from-the-desktop){target="_blank"} or the commands one by one, and follow the instructions. It may take a while to download and install.
+
+## 3. DOWNLOAD BAYESX SOURCE CODE
+
+Go to the [Download](https://www.uni-goettingen.de/de/download/550527.html){target="_blank"} page and get the source. I suggest that you store the .zip file in a dedicated directory such as /Users/me/Downloads/source/code (changing "me" for your user). Then, open the Terminal and type:
+
+```{bash eval=FALSE}
+cd /Users/me/Downloads/source/code
+unzip -a bayesxsource_3_0_1.zip # bayesxsource_3_0_1.zip or whatever the name is
+```
+
+## 4. INSTALL CMAKE AND GSL
+
+If you want to compile this source for Mac, you'll see you need two more components (at least in this tutorial): cmake and the GNU Scientific Library (GSL).
+
+Cmake is used to create a custom Makefile which will be used in compilation. You can insytall it typing in the Terminal:
+
+```{bash eval=FALSE}
+sudo apt-get install cmake
+```
+
+Or you can use a (very useful for debugging) [graphical user interface for Cmake](http://www.cmake.org/download/){target="_blank"}.
+
+To install [GSL](http://www.gnu.org/software/gsl/){target="_blank"}, simply type:
+
+```{bash eval=FALSE}
+sudo apt-get install gsl
+```
+
+## 5. COMPILE BAYESX
+
+Once everything is installed, you can start to compile. Run in the Terminal
+
+```{bash eval=FALSE}
+cd /Users/me/Downloads/source/code
+cmake . # this will create the Makefile
+cd /Users/Auri/Downloads/source/ # locate the Makefile
+make
+```
+
+You will obtain an Unix Executable File in /Users/me/Downloads/source called BayesX. Double-clicking on it should open the BayesX prompt!.
+
+## 6. FINAL NOTES
+
+Please, go to `README.BayesX` in the source for more information and issue solving.
+
+I have tested this tutorial in another Mac machine -OSX 10.10- without any of this software installed, and it worked well. However, you may experience (mostly unknown) issues that may depend on different versions of Xcode, Fink, Java, GSL... etc. Despite this, I hope these steps will help you.
+
+Also, from here you can only compile a mere console version of BayesX. I'm not sure how to run the Java user interface, but I will update this post to include any progress.
+
+Hope you enjoy!
+
+<div style="margin:auto; width:40%; height:50%;">
+
+![](/images/bayesx2.jpg)
+
+</div> 
