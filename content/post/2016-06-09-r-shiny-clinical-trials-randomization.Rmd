@@ -46,7 +46,7 @@ To tackle the points above, my app should have two main features:
 
 Here's how I got it to work:
 
-- The very core of this Shiny app is a combination between the [set.seed](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Random.html){target="_blank"} and [sample](https://stat.ethz.ch/R-manual/R-devel/library/base/html/sample.html){target="_blank"} R functions. The PIN number (the **set.seed** argument){target="_blank"} works like a secret passcode that links to a given random table. E.g., every time I enter '5432', the random tables will look the same. This protects from accidental blindness disclosure, as nobody can find the correct random table without the proper PIN, *even if they can access the app's source code*.
+- The very core of this Shiny app is a combination between the [set.seed](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Random.html){target="_blank"} and [sample](https://stat.ethz.ch/R-manual/R-devel/library/base/html/sample.html){target="_blank"} R functions. The PIN number (the **set.seed** argument) works like a secret passcode that links to a given random table. E.g., every time I enter '5432', the random tables will look the same. This protects from accidental blindness disclosure, as nobody can find the correct random table without the proper PIN, *even if they can access the app's source code*.
 
 - The tables are created column by column, ordered at first. Then we proceed to randomize (via the **sample** function) both the treatment column (in the random table) and the Group column (in the PIN table).
 

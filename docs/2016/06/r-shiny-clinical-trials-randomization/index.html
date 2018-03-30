@@ -323,7 +323,7 @@ Here’s a small hack done in R/Shiny: it covered an urgent need for a study inv
 </ul>
 <p>Here’s how I got it to work:</p>
 <ul>
-<li><p>The very core of this Shiny app is a combination between the <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/Random.html" target="_blank">set.seed</a> and <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/sample.html" target="_blank">sample</a> R functions. The PIN number (the <strong>set.seed</strong> argument){target=“_blank“} works like a secret passcode that links to a given random table. E.g., every time I enter ‘5432’, the random tables will look the same. This protects from accidental blindness disclosure, as nobody can find the correct random table without the proper PIN, <em>even if they can access the app’s source code</em>.</p></li>
+<li><p>The very core of this Shiny app is a combination between the <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/Random.html" target="_blank">set.seed</a> and <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/sample.html" target="_blank">sample</a> R functions. The PIN number (the <strong>set.seed</strong> argument) works like a secret passcode that links to a given random table. E.g., every time I enter ‘5432’, the random tables will look the same. This protects from accidental blindness disclosure, as nobody can find the correct random table without the proper PIN, <em>even if they can access the app’s source code</em>.</p></li>
 <li><p>The tables are created column by column, ordered at first. Then we proceed to randomize (via the <strong>sample</strong> function) both the treatment column (in the random table) and the Group column (in the PIN table).</p></li>
 <li><p>Once the tables are created they can be downloaded as .CSV files, printed, signed and dated to document the randomization procedure. The app’s open source code and the PIN number will provide reproducibility to the procedure for many years.</p></li>
 </ul>
@@ -858,7 +858,7 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/aurora-mareviv.github.io\/talesofr\/2016\/06\/r-shiny-clinical-trials-randomization\/';
+          this.page.url = '\/2016\/06\/r-shiny-clinical-trials-randomization\/';
           
             this.page.identifier = '\/2016\/06\/r-shiny-clinical-trials-randomization\/'
           
