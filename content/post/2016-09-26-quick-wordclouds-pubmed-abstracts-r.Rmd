@@ -75,7 +75,7 @@ At the beginning of the [gist](https://gist.github.com/aurora-mareviv/697cbb5051
 
 To source the script, simply type in the R console:
 
-This script creates two directories in your working directory: 'corpus1' for the abstracts file, and 'wordcloud' to store the plot.
+Note: This script creates two directories in your working directory: 'corpus1' for the abstracts file, and 'wordcloud' to store the plot.
 
 ```{r eval=FALSE}
 library(devtools)
