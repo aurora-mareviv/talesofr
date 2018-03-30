@@ -66,6 +66,15 @@
     </item>
     
     <item>
+      <title>Abstract</title>
+      <link>/tags/abstract/</link>
+      <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/abstract/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Anaesthesiology</title>
       <link>/tags/anaesthesiology/</link>
       <pubDate>Tue, 11 Jun 2013 00:00:00 +0000</pubDate>
@@ -255,6 +264,15 @@
     </item>
     
     <item>
+      <title>Corpus</title>
+      <link>/tags/corpus/</link>
+      <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/corpus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Cran</title>
       <link>/tags/cran/</link>
       <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
@@ -399,6 +417,15 @@
     </item>
     
     <item>
+      <title>Gist</title>
+      <link>/tags/gist/</link>
+      <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/gist/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Github</title>
       <link>/tags/github/</link>
       <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
@@ -446,7 +473,7 @@
     <item>
       <title>Graphs</title>
       <link>/tags/graphs/</link>
-      <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>/tags/graphs/</guid>
       <description></description>
@@ -734,7 +761,7 @@
     <item>
       <title>Plyr</title>
       <link>/tags/plyr/</link>
-      <pubDate>Tue, 07 May 2013 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>/tags/plyr/</guid>
       <description></description>
@@ -759,9 +786,18 @@
     </item>
     
     <item>
+      <title>Pubmed</title>
+      <link>/tags/pubmed/</link>
+      <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/pubmed/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>R</title>
       <link>/tags/r/</link>
-      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>/tags/r/</guid>
       <description></description>
@@ -854,6 +890,24 @@
       <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/rcommander/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rcurl</title>
+      <link>/tags/rcurl/</link>
+      <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/rcurl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Refmanager</title>
+      <link>/tags/refmanager/</link>
+      <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/refmanager/</guid>
       <description></description>
     </item>
     
@@ -957,6 +1011,15 @@
     </item>
     
     <item>
+      <title>Snowballc</title>
+      <link>/tags/snowballc/</link>
+      <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/snowballc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Source Code</title>
       <link>/tags/source-code/</link>
       <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>
@@ -1007,6 +1070,15 @@
       <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
       
       <guid>/tags/tablet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tagcloud</title>
+      <link>/tags/tagcloud/</link>
+      <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/tagcloud/</guid>
       <description></description>
     </item>
     
@@ -1083,6 +1155,15 @@
     </item>
     
     <item>
+      <title>Tm</title>
+      <link>/tags/tm/</link>
+      <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/tm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Ubuntu</title>
       <link>/tags/ubuntu/</link>
       <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
@@ -1106,6 +1187,15 @@
       <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>/tags/wilcoxon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wordcloud</title>
+      <link>/tags/wordcloud/</link>
+      <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/wordcloud/</guid>
       <description></description>
     </item>
     

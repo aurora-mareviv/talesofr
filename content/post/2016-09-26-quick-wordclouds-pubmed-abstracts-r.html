@@ -1,0 +1,59 @@
+---
+title: Quick wordclouds from PubMed abstracts - using PMID lists in R
+author: mareviv
+date: '2016-09-26'
+slug: quick-wordclouds-pubmed-abstracts-r
+categories:
+  - R
+  - medicine
+tags:
+  - abstract
+  - corpus
+  - Gist
+  - graphs
+  - plyr
+  - PubMed
+  - R
+  - RCurl
+  - RefManageR
+  - SnowballC
+  - tagcloud
+  - tm
+  - wordcloud
+  - '#rstats'
+thumbnailImagePosition: left
+thumbnailImage: ./images/medicine/wordcloud.png
+metaAlignment: center
+disable_comments: false
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: "/css/my-style.css"
+---
+
+  <link rel="stylesheet" href="/css/my-style.css" type="text/css" />
+
+
+<p>Wordclouds are one of the most visually straightforward, compelling ways of displaying text info in a graph.</p>
+<p>Of course, we have a lot of web <a href="http://www.techlearning.com/default.aspx?tabid=100&amp;entryid=364" target="_blank">pages</a> (and even <a href="https://ictevangelist.com/top-six-apps-for-creating-word-clouds/" target="_blank">apps</a>) that, given an input text, will plot you some nice tagclouds. However, when you need reproducible results, or getting done complex tasks -like combined wordclouds from several files-, a programming environment may be the best option.</p>
+<p>In R, there are (as always), several alternatives to get this done, such as <a href="https://logfc.wordpress.com/2014/11/05/tagcloud-creating-tag-word-clouds/" target="_blank">tagcloud</a> and <a href="https://cran.r-project.org/web/packages/wordcloud/wordcloud.pdf" target="_blank">wordcloud</a>.</p>
+<p>For this script I used the following packages:</p>
+<ul>
+<li><p><a href="https://cran.r-project.org/web/packages/RCurl/RCurl.pdf" target="_blank">RCurl</a> to retrieve a <strong>PMID list</strong>, stored in my GitHub account as a <a href="https://gist.githubusercontent.com/aurora-mareviv/14e5837814a8d8d47c20/raw/90b198bae82154688dcd9a2596af798612e6619f/pmids.csv" target="_blank"><code>.csv</code> file</a>.</p></li>
+<li><p><a href="https://cran.r-project.org/web/packages/RefManageR/RefManageR.pdf" target="_blank">RefManageR</a> and <a href="https://cran.r-project.org/web/packages/plyr/plyr.pdf" target="_blank">plyr</a> to retrieve and arrange PM records. To fetch the info from the inets, we’ll be using the <a href="http://www.ncbi.nlm.nih.gov/home/develop/api.shtml" target="_blank">PubMed API</a> (free version, with some limitations).</p></li>
+<li><p>Finally, <a href="https://cran.r-project.org/web/packages/tm/tm.pdf" target="_blank">tm</a>, <a href="https://cran.r-project.org/web/packages/SnowballC/SnowballC.pdf" target="_blank">SnowballC</a> to prepare the data, and the package <a href="https://cran.r-project.org/web/packages/wordcloud/wordcloud.pdf" target="_blank">wordcloud</a> to plot the wordcloud. This part of the script is based on this from <a href="https://georeferenced.wordpress.com/2013/01/15/rwordcloud/" target="_blank">Georeferenced</a>.</p></li>
+</ul>
+<p>One of the advantages of using RefManageR is that you can easily change the field which you are importing from, and it usually works flawlessly with the PubMed API.</p>
+<p>My biggest problem sources when running this script: download caps, busy hours, and firewalls!.</p>
+<p>At the beginning of the <a href="https://gist.github.com/aurora-mareviv/697cbb505189591648224ed640e70fb1" target="_blank">gist</a>, there is also a handy function that automagically downloads all needed packages for you.</p>
+<p>To source the script, simply type in the R console:</p>
+<p>This script creates two directories in your working directory: ‘corpus1’ for the abstracts file, and ‘wordcloud’ to store the plot.</p>
+<pre class="r"><code>library(devtools)
+source_url(&quot;https://gist.githubusercontent.com/aurora-mareviv/697cbb505189591648224ed640e70fb1/raw/b42ac2e361ede770e118f217494d70c332a64ef8/pmid.tagcloud.R&quot;)</code></pre>
+<p>And there is the code:</p>
+{{< gist aurora-mareviv 697cbb505189591648224ed640e70fb1>}}
+<p>Enjoy!</p>
+<center>
+<img src="/images/medicine/wordcloud.png" />
+</center>

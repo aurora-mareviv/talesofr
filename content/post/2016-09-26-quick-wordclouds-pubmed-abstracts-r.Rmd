@@ -1,0 +1,98 @@
+---
+title: Quick wordclouds from PubMed abstracts - using PMID lists in R
+author: mareviv
+date: '2016-09-26'
+slug: quick-wordclouds-pubmed-abstracts-r
+categories:
+  - R
+  - medicine
+tags:
+  - abstract
+  - corpus
+  - Gist
+  - graphs
+  - plyr
+  - PubMed
+  - R
+  - RCurl
+  - RefManageR
+  - SnowballC
+  - tagcloud
+  - tm
+  - wordcloud
+  - '#rstats'
+thumbnailImagePosition: left
+thumbnailImage: ./images/medicine/wordcloud.png
+metaAlignment: center
+disable_comments: false
+output:
+  blogdown::html_page:
+    toc: false
+    fig_width: 8
+    css: "/css/my-style.css"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, echo=TRUE, eval=TRUE, warning=FALSE, message=FALSE, comment="  ")
+# https:\/\/aurora-mareviv.github.io\/talesofr
+```
+
+```{r results='hide', echo=FALSE}
+# Installs missing libraries on render!
+list.of.packages <- c("rmarkdown", "Rcpp", "devtools")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages, repos='https://cran.rstudio.com/')
+```
+
+```{r echo=FALSE}
+wdir <- getwd() 
+# la carpeta donde guardo los datos
+datadir <- paste(wdir, "/data", sep="")
+# y la carpeta inmediatamente por encima
+wdirRoot <- gsub("\\content\\/post", "", wdir) 
+```
+
+
+Wordclouds are one of the most visually straightforward, compelling ways of displaying text info in a graph.
+
+Of course, we have a lot of web [pages](http://www.techlearning.com/default.aspx?tabid=100&entryid=364){target="_blank"} (and even [apps](https://ictevangelist.com/top-six-apps-for-creating-word-clouds/){target="_blank"}) that, given an input text, will plot you some nice tagclouds. However, when you need reproducible results, or getting done complex tasks -like combined wordclouds from several files-, a programming environment may be the best option.
+
+In R, there are (as always), several alternatives to get this done, such as [tagcloud](https://logfc.wordpress.com/2014/11/05/tagcloud-creating-tag-word-clouds/){target="_blank"} and [wordcloud](https://cran.r-project.org/web/packages/wordcloud/wordcloud.pdf){target="_blank"}.
+
+For this script I used the following packages:
+
+- [RCurl](https://cran.r-project.org/web/packages/RCurl/RCurl.pdf){target="_blank"} to retrieve a **PMID list**, stored in my GitHub account as a [`.csv` file](https://gist.githubusercontent.com/aurora-mareviv/14e5837814a8d8d47c20/raw/90b198bae82154688dcd9a2596af798612e6619f/pmids.csv){target="_blank"}.
+
+- [RefManageR](https://cran.r-project.org/web/packages/RefManageR/RefManageR.pdf){target="_blank"} and [plyr](https://cran.r-project.org/web/packages/plyr/plyr.pdf){target="_blank"} to retrieve and arrange PM records. To fetch the info from the inets, we'll be using the [PubMed API](http://www.ncbi.nlm.nih.gov/home/develop/api.shtml){target="_blank"} (free version, with some limitations). 
+
+- Finally, [tm](https://cran.r-project.org/web/packages/tm/tm.pdf){target="_blank"}, [SnowballC](https://cran.r-project.org/web/packages/SnowballC/SnowballC.pdf){target="_blank"} to prepare the data, and the package [wordcloud](https://cran.r-project.org/web/packages/wordcloud/wordcloud.pdf){target="_blank"} to plot the wordcloud. This part of the script is based on this from [Georeferenced](https://georeferenced.wordpress.com/2013/01/15/rwordcloud/){target="_blank"}.
+
+One of the advantages of using RefManageR is that you can easily change the field which you are importing from, and it usually works flawlessly with the PubMed API.
+
+My biggest problem sources when running this script: download caps, busy hours, and firewalls!.
+
+At the beginning of the [gist](https://gist.github.com/aurora-mareviv/697cbb505189591648224ed640e70fb1){target="_blank"}, there is also a handy function that automagically downloads all needed packages for you.
+
+To source the script, simply type in the R console:
+
+This script creates two directories in your working directory: 'corpus1' for the abstracts file, and 'wordcloud' to store the plot.
+
+```{r eval=FALSE}
+library(devtools)
+source_url("https://gist.githubusercontent.com/aurora-mareviv/697cbb505189591648224ed640e70fb1/raw/b42ac2e361ede770e118f217494d70c332a64ef8/pmid.tagcloud.R")
+```
+
+And there is the code:
+
+`r htmltools::HTML("{{< gist aurora-mareviv 697cbb505189591648224ed640e70fb1>}}")`
+
+Enjoy!
+
+<center> 
+
+![](/images/medicine/wordcloud.png)
+</center> 
+
+
+
+

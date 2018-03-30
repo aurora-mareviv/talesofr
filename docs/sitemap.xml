@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>/2016/09/quick-wordclouds-pubmed-abstracts-r/</loc>
+    <lastmod>2016-09-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2016/06/r-shiny-clinical-trials-randomization/</loc>
     <lastmod>2016-06-09T00:00:00+00:00</lastmod>
   </url>
@@ -149,19 +154,25 @@
   </url>
   
   <url>
+    <loc>/tags/abstract/</loc>
+    <lastmod>2016-09-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/anaesthesiology/</loc>
     <lastmod>2013-06-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/android/</loc>
+    <loc>/tags/android/</loc>
     <lastmod>2014-09-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/android/</loc>
+    <loc>/categories/android/</loc>
     <lastmod>2014-09-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -298,6 +309,12 @@
   </url>
   
   <url>
+    <loc>/tags/corpus/</loc>
+    <lastmod>2016-09-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/cran/</loc>
     <lastmod>2014-09-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -394,6 +411,12 @@
   </url>
   
   <url>
+    <loc>/tags/gist/</loc>
+    <lastmod>2016-09-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/github/</loc>
     <lastmod>2016-06-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -425,7 +448,7 @@
   
   <url>
     <loc>/tags/graphs/</loc>
-    <lastmod>2013-11-14T00:00:00+00:00</lastmod>
+    <lastmod>2016-09-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -502,26 +525,26 @@
   </url>
   
   <url>
-    <loc>/categories/linux/</loc>
-    <lastmod>2015-06-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/linux/</loc>
     <lastmod>2014-09-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/medicine/</loc>
-    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
+    <loc>/categories/linux/</loc>
+    <lastmod>2015-06-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/medicine/</loc>
     <lastmod>2013-06-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/medicine/</loc>
+    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -629,7 +652,7 @@
   
   <url>
     <loc>/tags/plyr/</loc>
-    <lastmod>2013-05-07T00:00:00+00:00</lastmod>
+    <lastmod>2016-09-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -652,14 +675,20 @@
   </url>
   
   <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2018-02-25T00:00:00+00:00</lastmod>
+    <loc>/tags/pubmed/</loc>
+    <lastmod>2016-09-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2016-06-09T00:00:00+00:00</lastmod>
+    <lastmod>2016-09-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/r/</loc>
+    <lastmod>2018-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -720,6 +749,18 @@
   <url>
     <loc>/tags/rcommander/</loc>
     <lastmod>2013-04-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/rcurl/</loc>
+    <lastmod>2016-09-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/refmanager/</loc>
+    <lastmod>2016-09-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -790,6 +831,12 @@
   </url>
   
   <url>
+    <loc>/tags/snowballc/</loc>
+    <lastmod>2016-09-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/source-code/</loc>
     <lastmod>2015-06-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -828,6 +875,12 @@
   <url>
     <loc>/tags/tablet/</loc>
     <lastmod>2014-09-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/tagcloud/</loc>
+    <lastmod>2016-09-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -892,6 +945,12 @@
   </url>
   
   <url>
+    <loc>/tags/tm/</loc>
+    <lastmod>2016-09-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/ubuntu/</loc>
     <lastmod>2013-05-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -906,6 +965,12 @@
   <url>
     <loc>/tags/wilcoxon/</loc>
     <lastmod>2013-11-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/wordcloud/</loc>
+    <lastmod>2016-09-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

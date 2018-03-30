@@ -6,10 +6,21 @@
     <description>Recent content in R on Tales of R - Rmarkdown Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jun 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Sep 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Quick wordclouds from PubMed abstracts - using PMID lists in R</title>
+      <link>/2016/09/quick-wordclouds-pubmed-abstracts-r/</link>
+      <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/2016/09/quick-wordclouds-pubmed-abstracts-r/</guid>
+      <description>Wordclouds are one of the most visually straightforward, compelling ways of displaying text info in a graph.
+Of course, we have a lot of web pages (and even apps) that, given an input text, will plot you some nice tagclouds. However, when you need reproducible results, or getting done complex tasks -like combined wordclouds from several files-, a programming environment may be the best option.
+In R, there are (as always), several alternatives to get this done, such as tagcloud and wordcloud.</description>
+    </item>
     
     <item>
       <title>R/Shiny for clinical trials: simple randomization tables</title>
