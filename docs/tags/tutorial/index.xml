@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>#Tutorial on Tales of R - Rmarkdown Blog</title>
+    <link>/tags/tutorial/</link>
+    <description>Recent content in #Tutorial on Tales of R - Rmarkdown Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A minimal Project Tree in R</title>
+      <link>/2017/12/minimal-project-tree-r/</link>
+      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/12/minimal-project-tree-r/</guid>
+      <description>Introduction  The last two days arrived at my twitter feed some discussions on how bad are the following sentences at the beginning of your R script/notebook, sparked by @JennyBryan’s slides at the IASC-ARS/NZSA Conference:
+ setwd()
+ and
+ rm(list = ls())
+ 
+ The only two things that make @JennyBryan 😤😠🤯. Instead use projects + here::here() #rstats pic.twitter.com/GwxnHePL4n
+&amp;mdash; Hadley Wickham (@hadleywickham) December 11, 2017  Blog post elaborating on my advice to avoid setwd() and rm(list = ls()) at top of an #rstats script.</description>
+    </item>
+    
+    <item>
+      <title>…start using Sweave, from scratch!</title>
+      <link>/2013/05/start-using-sweave-from-scratch/</link>
+      <pubDate>Wed, 01 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/05/start-using-sweave-from-scratch/</guid>
+      <description>INTRODUCTION CONFIGURING SWEAVE FOR TEXWORKS In MS Windows In (K)Ubuntu &amp;amp; MacOSX  WRITING A .RNW FILE EDIT FOR TEXWORKS IN UBUNTU FURTHER READINGS   INTRODUCTION Sweave is nothing more, nothing less than one of the best ways R can connect with a text editor, in this case LaTeX.
+So you don’t know anyting about LaTeX? neither did I 8 months ago… The hyperlinks in this post will take you to some great pages, to learn different things in an organised way.</description>
+    </item>
+    
+  </channel>
+</rss>

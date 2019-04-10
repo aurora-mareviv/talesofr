@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>#Rstats on Tales of R - Rmarkdown Blog</title>
+    <link>/tags/rstats/</link>
+    <description>Recent content in #Rstats on Tales of R - Rmarkdown Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 25 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>R Blogdown Setup in GitHub (2)</title>
+      <link>/2018/02/r-blogdown-setup-in-github-2/</link>
+      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/02/r-blogdown-setup-in-github-2/</guid>
+      <description>An updated tutorial to set up a blogdown blog  Install Blogdown Install Hugo ./From RStudio ./From other sources  Git &amp;amp; GitHub repos RStudio and blogdown setup  Customising paths and styles Modify config.toml file Custom css Custom javascript MathJax Site build with blogdown   Deploying the site Updating the local git  repository Pushing to GitHub  Add R code A new post in blogdown Deploying the site with the new post  This .</description>
+    </item>
+    
+    <item>
+      <title>An introduction to joint modeling in R</title>
+      <link>/2018/02/intro-joint-modeling-r/</link>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/02/intro-joint-modeling-r/</guid>
+      <description>J Espasandin, O Lado, C Díaz, A Bouzas, I Guler, A Baluja. 
+   These days, between the 19th and 21st of February, has taken place the learning activity titled “An Introduction to the Joint Modeling of Longitudinal and Survival Data, with Applications in R” organized by the Interdisciplinary Group of Biostatistics (ICBUSC), directed by Professor Carmen Cadarso-Suárez, from the University of Santiago de Compostela.
+ The international nature of this scientific activity has been marked by the presence of researchers from different European countries such as Germany, Portugal, Holland, Greece or Turkey.</description>
+    </item>
+    
+    <item>
+      <title>A minimal Project Tree in R</title>
+      <link>/2017/12/minimal-project-tree-r/</link>
+      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/12/minimal-project-tree-r/</guid>
+      <description>Introduction  The last two days arrived at my twitter feed some discussions on how bad are the following sentences at the beginning of your R script/notebook, sparked by @JennyBryan’s slides at the IASC-ARS/NZSA Conference:
+ setwd()
+ and
+ rm(list = ls())
+ 
+ The only two things that make @JennyBryan 😤😠🤯. Instead use projects + here::here() #rstats pic.twitter.com/GwxnHePL4n
+&amp;mdash; Hadley Wickham (@hadleywickham) December 11, 2017  Blog post elaborating on my advice to avoid setwd() and rm(list = ls()) at top of an #rstats script.</description>
+    </item>
+    
+    <item>
+      <title>Taming exam results in pdf with pdftools</title>
+      <link>/2017/11/taming-exam-results-with-pdftools/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/11/taming-exam-results-with-pdftools/</guid>
+      <description>Introduction  There are several ways to mine tables and other content from a pdf, using R. After a lot of trial &amp;amp; error, here’s how I managed to extract global exam results from an international, massive, yearly examination, the EDAIC.
+This is my first use case of “pdf mining” with R, and also a fairly simple one. However, more complex and very fine examples of this can be found elsewhere, using both pdftools and tabulizer packages.</description>
+    </item>
+    
+    <item>
+      <title>Tracking Septic Patients in a Hospital</title>
+      <link>/2017/08/tracking-septic-patients/</link>
+      <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/08/tracking-septic-patients/</guid>
+      <description>Background A hospital may be defined as a place, or building, or set of facilities where patients go to receive the care they need.
+In ancient times, a hospital was not much more than a hotel for the poor, where they could stay and be cared for. Some centuries passed, and now we call hospitals to extremely complex structures, from both physical and functional perspectives.</description>
+    </item>
+    
+    <item>
+      <title>R Blogdown Setup in GitHub</title>
+      <link>/2017/08/r-blogdown-setup-in-github/</link>
+      <pubDate>Thu, 17 Aug 2017 21:13:14 -0500</pubDate>
+      
+      <guid>/2017/08/r-blogdown-setup-in-github/</guid>
+      <description>The blogdown R package  Finally, -after 24h of failed attempts-, I could get my favourite Hugo theme up and running with R Studio and Blogdown.
+ After exploring some alternatives, like Shirin’s (with Jekyll), and Amber Thomas advice (which involved Git skills beyond my basic abilities), I was able to install Yihui’s hugo-lithium-theme in a new repository.
+However, I wanted to explore other blog templates, hosted in GiHub, like:</description>
+    </item>
+    
+    <item>
+      <title>Quick wordclouds from PubMed abstracts - using PMID lists in R</title>
+      <link>/2016/09/quick-wordclouds-pubmed-abstracts-r/</link>
+      <pubDate>Mon, 26 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/2016/09/quick-wordclouds-pubmed-abstracts-r/</guid>
+      <description>Wordclouds are one of the most visually straightforward, compelling ways of displaying text info in a graph.
+Of course, we have a lot of web pages (and even apps) that, given an input text, will plot you some nice tagclouds. However, when you need reproducible results, or getting done complex tasks -like combined wordclouds from several files-, a programming environment may be the best option.
+In R, there are (as always), several alternatives to get this done, such as tagcloud and wordcloud.</description>
+    </item>
+    
+    <item>
+      <title>R/Shiny for clinical trials: simple randomization tables</title>
+      <link>/2016/06/r-shiny-clinical-trials-randomization/</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/2016/06/r-shiny-clinical-trials-randomization/</guid>
+      <description>One of the things I most like from R + Shiny is that it enables me to serve the power and flexibility of R in small “chunks” to cover different needs, allowing people not used to R to benefit from it. However, what I like most is that’s really fun and easy to program those utilities for a person without any specific programming background.
+Here’s a small hack done in R/Shiny: it covered an urgent need for a study involving patient randomisation to two branches of treatment, in what is commonly known as a clinical trial.</description>
+    </item>
+    
+    <item>
+      <title>Happening just now... 6th Conference of the R Spanish User Community</title>
+      <link>/2014/10/6th-conference-r-spain/</link>
+      <pubDate>Thu, 23 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/2014/10/6th-conference-r-spain/</guid>
+      <description>The R-Spain Conferences have been taking place since 2009 as an expression of the growing interest that R elicits in many fileds. The organisers are the Comunidad R Hispano (R-es). The community supports many groups and initiatives aimed to develop R knowledge and widen its use.
+To attend the talks by streaming (they are in Spanish) you must registrate.
+There is also a scientific programme with the presentations (some in English) here.</description>
+    </item>
+    
+    <item>
+      <title>Install R in Android, via GNURoot -no root required!</title>
+      <link>/2014/09/r-in-android-gnuroot/</link>
+      <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/2014/09/r-in-android-gnuroot/</guid>
+      <description>Playing with my tablet some time ago, I wondered if installing R could be possible. You know, a small android device “to the power of R”…
+After searching on Google from time to time, I came across some interesting possibilities:
+ R Instructor, created “to bridge the gap between authoritative (but expensive) reference textbooks and free but often technical and difficult to understand help files”.
+ R Console Free. provides the necessary C, C++ and Fortran compilers to build and install R packages.</description>
+    </item>
+    
+    <item>
+      <title>...start using R, from scratch!</title>
+      <link>/2013/11/using-r-from-scratch/</link>
+      <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/11/using-r-from-scratch/</guid>
+      <description>Some time ago, since I was able to use R by myself, have found some fellows and other people who wanted to learn R as well. Then I pointed them to help pages, to CRAN repositories… but in some cases they said that didn’t know how to start using those resources. Obviously, the main self-perceived limitation for non-programmers is the use of “commands” -ok, many of the 80’s kids will remember the use of some command lines to access games such as PacMan, Frogger… 🙂</description>
+    </item>
+    
+    <item>
+      <title>Power and sample size calculator for mitochondrial DNA association studies (Shiny)</title>
+      <link>/2013/07/power-sample-size-mitochondrial-dna/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/07/power-sample-size-mitochondrial-dna/</guid>
+      <description>The functions detailed inside the piece of code below (in a Gist) has been useful for me when I had to calculate many possible scenarios of statistical power and sample size. The formulae were taken from the article of Samuels et al., AJHG 2006, and the script showed even useful for making a variety of comparative plots.
+This is intended for estimating power/ sample size in association studies, involving mitochondrial DNA haplogroups (which are categories whose frequencies depend on each other), on a Chi-square test basis.</description>
+    </item>
+    
+    <item>
+      <title>Using gdata, for MS Windows users</title>
+      <link>/2013/05/gdata-for-ms-windows/</link>
+      <pubDate>Sat, 18 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/05/gdata-for-ms-windows/</guid>
+      <description>I use both GNU-Linux and Windows systems on a regular basis… so I’m aware of the advantages (more for GNU-Linux in my case) and disadvantages of both.
+Recently I needed to analyse a database from a remote location, an Excel (`*xlsx) file.
+The problem was that I couldn’t put my gdata library to work… some weird errors about a missing Perl interpreter… just needed to install one. Based on this tutorial in CRAN, I downloaded ActivePerl.</description>
+    </item>
+    
+    <item>
+      <title>heatmaps with p-values (2)... coloured according to odds ratio</title>
+      <link>/2013/05/heatmaps-p-values-coloured-by-odds-ratio/</link>
+      <pubDate>Tue, 07 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/05/heatmaps-p-values-coloured-by-odds-ratio/</guid>
+      <description>I like heatplots with p-values -or frequencies, or whatever-. Not very conclusive, but pretty anyway. And when talking about graphs, pretty will make our neurons to fire in more interesting ways: neurons like “pretty” graphs. Moreover, observing your data can be as important as analysing it. It’s better to observe, to listen your patients than making tests without knowing very much about them…
+In the heatmaps of the previous post, not a lot of information can be included.</description>
+    </item>
+    
+    <item>
+      <title>... ridiculously photogenic factors (heatmap with p-values)</title>
+      <link>/2013/05/ridiculously-photogenic-heatmap-p-values/</link>
+      <pubDate>Sun, 05 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/05/ridiculously-photogenic-heatmap-p-values/</guid>
+      <description>Some months ago, I had to explore a vast amount of categorical variables before making some multivariate analyses.
+One good way to know your raw data, to make new hypotheses…etc, is to calculate some pairwise “crude” chi-square tests of independence of your factors, but it can be very time-consuming.
+I mean, not time-consuming to make the tests (with a simple command it can be done), but to revise all of them.</description>
+    </item>
+    
+    <item>
+      <title>...learning LaTeX, from scratch!</title>
+      <link>/2013/05/learning-latex-from-scratch/</link>
+      <pubDate>Thu, 02 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/05/learning-latex-from-scratch/</guid>
+      <description>“LaTeX is a high-quality typesetting system; it includes features designed for the production of technical and scientific documentation, and is the de facto standard for the communication and publication of scientific documents.”
+ 
+It is also… Free and Open. Specially designed for beautiful documents even when they include special language: mathematic formulae, phonetic symbols, musical notation…
+The mix of normal text with special languages is indeed much better arranged in LaTeX than in any other text editor, so maybe it can be interesting for you!</description>
+    </item>
+    
+  </channel>
+</rss>

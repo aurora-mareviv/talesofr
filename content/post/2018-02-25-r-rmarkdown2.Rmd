@@ -87,7 +87,7 @@ The [Hugo install page](https://gohugo.io/getting-started/installing/){target="_
 
 - <span class="fa fa-github"></span> Set up a GitHub account, following for example [this](https://www.wikihow.com/Create-an-Account-on-GitHub){target="_blank"}.  
 - <span class="fa fa-github"></span> Set up a new [GitHub](https://github.com/){target="_blank"} repo with a name of your choice (in my case <span class="texttt">talesofr</span>). See [this](https://help.github.com/articles/create-a-repo/){target="_blank"} and [this](https://tclavelle.github.io/blog/blogdown_github/){target="_blank"}.  
-- <span class="fa fa-github"></span> Activate GitHub pages. For this, you must go to the <span class="texttt">/settings</span> section of your repo and find the epigraph "GitHub Pages". In the dropdown menu, select: &nbsp; <span class="texttt">master branch /docs folder</span> and save. 
+- <span class="fa fa-github"></span> Activate GitHub pages. For this, you must go to the <span class="texttt">/settings</span> section of your repo and find the epigraph "GitHub Pages". In the dropdown menu, select: &nbsp; <span class="texttt">master branch /docs folder</span><!-- and save-->. 
 
 ![Activating GitHub pages](/images/tuto/tuto5.2.png)
 

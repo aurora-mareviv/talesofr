@@ -17,6 +17,7 @@ output:
     css: "/css/my-style.css"
 ---
 
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 <script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
 <script src="/rmarkdown-libs/d3/d3.min.js"></script>
 <script src="/rmarkdown-libs/sankey/sankey.js"></script>
@@ -32,29 +33,53 @@ In this context, patients usually undergo a wide variety of diagnostic and/or th
 For example, when a patient develops circulatory failure (shock), it must be transferred to an ICU. When the patient recovers, it may be taken back by their original service or, if needed, be transferred to a third unit.<br />
 The following data illustrates a number of patients being transferred between different services:<br />
 <br></p>
-<table>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
-<tr class="header">
-<th align="left">origins</th>
-<th align="left">destinations</th>
-<th align="right">counts</th>
+<tr>
+<th style="text-align:left;">
+origins
+</th>
+<th style="text-align:left;">
+destinations
+</th>
+<th style="text-align:right;">
+counts
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left">Admission</td>
-<td align="left">Traumatology</td>
-<td align="right">20</td>
+<tr>
+<td style="text-align:left;">
+Admission
+</td>
+<td style="text-align:left;">
+Traumatology
+</td>
+<td style="text-align:right;">
+20
+</td>
 </tr>
-<tr class="even">
-<td align="left">Traumatology</td>
-<td align="left">Intensive Care</td>
-<td align="right">10</td>
+<tr>
+<td style="text-align:left;">
+Traumatology
+</td>
+<td style="text-align:left;">
+Intensive Care
+</td>
+<td style="text-align:right;">
+10
+</td>
 </tr>
-<tr class="odd">
-<td align="left">Intensive Care</td>
-<td align="left">Traumatology</td>
-<td align="right">9</td>
+<tr>
+<td style="text-align:left;">
+Intensive Care
+</td>
+<td style="text-align:left;">
+Traumatology
+</td>
+<td style="text-align:right;">
+9
+</td>
 </tr>
 </tbody>
 </table>
@@ -85,27 +110,51 @@ The following data illustrates a number of patients being transferred between di
 <br></p>
 <table>
 <thead>
-<tr class="header">
-<th align="left">origins</th>
-<th align="left">destinations</th>
-<th align="right">counts</th>
+<tr>
+<th style="text-align:left;">
+origins
+</th>
+<th style="text-align:left;">
+destinations
+</th>
+<th style="text-align:right;">
+counts
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left">MIV</td>
-<td align="left">MIR</td>
-<td align="right">133</td>
+<tr>
+<td style="text-align:left;">
+MIV
+</td>
+<td style="text-align:left;">
+MIR
+</td>
+<td style="text-align:right;">
+133
+</td>
 </tr>
-<tr class="even">
-<td align="left">CGD</td>
-<td align="left">ANR</td>
-<td align="right">124</td>
+<tr>
+<td style="text-align:left;">
+CGD
+</td>
+<td style="text-align:left;">
+ANR
+</td>
+<td style="text-align:right;">
+124
+</td>
 </tr>
-<tr class="odd">
-<td align="left">MIR</td>
-<td align="left">MIV</td>
-<td align="right">80</td>
+<tr>
+<td style="text-align:left;">
+MIR
+</td>
+<td style="text-align:left;">
+MIV
+</td>
+<td style="text-align:right;">
+80
+</td>
 </tr>
 </tbody>
 </table>

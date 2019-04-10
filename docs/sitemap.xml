@@ -118,37 +118,37 @@
   </url>
   
   <url>
-    <loc>/tags/#personalisedmedicine/</loc>
+    <loc>/tags/personalisedmedicine/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/#predictions/</loc>
+    <loc>/tags/predictions/</loc>
     <lastmod>2018-02-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/#rstats/</loc>
+    <loc>/tags/rstats/</loc>
     <lastmod>2018-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/#template/</loc>
+    <loc>/tags/template/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/#tidy/</loc>
+    <loc>/tags/tidy/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/#tutorial/</loc>
+    <loc>/tags/tutorial/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -166,13 +166,13 @@
   </url>
   
   <url>
-    <loc>/categories/android/</loc>
+    <loc>/tags/android/</loc>
     <lastmod>2014-09-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/android/</loc>
+    <loc>/categories/android/</loc>
     <lastmod>2014-09-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -525,26 +525,26 @@
   </url>
   
   <url>
-    <loc>/categories/linux/</loc>
-    <lastmod>2015-06-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/linux/</loc>
     <lastmod>2014-09-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/medicine/</loc>
-    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
+    <loc>/categories/linux/</loc>
+    <lastmod>2015-06-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/medicine/</loc>
     <lastmod>2013-06-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/medicine/</loc>
+    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -681,14 +681,14 @@
   </url>
   
   <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2018-02-25T00:00:00+00:00</lastmod>
+    <loc>/tags/r/</loc>
+    <lastmod>2016-09-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/r/</loc>
-    <lastmod>2016-09-26T00:00:00+00:00</lastmod>
+    <loc>/categories/r/</loc>
+    <lastmod>2018-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

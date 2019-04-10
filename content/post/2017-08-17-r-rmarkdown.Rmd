@@ -62,7 +62,8 @@ The three first themes are currently linked in the [blogdown](https://bookdown.o
 
 Finally I chose the hugo-tranquilpeak theme, by [Louis Barranqueiro](https://github.com/LouisBarranqueiro){target="_blank"} & [Thibaud Lepr&ecirc;tre](https://github.com/kakawait){target="_blank"}, for which I mostly followed Tyler Clavelle's [entry](https://tclavelle.github.io/blog/blogdown_github/){target="_blank"} on the topic. This approach turned out to be easy and good, given some conditions:   
 
-- Contrary to Yihui Xie's [advice](https://bookdown.org/yihui/blogdown/deployment.html){target="_blank"}, I chose github.io to host my blog, instead of Netlify (I love my desktop integration with GitHub, so it was interesting for me not to move to another service for my static content). 
+- Contrary to Yihui Xie's [advice](https://bookdown.org/yihui/blogdown/deployment.html){target="_blank"}, I felt brave enough to choose github.io to host my blog, instead of Netlify (I loved my desktop integration with GitHub, so it was interesting for me not to move to another service for my static content). However it is possible that in the future I change the hosting.
+
 - In my machine, I installed Blogdown & Hugo using R studio (v 1.1.336). 
 - In GiHub, it was easier for me to host the blog directly in my main github pages repository (always named <span class="texttt">[USERNAME].github.io</span>), in the <span class="texttt">master</span> branch, following Tyler's tutorial. 
 - I have basic knowledge of html, css and javascript, so I didn't mind to tinker around with the theme.
