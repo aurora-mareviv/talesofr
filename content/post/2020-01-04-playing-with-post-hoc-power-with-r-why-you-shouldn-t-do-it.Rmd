@@ -293,7 +293,7 @@ mydata %>%
 ```
 &nbsp; 
 
-The power corresponding to a p-value of 0.05 is between 0.29 and 0.30 (exact results will vary each time code runs; for didactic purposes I won't `set.seed` here). 
+The power corresponding to a p-value of 0.05 is between 0.29 and 0.30 (exact results will vary each time code runs; for didactic purposes I won't `set.seed` here). In Hoenig and Lakens examples, -using different tests- the correspondence was between p=0.05 and a power of 0.5. 
 
 We can see how plotting power against p-value (regardless of sample size, you can try with a different one) always yield the same relationship:
 
