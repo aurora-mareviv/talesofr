@@ -70,7 +70,7 @@ The reason for bringing this here is that I witnessed an interesting exchange so
 `r htmltools::HTML("{{< tweet 1123575393481629697 >}}")`
 </center> 
 
-Tweets refer also to this great post: **[Observed power, and what to do if your editor asks for post-hoc power analyses](http://daniellakens.blogspot.com/2014/12/observed-power-and-what-to-do-if-your.html){target="_blank"}**, written by [Dani&euml;l Lakens](https://twitter.com/lakens){target="_blank"} in which this issue is discussed. 
+The tweets refer also to this great post: **[Observed power, and what to do if your editor asks for post-hoc power analyses](http://daniellakens.blogspot.com/2014/12/observed-power-and-what-to-do-if-your.html){target="_blank"}**, written by [Dani&euml;l Lakens](https://twitter.com/lakens){target="_blank"} in which this issue is discussed. 
 
 At first, I wasn't too interested in this topic (to be honest)<!-- from an statistical point of view-->; but then I read [the above mentioned study](https://www.sciencedirect.com/science/article/pii/S0022480419301854?via%3Dihub){target="_blank"}, showcasing post-hoc calculations, and a few others that were **spreading *and* being cited (even worse)** in a field very, very close to mine: **surgery**. That's when it got personal. 
 
@@ -84,7 +84,7 @@ This paper patiently explains why post-hoc power is bad. Interestingly, the manu
 
 ## What can we do about it?
 
-My two cents to this discussion abut **post-hoc power** come below in the form of a small R tutorial. It demonstrates, using the rationale in the paper, how it *doesn't make sense* to get power calculations after hypothesis testing. 
+My two cents to this discussion abut **post-hoc power** come below in the form of a small R tutorial. It shows (yet again), using the rationale in the paper, how it *doesn't make sense* to get power calculations after hypothesis testing. 
 
 I hope this can help those peeps that need a more '*hands-on*' (rather than purely abstract) approach to learning stats! R serves as a great, flexible tool for this!.  
 

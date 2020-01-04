@@ -326,7 +326,7 @@ Current state of the matter The reason for bringing this here is that I witnesse
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </center>
-<p>Tweets refer also to this great post: <strong><a href="http://daniellakens.blogspot.com/2014/12/observed-power-and-what-to-do-if-your.html" target="_blank">Observed power, and what to do if your editor asks for post-hoc power analyses</a></strong>, written by <a href="https://twitter.com/lakens" target="_blank">Daniël Lakens</a> in which this issue is discussed.</p>
+<p>The tweets refer also to this great post: <strong><a href="http://daniellakens.blogspot.com/2014/12/observed-power-and-what-to-do-if-your.html" target="_blank">Observed power, and what to do if your editor asks for post-hoc power analyses</a></strong>, written by <a href="https://twitter.com/lakens" target="_blank">Daniël Lakens</a> in which this issue is discussed.</p>
 <p>At first, I wasn’t too interested in this topic (to be honest)<!-- from an statistical point of view-->; but then I read <a href="https://www.sciencedirect.com/science/article/pii/S0022480419301854?via%3Dihub" target="_blank">the above mentioned study</a>, showcasing post-hoc calculations, and a few others that were <strong>spreading <em>and</em> being cited (even worse)</strong> in a field very, very close to mine: <strong>surgery</strong>. That’s when it got personal.</p>
 <p>Like almost a year ago, I came across this beautiful paper: <strong><a href="https://www.vims.edu/people/hoenig_jm/pubs/hoenig2.pdf" target="_blank">The Abuse of Power: The Pervasive Fallacy of Power Calculations for Data Analysis</a></strong> by <a href="https://www.researchgate.net/profile/John_Hoenig" target="_blank">John Hoenig et al.</a></p>
 <p>This paper patiently explains why post-hoc power is bad. Interestingly, the manuscript aims to be understood by scientists of all backgrounds, not only statistical. It uses appealing examples and develops them in a didactic, orderly manner, so a clinician (like myself) can grasp those concepts.</p>
@@ -334,7 +334,7 @@ Current state of the matter The reason for bringing this here is that I witnesse
 </div>
 <div id="what-can-we-do-about-it" class="section level2">
 <h2>What can we do about it?</h2>
-<p>My two cents to this discussion abut <strong>post-hoc power</strong> come below in the form of a small R tutorial. It demonstrates, using the rationale in the paper, how it <em>doesn’t make sense</em> to get power calculations after hypothesis testing.</p>
+<p>My two cents to this discussion abut <strong>post-hoc power</strong> come below in the form of a small R tutorial. It shows (yet again), using the rationale in the paper, how it <em>doesn’t make sense</em> to get power calculations after hypothesis testing.</p>
 <p>I hope this can help those peeps that need a more ‘<em>hands-on</em>’ (rather than purely abstract) approach to learning stats! R serves as a great, flexible tool for this!.</p>
 <div id="observed-power-is-a-function-of-the-p-value" class="section level3">
 <h3>Observed power is a function of the p-value</h3>
@@ -495,40 +495,40 @@ power_against_pvalue_extractor &lt;- function(power_versus_pvalue, extracted=NUL
    [1] 1000
    
    $w
-   [1] 0.01600029
+   [1] 0.01400011
    
    $power
-   [1] 0.07980724
+   [1] 0.07274042
    
    $p_value
-   [1] 0.5023273
+   [1] 0.5609828
    
    $OR
-   [1] 0.9379977
+   [1] 0.9455348
    
    $observed_counts
             
              A=exposed G=unexposed
-     case          495         505
-     control       511         489
+     case          491         509
+     control       505         495
    
    $expected_counts
             
              A=exposed G=unexposed
-     case          503         497
-     control       503         497
+     case          498         502
+     control       498         502
    
    $observed_proportions
             
              A=exposed G=unexposed
-     case       0.2475      0.2525
-     control    0.2555      0.2445
+     case       0.2455      0.2545
+     control    0.2525      0.2475
    
    $expected_proportions
             
              A=exposed G=unexposed
-     case       0.2515      0.2485
-     control    0.2515      0.2485</code></pre>
+     case        0.249       0.251
+     control     0.249       0.251</code></pre>
 <p>And now we can map this function to all the combinations of proportions we had stored in our data frame (using the wonderful <code>purrr</code> package):</p>
 <pre class="r"><code>mydata &lt;- mydata0 %&gt;%
    # calculate
@@ -576,13 +576,13 @@ OR
 0.3
 </td>
 <td style="text-align:center;">
-0.1110964
+0.0912851
 </td>
 <td style="text-align:center;">
-0.3324798
+0.4292446
 </td>
 <td style="text-align:center;">
-0.906063
+1.0865510
 </td>
 </tr>
 <tr>
@@ -593,13 +593,13 @@ OR
 0.3
 </td>
 <td style="text-align:center;">
-0.2503945
+0.0802295
 </td>
 <td style="text-align:center;">
-0.0768509
+0.5012678
 </td>
 <td style="text-align:center;">
-1.189970
+0.9331104
 </td>
 </tr>
 <tr>
@@ -610,13 +610,13 @@ OR
 0.3
 </td>
 <td style="text-align:center;">
-0.1746965
+0.1812504
 </td>
 <td style="text-align:center;">
-0.1637885
+0.1534005
 </td>
 <td style="text-align:center;">
-1.148441
+1.1566220
 </td>
 </tr>
 </tbody>
@@ -651,19 +651,53 @@ OR
 <tbody>
 <tr>
 <td style="text-align:center;">
+0.30
+</td>
+<td style="text-align:center;">
+0.33
+</td>
+<td style="text-align:center;">
+0.2954097
+</td>
+<td style="text-align:center;">
+0.0497482
+</td>
+<td style="text-align:center;">
+0.8248226
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+0.41
+</td>
+<td style="text-align:center;">
 0.40
 </td>
 <td style="text-align:center;">
-0.44
+0.2940185
 </td>
 <td style="text-align:center;">
-0.2925585
+0.0501482
 </td>
 <td style="text-align:center;">
-0.0508424
+1.2004930
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+0.50
 </td>
 <td style="text-align:center;">
-0.8339090
+0.45
+</td>
+<td style="text-align:center;">
+0.2960548
+</td>
+<td style="text-align:center;">
+0.0490788
+</td>
+<td style="text-align:center;">
+1.1973996
 </td>
 </tr>
 <tr>
@@ -671,50 +705,33 @@ OR
 0.46
 </td>
 <td style="text-align:center;">
-0.50
+0.53
 </td>
 <td style="text-align:center;">
-0.2962194
+0.2960430
 </td>
 <td style="text-align:center;">
-0.0490027
+0.0490843
 </td>
 <td style="text-align:center;">
-0.8350416
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-0.48
-</td>
-<td style="text-align:center;">
-0.50
-</td>
-<td style="text-align:center;">
-0.2960685
-</td>
-<td style="text-align:center;">
-0.0490725
-</td>
-<td style="text-align:center;">
-0.8351346
+0.8351503
 </td>
 </tr>
 <tr>
 <td style="text-align:center;">
-0.65
+0.60
 </td>
 <td style="text-align:center;">
-0.69
+0.58
 </td>
 <td style="text-align:center;">
-0.2930812
+0.2927331
 </td>
 <td style="text-align:center;">
-0.0508489
+0.0507589
 </td>
 <td style="text-align:center;">
-0.8263437
+1.1993295
 </td>
 </tr>
 </tbody>
