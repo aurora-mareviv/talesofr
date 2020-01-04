@@ -290,7 +290,7 @@ mydata %>%
    ) %>%
    select(-power_versus_pvalue, -cohen_w) %>% kable()
 ```
-&nbsp;
+&nbsp; 
 
 The power corresponding to a p-value of 0.05 is between 0.29 and 0.30 (exact results will vary each time code runs; for didactic purposes I won't `set.seed` here). 
 
