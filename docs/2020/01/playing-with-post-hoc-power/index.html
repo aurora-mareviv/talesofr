@@ -495,40 +495,40 @@ power_against_pvalue_extractor &lt;- function(power_versus_pvalue, extracted=NUL
    [1] 1000
    
    $w
-   [1] 0.02300194
+   [1] 0.02800006
    
    $power
-   [1] 0.1124676
+   [1] 0.1435116
    
    $p_value
-   [1] 0.3251386
+   [1] 0.2272477
    
    $OR
-   [1] 0.9120761
+   [1] 1.118546
    
    $observed_counts
             
              A=exposed G=unexposed
-     case          482         518
-     control       505         495
+     case          515         485
+     control       487         513
    
    $expected_counts
             
              A=exposed G=unexposed
-     case        493.5       506.5
-     control     493.5       506.5
+     case          501         499
+     control       501         499
    
    $observed_proportions
             
              A=exposed G=unexposed
-     case       0.2410      0.2590
-     control    0.2525      0.2475
+     case       0.2575      0.2425
+     control    0.2435      0.2565
    
    $expected_proportions
             
              A=exposed G=unexposed
-     case      0.24675     0.25325
-     control   0.24675     0.25325</code></pre>
+     case       0.2505      0.2495
+     control    0.2505      0.2495</code></pre>
 <p>And now we can map this function to all the combinations of proportions we had stored in our data frame (using the wonderful <code>purrr</code> package):</p>
 <pre class="r"><code>mydata &lt;- mydata0 %&gt;%
    # calculate
@@ -576,13 +576,13 @@ OR
 0.3
 </td>
 <td style="text-align:center;">
-0.1258080
+0.0609045
 </td>
 <td style="text-align:center;">
-0.2795246
+0.6990423
 </td>
 <td style="text-align:center;">
-0.8947734
+0.9588308
 </td>
 </tr>
 <tr>
@@ -593,13 +593,13 @@ OR
 0.3
 </td>
 <td style="text-align:center;">
-0.0851131
+0.0534195
 </td>
 <td style="text-align:center;">
-0.4671172
+0.8451791
 </td>
 <td style="text-align:center;">
-1.0781193
+1.0241189
 </td>
 </tr>
 <tr>
@@ -610,13 +610,13 @@ OR
 0.3
 </td>
 <td style="text-align:center;">
-0.0698215
+0.0657312
 </td>
 <td style="text-align:center;">
-0.5917956
+0.6352985
 </td>
 <td style="text-align:center;">
-1.0586984
+0.9517137
 </td>
 </tr>
 </tbody>
@@ -651,42 +651,76 @@ OR
 <tbody>
 <tr>
 <td style="text-align:center;">
-0.52
+0.36
 </td>
 <td style="text-align:center;">
-0.48
+0.43
 </td>
 <td style="text-align:center;">
-0.2960136
+0.2934540
 </td>
 <td style="text-align:center;">
-0.0490979
+0.0504155
 </td>
 <td style="text-align:center;">
-1.197363
+0.8333460
 </td>
 </tr>
 <tr>
 <td style="text-align:center;">
-0.66
+0.53
 </td>
 <td style="text-align:center;">
-0.61
+0.49
 </td>
 <td style="text-align:center;">
-0.2930217
+0.2960430
 </td>
 <td style="text-align:center;">
-0.0507461
+0.0490843
 </td>
 <td style="text-align:center;">
-1.204707
+1.1973892
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+0.60
+</td>
+<td style="text-align:center;">
+0.68
+</td>
+<td style="text-align:center;">
+0.2957282
+</td>
+<td style="text-align:center;">
+0.0494704
+</td>
+<td style="text-align:center;">
+0.8283433
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+0.63
+</td>
+<td style="text-align:center;">
+0.68
+</td>
+<td style="text-align:center;">
+0.2930812
+</td>
+<td style="text-align:center;">
+0.0508489
+</td>
+<td style="text-align:center;">
+0.8263437
 </td>
 </tr>
 </tbody>
 </table>
 <p> </p>
-<p>The power corresponding to a p-value of 0.05 is between 0.29 and 0.30 (exact results will vary each time code runs; for didactic purposes I won’t <code>set.seed</code> here).</p>
+<p>The power corresponding to a p-value of 0.05 is between 0.29 and 0.30 (exact results will vary each time code runs; for didactic purposes I won’t <code>set.seed</code> here). In Hoenig and Lakens examples, -using different tests- the correspondence was between p=0.05 and a power of 0.5.</p>
 <p>We can see how plotting power against p-value (regardless of sample size, you can try with a different one) always yield the same relationship:</p>
 <pre class="r"><code>power_vs_pvalue &lt;- mydata %&gt;%
    ggplot(
