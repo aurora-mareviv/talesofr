@@ -1,0 +1,1269 @@
+
+
+  
+    
+  
+
+
+  
+
+
+
+
+
+  
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.49.2 with theme Tranquilpeak 0.4.3-BETA">
+    <title>Playing with post-hoc power with R - why we shouldn’t do it</title>
+    <meta name="author" content="aurora-mareviv">
+    <meta name="keywords" content="tech, R">
+
+    <link rel="icon" href="../../../favicon.png">
+    
+
+    
+    <meta name="description" content="(A half-baked post that I had some time ago pending finishing)
+Current state of the matter The reason for bringing this here is that I witnessed an interesting exchange some time ago, regarding one article and their use of post-hoc power, pinpointed by @ADAlthousePhD:
+ Hi @scottlemaire, I would like to issue a public expression of concern about a paper published recently in the Journal of Surgical Research, on which you are the editor in chief.">
+    <meta property="og:description" content="(A half-baked post that I had some time ago pending finishing)
+Current state of the matter The reason for bringing this here is that I witnessed an interesting exchange some time ago, regarding one article and their use of post-hoc power, pinpointed by @ADAlthousePhD:
+ Hi @scottlemaire, I would like to issue a public expression of concern about a paper published recently in the Journal of Surgical Research, on which you are the editor in chief.">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Playing with post-hoc power with R - why we shouldn’t do it">
+    <meta property="og:url" content="/2020/01/playing-with-post-hoc-power/">
+    <meta property="og:site_name" content="Tales of R - Rmarkdown Blog">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tales of R - Rmarkdown Blog">
+    <meta name="twitter:description" content="(A half-baked post that I had some time ago pending finishing)
+Current state of the matter The reason for bringing this here is that I witnessed an interesting exchange some time ago, regarding one article and their use of post-hoc power, pinpointed by @ADAlthousePhD:
+ Hi @scottlemaire, I would like to issue a public expression of concern about a paper published recently in the Journal of Surgical Research, on which you are the editor in chief.">
+    
+      <meta name="twitter:creator" content="@maureviv">
+    
+    
+
+    
+    
+
+    
+      <meta property="og:image" content="/logo-alpha.png">
+    
+
+    
+      <meta property="og:image" content="/images/posthoc.png">
+    
+    
+    
+
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="../../../css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
+    
+    
+      
+        <link rel="stylesheet"  href="../../../css/my-style.css">
+      
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="../../../">Tales of R - Rmarkdown Blog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="../../../#about">
+    
+    
+    
+      
+        <img class="header-picture" src="../../../logo-alpha.png" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="../../../#about">
+          <img class="sidebar-profile-picture" src="../../../logo-alpha.png" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">aurora-mareviv</h4>
+        
+          <h5 class="sidebar-profile-bio">Anesthesiologist, MD, postdoc. Utter Rstats geek</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/maureviv">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+      
+      <span class="sidebar-button-desc">Twitter</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/aurora-mareviv">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://talesofr.wordpress.com">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-edit"></i>
+      
+      <span class="sidebar-button-desc">Tales of R</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.r-bloggers.com/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss-square"></i>
+      
+      <span class="sidebar-button-desc">R-bloggers</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://rweekly.org/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss-square"></i>
+      
+      <span class="sidebar-button-desc">R-weekly</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/1948108/mareviv">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+      
+      <span class="sidebar-button-desc">Stack Overflow</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      Playing with post-hoc power with R - why we shouldn’t do it
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2020-01-04T00:00:00Z">
+        
+  
+  
+  
+  
+    4 de January 2020
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="../../../categories/r">R</a>
+    
+  
+
+  </div>
+
+</div>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <script src="../../../rmarkdown-libs/kePrint/kePrint.js"></script>
+  <link rel="stylesheet" href="../../../css/my-style.css" type="text/css" />
+
+
+<p><em>(A half-baked post that I had some time ago pending finishing)</em></p>
+<div id="current-state-of-the-matter" class="section level2">
+<h2>Current state of the matter</h2>
+<p>The reason for bringing this here is that I witnessed an interesting exchange some time ago, regarding one article and their use of post-hoc power, pinpointed by @<a href="https://twitter.com/ADAlthousePhD" target="_blank">ADAlthousePhD</a>:</p>
+<center>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Hi <a href="https://twitter.com/scottlemaire?ref_src=twsrc%5Etfw">@scottlemaire</a>, I would like to issue a public expression of concern about a paper published recently in the Journal of Surgical Research, on which you are the editor in chief.</p>&mdash; Andrew Althouse (@ADAlthousePhD) <a href="https://twitter.com/ADAlthousePhD/status/1123205494968074240?ref_src=twsrc%5Etfw">April 30, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<br />
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">...effect sizes of the remaining studies.  This is a self-fulfilling prophecy: by definition, any study that failed to find a significant difference is going to appear to have low &quot;post hoc&quot; power.</p>&mdash; Andrew Althouse (@ADAlthousePhD) <a href="https://twitter.com/ADAlthousePhD/status/1123206831885692928?ref_src=twsrc%5Etfw">April 30, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+ <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Update for those that commented on the post-hoc power thread yesterday.  I have sent my thoughts to the editor in chief (at his invitation, and for which I give him a great deal of credit).  If you are also interested in this matter... <a href="https://t.co/MqerCamoyi">https://t.co/MqerCamoyi</a></p>&mdash; Andrew Althouse (@ADAlthousePhD) <a href="https://twitter.com/ADAlthousePhD/status/1123575393481629697?ref_src=twsrc%5Etfw">May 1, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</center>
+<p>Tweets refer also to this great post: <strong><a href="http://daniellakens.blogspot.com/2014/12/observed-power-and-what-to-do-if-your.html" target="_blank">Observed power, and what to do if your editor asks for post-hoc power analyses</a></strong>, written by <a href="https://twitter.com/lakens" target="_blank">Daniël Lakens</a> in which this issue is discussed.</p>
+<p>At first, I wasn’t too interested in this topic (to be honest)<!-- from an statistical point of view-->; but then I read <a href="https://www.sciencedirect.com/science/article/pii/S0022480419301854?via%3Dihub" target="_blank">the above mentioned study</a>, showcasing post-hoc calculations, and a few others that were <strong>spreading <em>and</em> being cited (even worse)</strong> in a field very, very close to mine: <strong>surgery</strong>. That’s when it got personal.</p>
+<p>Like almost a year ago, I came across this beautiful paper: <strong><a href="https://www.vims.edu/people/hoenig_jm/pubs/hoenig2.pdf" target="_blank">The Abuse of Power: The Pervasive Fallacy of Power Calculations for Data Analysis</a></strong> by <a href="https://www.researchgate.net/profile/John_Hoenig" target="_blank">John Hoenig et al.</a></p>
+<p>This paper patiently explains why post-hoc power is bad. Interestingly, the manuscript aims to be understood by scientists of all backgrounds, not only statistical. It uses appealing examples and develops them in a didactic, orderly manner, so a clinician (like myself) can grasp those concepts.</p>
+<p><em>Also, the second paragraph begins using the word “Dismayingly”. How graphic.</em></p>
+</div>
+<div id="what-can-we-do-about-it" class="section level2">
+<h2>What can we do about it?</h2>
+<p>My two cents to this discussion abut <strong>post-hoc power</strong> come below in the form of a small R tutorial. It demonstrates, using the rationale in the paper, how it <em>doesn’t make sense</em> to get power calculations after hypothesis testing.</p>
+<p>I hope this can help those peeps that need a more ‘<em>hands-on</em>’ (rather than purely abstract) approach to learning stats! R serves as a great, flexible tool for this!.</p>
+<div id="observed-power-is-a-function-of-the-p-value" class="section level3">
+<h3>Observed power is a function of the p-value</h3>
+<p><em>(One determines the other)</em> <!--*(they're the same thing)*--></p>
+<div class="well alert alert-info text-center">
+<p>TL;DR: nonsignificant p values always correspond to low observed powers.</p>
+</div>
+<p>This piece of code is inspired by the one written by Lakens, only that it is done with p-values from a Chi-Square test, making use of the <code>pwr::pwr.chisq.test()</code> function to get the power of the study. The only problem is that the effect size in this function is given by <code>w</code>, but fortunately <em>w</em> can be estimated from our contingency table using this formula (from Cohen’s <a href="https://www.amazon.com/Statistical-Power-Analysis-Behavioral-Sciences/dp/0805802835" target="blank">book</a>, p.216):</p>
+<p><span class="math inline">\(w = \sqrt{ \sum_{i=1}^{m} \dfrac{ (P_{1i} - P_{0i})^2 } {P_{0i}} }\)</span></p>
+<ul>
+<li><span class="math inline">\(P_{0i}\)</span> = the proportion in cell i posited by the null hypothesis,</li>
+<li><span class="math inline">\(P_{1i}\)</span> = the proportion in cell i posited by the alternate hypothesis and reflects the effect for that cell, and</li>
+<li><span class="math inline">\(m\)</span> = the number of cells.</li>
+</ul>
+<p>The reason I say “estimate” instead of to “calculate” the range of <em>w</em> values, is that we will use the sample proportions (observed, expected) instead of the population values (which we don’t know). Regardless effect size estimation in this case the results would be the same, so for didactic purposes this should be fine.</p>
+<div id="defining-the-problem-genomic-data" class="section level4">
+<h4>Defining the problem: genomic data</h4>
+<p>Let’s start with a simplified case for the simplest possible contingency table: a 2x2 table featuring an exposure and the affected status in a <strong>case-control study</strong>:</p>
+<ul>
+<li>The Antithrombin-III-Hamilton disease is characterized by recurrent thromboembolic events (PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/3179438" target="blank">3179438</a>).</li>
+<li>Caused by a DNA mutation exchanging Guanine (G) for Adenine (A) in the first base of codon 382 from the AT-III gene. This impairs its serine protease reactivity, thus being less effective blocking thrombus formation.</li>
+<li>Thus, we can consider the “A” allele as the exposure, “G” as the absence of exposure, and the “cases” would be those with recurrent thromboembolic events.</li>
+</ul>
+<p>We cannot simulate from a <code>rnorm</code> distribution like in t-tests. To simulate datasets with different table proportions we will set a range of different frequency combinations for two of the cells:</p>
+<pre class="r"><code>library(tidyverse)
+# Set basic parameters
+lower_prob_range=0.3
+upper_prob_range=0.7
+prob_step=0.01
+probabilities &lt;- seq(from = lower_prob_range, to = upper_prob_range, by = prob_step)
+
+# Create dataframe with all the possible effect sizes
+mydata0 &lt;- expand.grid(probabilities,probabilities) %&gt;%
+   tibble::as_tibble() %&gt;%
+   rename(
+      `prob of exposure in cases` = Var1,
+      `prob of exposure in controls` = Var2
+   )</code></pre>
+<p>Next, we define a function that does all the calculations and stores the results in a list (the code is as inelegant and explicit as possible):</p>
+<pre class="r"><code>power_against_pvalue &lt;- function(probabilities_expo_case=0.5, probabilities_expo_control=0.5, N=1000, exposure=&quot;exposed&quot;, unexposed=&quot;unexposed&quot;){
+   require(pwr)
+   require(magrittr)
+
+   table_exposure &lt;- c(exposure, unexposed)
+   
+   # Make a data frame
+   cases &lt;- tibble(
+      status = &quot;case&quot;,
+      allele = sample( table_exposure, N, replace=TRUE, prob=c(probabilities_expo_case, 1-probabilities_expo_case) )
+   )
+   controls &lt;- tibble(
+      status = &quot;control&quot;,
+      allele = sample( table_exposure, N, replace=TRUE, prob=c(probabilities_expo_control, 1-probabilities_expo_control) )
+   )
+   study &lt;- cases %&gt;%
+      bind_rows(controls)
+   
+   # Observed counts
+   .TableOC &lt;- table(study$status, study$allele)
+   # Observed proportions (row)
+   .TableOPr &lt;- prop.table(.TableOC, 1) # proportions by row
+   # Observed proportions (table)
+   .TableOP &lt;- prop.table(.TableOC) # proportions by table
+   # Chi-squared test
+   xsq_text &lt;- .TableOC %&gt;% chisq.test()
+   # Expected table counts:
+   .TableEC &lt;- xsq_text$expected   
+   # Expected table proportions:
+   .TableEP &lt;- prop.table(.TableEC) # proportions by table
+   # get p-value
+   xsq_pvalue &lt;- xsq_text$p.value
+   
+   # Observed counts:
+   H_n &lt;- count_observed_ctrls_unexpo &lt;- .TableOC[2,2]
+   D_n &lt;- count_observed_cases_unexpo &lt;- .TableOC[1,2]
+   H_e &lt;- count_observed_ctrls_expo &lt;- .TableOC[2,1] # A is the exposure
+   D_e &lt;- count_observed_cases_expo &lt;- .TableOC[1,1] # A is the exposure
+   
+   # Get the OR
+   OR &lt;- ( D_e / H_e ) / ( D_n / H_n )
+   
+   # Observed table proportions
+   pr_observed_ctrls_unexpo &lt;- .TableOP[2,2]
+   pr_observed_case_unexpo &lt;- .TableOP[1,2]
+   pr_observed_ctrls_expo &lt;- .TableOP[2,1]
+   pr_observed_case_expo &lt;- .TableOP[1,1]
+   
+   # Expected table proportions:
+   pr_expected_ctrls_unexpo &lt;- .TableEP[2,2]
+   pr_expected_case_unexpo &lt;- .TableEP[1,2]
+   pr_expected_ctrls_expo &lt;- .TableEP[2,1]
+   pr_expected_case_expo &lt;- .TableEP[1,1]
+   
+   # Cohen&#39;s w
+   w &lt;- (
+      (
+         (pr_expected_ctrls_unexpo - pr_observed_ctrls_unexpo)^2 / pr_expected_ctrls_unexpo
+      ) + (
+         (pr_expected_ctrls_expo - pr_observed_ctrls_expo)^2 / pr_expected_ctrls_expo
+      ) + (
+         (pr_expected_case_unexpo - pr_observed_case_unexpo)^2 / pr_expected_case_unexpo
+      ) + (
+         (pr_expected_case_expo - pr_observed_case_expo)^2 / pr_expected_case_expo
+      )
+   )^(1/2)
+   
+   # Power
+   pw &lt;- pwr.chisq.test(
+      w = w, 
+      N = N, 
+      df = 1, 
+      sig.level = 0.05, 
+      power = NULL
+   )
+   
+   # Final result
+   result0 &lt;- list(
+      prob_case_in_exposed = probabilities_expo_case,
+      prob_control_in_exposed = probabilities_expo_control,
+      N = N,
+      w = w,
+      power = pw$power,
+      p_value = xsq_pvalue,
+      OR = OR,
+      observed_counts = .TableOC,
+      expected_counts = .TableEC,
+      observed_proportions = .TableOP,
+      expected_proportions = .TableEP
+   )
+   result0
+   
+}
+
+# A helper function to extract the results into new columns
+power_against_pvalue_extractor &lt;- function(power_versus_pvalue, extracted=NULL){
+   if(is.null(extracted)){
+      result &lt;- power_versus_pvalue
+   }else{
+      result &lt;- power_versus_pvalue[[extracted]]
+   }
+   result
+}</code></pre>
+<p>We can execute this function and see the output:</p>
+<pre class="r"><code>power_against_pvalue(
+   probabilities_expo_case=0.5, 
+   probabilities_expo_control=0.5,
+   N=1000, 
+   exposure=&quot;A=exposed&quot;, 
+   unexposed=&quot;G=unexposed&quot; 
+)
+   $prob_case_in_exposed
+   [1] 0.5
+   
+   $prob_control_in_exposed
+   [1] 0.5
+   
+   $N
+   [1] 1000
+   
+   $w
+   [1] 0.02300609
+   
+   $power
+   [1] 0.1124906
+   
+   $p_value
+   [1] 0.3250515
+   
+   $OR
+   [1] 1.096436
+   
+   $observed_counts
+            
+             A=exposed G=unexposed
+     case          523         477
+     control       500         500
+   
+   $expected_counts
+            
+             A=exposed G=unexposed
+     case        511.5       488.5
+     control     511.5       488.5
+   
+   $observed_proportions
+            
+             A=exposed G=unexposed
+     case       0.2615      0.2385
+     control    0.2500      0.2500
+   
+   $expected_proportions
+            
+             A=exposed G=unexposed
+     case      0.25575     0.24425
+     control   0.25575     0.24425</code></pre>
+<p>And now we can map this function to all the combinations of proportions we had stored in our data frame (using the wonderful <code>purrr</code> package):</p>
+<pre class="r"><code>mydata &lt;- mydata0 %&gt;%
+   # calculate
+   mutate(
+      power_versus_pvalue = purrr::map2(
+         `prob of exposure in cases`, `prob of exposure in controls`, 
+         ~power_against_pvalue(.x, .y, N=1000, exposure=&quot;A=exposed&quot;, unexposed=&quot;G=unexposed&quot;)
+         )
+   ) %&gt;%
+   # extract elements
+   mutate(
+      power = purrr::map(power_versus_pvalue, power_against_pvalue_extractor, extracted=&quot;power&quot;),
+      pvalue = purrr::map(power_versus_pvalue, power_against_pvalue_extractor, extracted=&quot;p_value&quot;),
+      OR = purrr::map(power_versus_pvalue, power_against_pvalue_extractor, extracted=&quot;OR&quot;),
+      cohen_w = purrr::map(power_versus_pvalue, power_against_pvalue_extractor, extracted=&quot;w&quot;)
+   ) %&gt;%
+   unnest(cols = c(power, pvalue, OR, cohen_w))</code></pre>
+<pre class="r"><code>mydata %&gt;% select(-power_versus_pvalue, -cohen_w) %&gt;% head(3) %&gt;% kable()</code></pre>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;">
+prob of exposure in cases
+</th>
+<th style="text-align:center;">
+prob of exposure in controls
+</th>
+<th style="text-align:center;">
+power
+</th>
+<th style="text-align:center;">
+pvalue
+</th>
+<th style="text-align:center;">
+OR
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+0.30
+</td>
+<td style="text-align:center;">
+0.3
+</td>
+<td style="text-align:center;">
+0.0500000
+</td>
+<td style="text-align:center;">
+1.0000000
+</td>
+<td style="text-align:center;">
+1.000000
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+0.31
+</td>
+<td style="text-align:center;">
+0.3
+</td>
+<td style="text-align:center;">
+0.1439164
+</td>
+<td style="text-align:center;">
+0.2275967
+</td>
+<td style="text-align:center;">
+1.128824
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+0.32
+</td>
+<td style="text-align:center;">
+0.3
+</td>
+<td style="text-align:center;">
+0.1547361
+</td>
+<td style="text-align:center;">
+0.2025910
+</td>
+<td style="text-align:center;">
+1.138560
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>We can see the power that corresponds to a p-value of 0.05:</p>
+<pre class="r"><code>mydata %&gt;%
+   filter(
+      pvalue &gt; 0.049 &amp; pvalue &lt; 0.051
+   ) %&gt;%
+   select(-power_versus_pvalue, -cohen_w) %&gt;% kable()</code></pre>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;">
+prob of exposure in cases
+</th>
+<th style="text-align:center;">
+prob of exposure in controls
+</th>
+<th style="text-align:center;">
+power
+</th>
+<th style="text-align:center;">
+pvalue
+</th>
+<th style="text-align:center;">
+OR
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>The power corresponding to a p-value of 0.05 is between 0.29 and 0.30 (exact results will vary each time code runs; for didactic purposes I won’t <code>set.seed</code> here).</p>
+<p>We can see how plotting power against p-value (regardless of sample size, you can try with a different one) always yield the same relationship:</p>
+<pre class="r"><code>power_vs_pvalue &lt;- mydata %&gt;%
+   ggplot(
+      aes(
+         x=power,
+         y=pvalue,
+         colour=pvalue
+      )
+   ) +
+   geom_point() + 
+   geom_hline(yintercept=0.05) + geom_vline(xintercept=0.29) +
+   scale_colour_gradientn(colours = terrain.colors(5)) +
+   theme_bw() + theme(legend.position = &quot;none&quot;)
+
+power_vs_pvalue</code></pre>
+<p><img src="../../../post/2020-01-04-playing-with-post-hoc-power-with-r-why-you-shouldn-t-do-it_files/figure-html/plot_output-1.png" width="480" />  </p>
+</div>
+</div>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>Once you set your data and statistical test to compute a p-value, your power is already fixed. Hence, power doesn’t add information and cannot be further interpreted, as higher p-values will <strong><em>always</em></strong> correspond to low powers.</p>
+<p><a href="https://www.vims.edu/people/hoenig_jm/pubs/hoenig2.pdf" target="_blank">Hoenig’s paper</a> elaborates on more reasons why calculated (post-hoc) power cannot be interpreted (hence used). The Discussion section definitely worths reading.</p>
+</div>
+<div id="bonus" class="section level2">
+<h2>Bonus</h2>
+<div id="plotting-power-p-pvalue-against-or-and-cohens-w" class="section level4">
+<h4>Plotting power &amp; p-pvalue against OR and Cohen’s <em>w</em></h4>
+<p>Here are 4 graphs corresponding to 1000 patients. Unlike the ‘power versus p-value’ representation, those are influenced by sample size. With <strong>bigger sample sizes</strong>:</p>
+<ul>
+<li><p>As effect size increases, power increases are more steep and p-value decreases more quickly,</p></li>
+<li><p>OR values that correspond either to <em>p-values under 0.05</em> or <em>power values over 0.8</em> are closer to 1.</p></li>
+</ul>
+<pre class="r"><code>or_vs_pvalue &lt;- mydata %&gt;%
+   ggplot(
+      aes(x=OR, y=pvalue, colour=pvalue)
+   ) +
+   geom_point() + 
+   geom_hline(yintercept=0.05) +
+   scale_colour_gradientn(colours = terrain.colors(5)) +
+   theme_bw() + theme(legend.position = &quot;none&quot;)
+
+w_vs_pvalue &lt;- mydata %&gt;%
+   ggplot(
+      aes(x=cohen_w, y=pvalue, colour=pvalue)
+   ) +
+   geom_point() + 
+   geom_hline(yintercept=0.05) +
+   scale_colour_gradientn(colours = terrain.colors(5)) +
+   theme_bw() + theme(legend.position = &quot;none&quot;)
+
+or_vs_power &lt;- mydata %&gt;%
+   ggplot(
+      aes(x=OR, y=power, colour=pvalue)
+   ) +
+   geom_point() + 
+   geom_hline(yintercept=0.8) +
+   scale_colour_gradientn(colours = terrain.colors(5)) +
+   theme_bw() + theme(legend.position = &quot;none&quot;)
+
+w_vs_power &lt;- mydata %&gt;%
+   ggplot(
+      aes(x=cohen_w, y=power, colour=pvalue)
+   ) +
+   geom_point() + 
+   geom_hline(yintercept=0.8) +
+   scale_colour_gradientn(colours = terrain.colors(5)) +
+   theme_bw() + theme(legend.position = &quot;none&quot;)
+
+cowplots &lt;- list(or_vs_pvalue, w_vs_pvalue, or_vs_power, w_vs_power) 
+mylabels &lt;- letters[1:length(cowplots)]
+composed_figure &lt;- cowplot::plot_grid(plotlist = cowplots,
+                 labels = mylabels, nrow = 2, align = &quot;h&quot;) 
+
+composed_figure</code></pre>
+<p><img src="../../../post/2020-01-04-playing-with-post-hoc-power-with-r-why-you-shouldn-t-do-it_files/figure-html/plot_output2-1.png" width="1152" />  </p>
+</div>
+<div id="this-.rmd-source-code" class="section level4">
+<h4>This .Rmd source code</h4>
+<p>You can download it from <a href="https://github.com/aurora-mareviv/talesofr/blob/master/content/post/2020-01-04-playing-with-post-hoc-power-with-r-why-you-shouldn-t-do-it.Rmd" target="blank">here</a></p>
+</div>
+</div>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="../../../tags/#rstats/">#rstats</a>
+
+  <a class="tag tag--primary tag--small" href="../../../tags/statistical/">Statistical</a>
+
+  <a class="tag tag--primary tag--small" href="../../../tags/research/">research</a>
+
+  <a class="tag tag--primary tag--small" href="../../../tags/#tutorial/">#tutorial</a>
+
+  <a class="tag tag--primary tag--small" href="../../../tags/medicine/">medicine</a>
+
+  <a class="tag tag--primary tag--small" href="../../../tags/power/">power</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="../../../2018/02/r-blogdown-setup-in-github-2/" data-tooltip="R Blogdown Setup in GitHub (2)">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2020/01/playing-with-post-hoc-power/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2020/01/playing-with-post-hoc-power/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2020/01/playing-with-post-hoc-power/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 aurora-mareviv. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="../../../2018/02/r-blogdown-setup-in-github-2/" data-tooltip="R Blogdown Setup in GitHub (2)">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2020/01/playing-with-post-hoc-power/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2020/01/playing-with-post-hoc-power/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2020/01/playing-with-post-hoc-power/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F2020%2F01%2Fplaying-with-post-hoc-power%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F2020%2F01%2Fplaying-with-post-hoc-power%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=%2F2020%2F01%2Fplaying-with-post-hoc-power%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="../../../logo-alpha.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">aurora-mareviv</h4>
+    
+      <div id="about-card-bio">Anesthesiologist, MD, postdoc. Utter Rstats geek</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Universidade de Santiago de Compostela
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Spain
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2020/01/playing-with-post-hoc-power/">
+                <h3 class="media-heading">Playing with post-hoc power with R - why we shouldn’t do it</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2020
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">(A half-baked post that I had some time ago pending finishing)
+Current state of the matter The reason for bringing this here is that I witnessed an interesting exchange some time ago, regarding one article and their use of post-hoc power, pinpointed by @ADAlthousePhD:
+ Hi @scottlemaire, I would like to issue a public expression of concern about a paper published recently in the Journal of Surgical Research, on which you are the editor in chief.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2018/02/r-blogdown-setup-in-github-2/">
+                <h3 class="media-heading">R Blogdown Setup in GitHub (2)</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">An updated tutorial to set up a blogdown blog  Install Blogdown Install Hugo ./From RStudio ./From other sources  Git &amp; GitHub repos RStudio and blogdown setup  Customising paths and styles Modify config.toml file Custom css Custom javascript MathJax Site build with blogdown   Deploying the site Updating the local git  repository Pushing to GitHub  Add R code A new post in blogdown Deploying the site with the new post  This .</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2018/02/intro-joint-modeling-r/">
+                <h3 class="media-heading">An introduction to joint modeling in R</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">J Espasandin, O Lado, C Díaz, A Bouzas, I Guler, A Baluja. 
+   These days, between the 19th and 21st of February, has taken place the learning activity titled “An Introduction to the Joint Modeling of Longitudinal and Survival Data, with Applications in R” organized by the Interdisciplinary Group of Biostatistics (ICBUSC), directed by Professor Carmen Cadarso-Suárez, from the University of Santiago de Compostela.
+ The international nature of this scientific activity has been marked by the presence of researchers from different European countries such as Germany, Portugal, Holland, Greece or Turkey.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2017/12/minimal-project-tree-r/">
+                <h3 class="media-heading">A minimal Project Tree in R</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Introduction  The last two days arrived at my twitter feed some discussions on how bad are the following sentences at the beginning of your R script/notebook, sparked by @JennyBryan’s slides at the IASC-ARS/NZSA Conference:
+ setwd()
+ and
+ rm(list = ls())
+ 
+ The only two things that make @JennyBryan 😤😠🤯. Instead use projects + here::here() #rstats pic.twitter.com/GwxnHePL4n
+&mdash; Hadley Wickham (@hadleywickham) December 11, 2017  Blog post elaborating on my advice to avoid setwd() and rm(list = ls()) at top of an #rstats script.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2017/11/taming-exam-results-with-pdftools/">
+                <h3 class="media-heading">Taming exam results in pdf with pdftools</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Introduction  There are several ways to mine tables and other content from a pdf, using R. After a lot of trial &amp; error, here’s how I managed to extract global exam results from an international, massive, yearly examination, the EDAIC.
+This is my first use case of “pdf mining” with R, and also a fairly simple one. However, more complex and very fine examples of this can be found elsewhere, using both pdftools and tabulizer packages.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2017/08/tracking-septic-patients/">
+                <h3 class="media-heading">Tracking Septic Patients in a Hospital</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Background A hospital may be defined as a place, or building, or set of facilities where patients go to receive the care they need.
+In ancient times, a hospital was not much more than a hotel for the poor, where they could stay and be cared for. Some centuries passed, and now we call hospitals to extremely complex structures, from both physical and functional perspectives.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2017/08/r-blogdown-setup-in-github/">
+                <h3 class="media-heading">R Blogdown Setup in GitHub</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">The blogdown R package  Finally, -after 24h of failed attempts-, I could get my favourite Hugo theme up and running with R Studio and Blogdown.
+ After exploring some alternatives, like Shirin’s (with Jekyll), and Amber Thomas advice (which involved Git skills beyond my basic abilities), I was able to install Yihui’s hugo-lithium-theme in a new repository.
+However, I wanted to explore other blog templates, hosted in GiHub, like:</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2016/09/quick-wordclouds-pubmed-abstracts-r/">
+                <h3 class="media-heading">Quick wordclouds from PubMed abstracts - using PMID lists in R</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2016
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Wordclouds are one of the most visually straightforward, compelling ways of displaying text info in a graph.
+Of course, we have a lot of web pages (and even apps) that, given an input text, will plot you some nice tagclouds. However, when you need reproducible results, or getting done complex tasks -like combined wordclouds from several files-, a programming environment may be the best option.
+In R, there are (as always), several alternatives to get this done, such as tagcloud and wordcloud.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2016/06/r-shiny-clinical-trials-randomization/">
+                <h3 class="media-heading">R/Shiny for clinical trials: simple randomization tables</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2016
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">One of the things I most like from R + Shiny is that it enables me to serve the power and flexibility of R in small “chunks” to cover different needs, allowing people not used to R to benefit from it. However, what I like most is that’s really fun and easy to program those utilities for a person without any specific programming background.
+Here’s a small hack done in R/Shiny: it covered an urgent need for a study involving patient randomisation to two branches of treatment, in what is commonly known as a clinical trial.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="../../../2015/06/compile-bayesx-via-fink-osx1010/">
+                <h3 class="media-heading">Compile BayesX from source code - via Fink in OSX 10.10</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2015
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">My PC just passed away. My good old one since 2009… so I decided to buy a desktop computer running OSX 10.10 (although I cannot exclude the possibility of partitioning the disk and installing also Linux…). For now, I missed some apps, which I installed with Fink (a popular debian-based distro ported to Mac).
+One of the programs I was fiddling around with was BayesX: “Bayesian Inference in Structured Additive Regression Models”, authored by great people at Muenchen University, (specially Nadja and Thomas, whom I’m glad to know personally).</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         24 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://aurora-mareviv.github.io/talesofr/images/Solpor_Praia_America.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js" integrity="sha256-XrZQp+ZMfovqr6Hb2M6okHvSEYaB/+Xbx7toWmOOZUM=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" integrity="sha256-KacbO6Nou2geGJEUzQeKzKEdp/DENVGJKAd2v37moh0=" crossorigin="anonymous" />
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="../../../js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+  
+    <script src="../../../js/myjs.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/aurora-mareviv.github.io\/talesofr\/2020\/01\/playing-with-post-hoc-power\/';
+          
+            this.page.identifier = '\/2020\/01\/playing-with-post-hoc-power\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'talesofr';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+    
+  </body>
+</html>
+

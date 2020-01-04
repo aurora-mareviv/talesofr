@@ -6,10 +6,21 @@
     <description>Recent content in Power on Tales of R - Rmarkdown Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jul 2013 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/power/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Playing with post-hoc power with R - why we shouldn’t do it</title>
+      <link>/2020/01/playing-with-post-hoc-power/</link>
+      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/01/playing-with-post-hoc-power/</guid>
+      <description>(A half-baked post that I had some time ago pending finishing)
+Current state of the matter The reason for bringing this here is that I witnessed an interesting exchange some time ago, regarding one article and their use of post-hoc power, pinpointed by @ADAlthousePhD:
+ Hi @scottlemaire, I would like to issue a public expression of concern about a paper published recently in the Journal of Surgical Research, on which you are the editor in chief.</description>
+    </item>
     
     <item>
       <title>Power and sample size calculator for mitochondrial DNA association studies (Shiny)</title>
