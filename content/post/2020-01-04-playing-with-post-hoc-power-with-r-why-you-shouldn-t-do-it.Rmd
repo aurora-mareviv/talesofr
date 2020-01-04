@@ -383,4 +383,3 @@ composed_figure
 
 You can download it from [here](https://github.com/aurora-mareviv/talesofr/blob/master/content/post/2020-01-04-playing-with-post-hoc-power-with-r-why-you-shouldn-t-do-it.Rmd){target="blank"}
 
-
