@@ -58,7 +58,7 @@ kable <- function(x){
 }
 ```
 
-*(A half-baked post that I had some time ago pending finishing)* 
+<!-- *(A half-baked post that I had some time ago pending finishing)*  -->
 
 ## Current state of the matter
 
