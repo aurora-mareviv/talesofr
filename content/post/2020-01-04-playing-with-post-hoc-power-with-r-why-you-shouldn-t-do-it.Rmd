@@ -35,7 +35,7 @@ knitr::opts_chunk$set(collapse = TRUE, echo=TRUE, eval=TRUE, warning=FALSE, mess
  
 ```{r results='hide', echo=FALSE}
 # Installs missing libraries on render!
-list.of.packages <- c("rmarkdown", "Rcpp", "knitr", "tidyverse", "pwr", "kableExtra", "cowplot")
+list.of.packages <- c("rmarkdown", "Rcpp", "knitr", "tidyverse", "pwr", "kableExtra", "cowplot", "gridGraphics")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages, repos='https://cran.rstudio.com/')
 ```
@@ -378,9 +378,157 @@ composed_figure
 ```
 &nbsp;
 
- 
+
+##### Different sample sizes
+
+```{r additional_data_samsizes, echo=FALSE}
+mydata <- mydata %>%
+   # calculate 500
+   mutate(
+      power_versus_pvalue_500 = purrr::map2(
+         `prob of exposure in cases`, `prob of exposure in controls`, 
+         ~power_against_pvalue(.x, .y, N=500, exposure="A=exposed", unexposed="G=unexposed")
+         )
+   ) %>%
+   # extract elements
+   mutate(
+      power_500 = purrr::map(power_versus_pvalue_500, power_against_pvalue_extractor, extracted="power"),
+      pvalue_500 = purrr::map(power_versus_pvalue_500, power_against_pvalue_extractor, extracted="p_value"),
+      OR_500 = purrr::map(power_versus_pvalue_500, power_against_pvalue_extractor, extracted="OR"),
+      cohen_w_500 = purrr::map(power_versus_pvalue_500, power_against_pvalue_extractor, extracted="w")
+   ) %>%
+   unnest(cols = c(power_500, pvalue_500, OR_500, cohen_w_500)) %>%
+   # calculate 2000
+   mutate(
+      power_versus_pvalue_2000 = purrr::map2(
+         `prob of exposure in cases`, `prob of exposure in controls`, 
+         ~power_against_pvalue(.x, .y, N=2000, exposure="A=exposed", unexposed="G=unexposed")
+         )
+   ) %>%
+   # extract elements
+   mutate(
+      power_2000 = purrr::map(power_versus_pvalue_2000, power_against_pvalue_extractor, extracted="power"),
+      pvalue_2000 = purrr::map(power_versus_pvalue_2000, power_against_pvalue_extractor, extracted="p_value"),
+      OR_2000 = purrr::map(power_versus_pvalue_2000, power_against_pvalue_extractor, extracted="OR"),
+      cohen_w_2000 = purrr::map(power_versus_pvalue_2000, power_against_pvalue_extractor, extracted="w")
+   ) %>%
+   unnest(cols = c(power_2000, pvalue_2000, OR_2000, cohen_w_2000))
+
+deselected <- c(
+   "prob of exposure in cases", "prob of exposure in controls",
+   "power_versus_pvalue", "power_versus_pvalue_500", "power_versus_pvalue_2000"
+)
+mydata_sizes0 <- mydata %>%
+   select(
+      -deselected
+   )
+mydata_sizes_power <- mydata_sizes0 %>%
+   select(starts_with("power")) %>%
+   tidyr::gather(
+      power0, value_power
+   )
+mydata_sizes_pvalue <- mydata_sizes0 %>%
+   select(starts_with("pvalue")) %>%
+   tidyr::gather(
+      pvalue0, value_pvalue
+   )
+mydata_sizes_OR <- mydata_sizes0 %>%
+   select(starts_with("OR")) %>%
+   tidyr::gather(
+      OR0, value_OR
+   )
+mydata_sizes_cohen_w <- mydata_sizes0 %>%
+   select(starts_with("cohen_w")) %>%
+   tidyr::gather(
+      cohen_w0, value_cohen_w
+   )
+mydata_sizes <- mydata_sizes_power %>%
+   bind_cols(mydata_sizes_pvalue, mydata_sizes_OR, mydata_sizes_cohen_w) %>%
+   mutate(
+      size = case_when(
+         power0 == "power_500" ~ " 500",
+         power0 == "power" ~ "1000",
+         power0 == "power_2000" ~ "2000",
+         TRUE ~ NA_character_
+      )
+   ) %>%
+   select(-ends_with("0")) %>%
+   rename_all(
+      list(
+        ~stringr::str_replace_all(., 'value_', '')
+      )
+  )
+```
+
+```{r plot_output3, fig.height=10, fig.width=12, echo=FALSE}
+discrete_pal <- c(
+    "#ffa83d", #yellow
+    "#a4c166",
+    "#00857c"
+  )
+cex <- 0.5
+or_vs_pvalue0 <- mydata_sizes %>%
+   ggplot(
+      aes(x=OR, y=pvalue, colour=size)
+   ) +
+   # geom_point(size = cex) + 
+   geom_line() + 
+   geom_hline(yintercept=0.05) +
+   scale_colour_manual(values=discrete_pal) +
+   theme_bw() 
+or_vs_pvalue <- or_vs_pvalue0+ theme(legend.position = "none")
+
+w_vs_pvalue0 <- mydata_sizes %>%
+   ggplot(
+      aes(x=cohen_w, y=pvalue, colour=size)
+   ) +
+   # geom_point(size = cex) + 
+   geom_line() + 
+   geom_hline(yintercept=0.05) +
+   scale_colour_manual(values=discrete_pal) +
+   theme_bw() 
+w_vs_pvalue <- w_vs_pvalue0 + theme(legend.position = "none")
+
+or_vs_power0 <- mydata_sizes %>%
+   ggplot(
+      aes(x=OR, y=power, colour=size)
+   ) +
+   # geom_point(size = cex) + 
+   geom_line() + 
+   geom_hline(yintercept=0.8) +
+   scale_colour_manual(values=discrete_pal) +
+   theme_bw() 
+or_vs_power <- or_vs_power0 + theme(legend.position = "none")
+
+w_vs_power0 <- mydata_sizes %>%
+   ggplot(
+      aes(x=cohen_w, y=power, colour=size)
+   ) +
+   # geom_point(size = cex) + 
+   geom_line() + 
+   geom_hline(yintercept=0.8) +
+   scale_colour_manual(values=discrete_pal) +
+   theme_bw() 
+w_vs_power <- w_vs_power0 + theme(legend.position = "none")
+
+legend <- cowplot::get_legend(
+  or_vs_pvalue0 + theme(legend.box.margin = margin(0, 0, 0, 9))
+)
+
+cowplots <- list(or_vs_pvalue, w_vs_pvalue, or_vs_power, w_vs_power) 
+mylabels <- letters[1:length(cowplots)]
+composed_figure_sizes <- cowplot::plot_grid(plotlist = cowplots,
+                 labels = mylabels, nrow = 2, align = "h") 
+
+# composed_figure_sizes
+library(gridGraphics)
+cowplot::plot_grid(composed_figure_sizes, legend, rel_widths = c(3, .4))
+```
+
 
 #### This .Rmd source code
 
 You can download it from [here](https://github.com/aurora-mareviv/talesofr/blob/master/content/post/2020-01-04-playing-with-post-hoc-power-with-r-why-you-shouldn-t-do-it.Rmd){target="blank"}
+
+
 
