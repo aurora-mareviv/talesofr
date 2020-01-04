@@ -12,6 +12,7 @@ tags:
   - '#tutorial'
   - medicine
   - power
+twitterImg: ./images/posthoc.png
 keywords:
   - tech
 thumbnailImagePosition: left
@@ -31,7 +32,7 @@ editor_options:
 knitr::opts_chunk$set(collapse = TRUE, echo=TRUE, eval=TRUE, warning=FALSE, message=FALSE, comment="  ")
 # https:\/\/aurora-mareviv.github.io\/talesofr
 ```
-
+ 
 ```{r results='hide', echo=FALSE}
 # Installs missing libraries on render!
 list.of.packages <- c("rmarkdown", "Rcpp", "knitr", "tidyverse", "pwr", "kableExtra", "cowplot")
