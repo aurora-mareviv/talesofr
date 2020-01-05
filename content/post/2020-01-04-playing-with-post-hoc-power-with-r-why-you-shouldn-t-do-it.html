@@ -209,40 +209,40 @@ power_against_pvalue_extractor &lt;- function(power_versus_pvalue, extracted=NUL
    [1] 1000
    
    $w
-   [1] 0.02700228
+   [1] 0.01600051
    
    $power
-   [1] 0.1367942
+   [1] 0.07980808
    
    $p_value
-   [1] 0.2448889
+   [1] 0.5023213
    
    $OR
-   [1] 1.114097
+   [1] 0.937996
    
    $observed_counts
             
              A=exposed G=unexposed
-     case          507         493
-     control       480         520
+     case          488         512
+     control       504         496
    
    $expected_counts
             
              A=exposed G=unexposed
-     case        493.5       506.5
-     control     493.5       506.5
+     case          496         504
+     control       496         504
    
    $observed_proportions
             
              A=exposed G=unexposed
-     case       0.2535      0.2465
-     control    0.2400      0.2600
+     case        0.244       0.256
+     control     0.252       0.248
    
    $expected_proportions
             
              A=exposed G=unexposed
-     case      0.24675     0.25325
-     control   0.24675     0.25325</code></pre>
+     case        0.248       0.252
+     control     0.248       0.252</code></pre>
 <p>And now we can map this function to all the combinations of proportions we had stored in our data frame (using the wonderful <code>purrr</code> package):</p>
 <pre class="r"><code>mydata &lt;- mydata0 %&gt;%
    # calculate
@@ -290,13 +290,13 @@ OR
 0.3
 </td>
 <td style="text-align:center;">
-0.3531753
+0.1172670
 </td>
 <td style="text-align:center;">
-0.0285551
+0.3086549
 </td>
 <td style="text-align:center;">
-0.8040218
+1.1089799
 </td>
 </tr>
 <tr>
@@ -307,13 +307,13 @@ OR
 0.3
 </td>
 <td style="text-align:center;">
-0.0804399
+0.0665180
 </td>
 <td style="text-align:center;">
-0.4998039
+0.6270413
 </td>
 <td style="text-align:center;">
-1.0721938
+0.9493811
 </td>
 </tr>
 <tr>
@@ -324,13 +324,13 @@ OR
 0.3
 </td>
 <td style="text-align:center;">
-0.1767098
+0.1298227
 </td>
 <td style="text-align:center;">
-0.1605137
+0.2665585
 </td>
 <td style="text-align:center;">
-1.1509480
+1.1185636
 </td>
 </tr>
 </tbody>
@@ -364,6 +364,38 @@ OR
 </thead>
 <tbody>
 <tr>
+<td style="text-align:center;">
+0.41
+</td>
+<td style="text-align:center;">
+0.37
+</td>
+<td style="text-align:center;">
+0.2932704
+</td>
+<td style="text-align:center;">
+0.0505027
+</td>
+<td style="text-align:center;">
+1.1998156
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+0.38
+</td>
+<td style="text-align:center;">
+0.43
+</td>
+<td style="text-align:center;">
+0.2944064
+</td>
+<td style="text-align:center;">
+0.0499654
+</td>
+<td style="text-align:center;">
+0.8327473
+</td>
 </tr>
 </tbody>
 </table>

@@ -377,7 +377,7 @@ composed_figure <- cowplot::plot_grid(plotlist = cowplots,
 composed_figure
 ```
 &nbsp;
-
+ 
 
 ##### Different sample sizes
 
@@ -524,6 +524,7 @@ composed_figure_sizes <- cowplot::plot_grid(plotlist = cowplots,
 library(gridGraphics)
 cowplot::plot_grid(composed_figure_sizes, legend, rel_widths = c(3, .4))
 ```
+
 
 
 #### This .Rmd source code
